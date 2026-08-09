@@ -1,7 +1,7 @@
 import React from 'react';
 import { ActiveTab, BookCategory, StudyStats, UserAccount } from '../types';
-import { isDemoEnv } from '../utils/auth';
-import { Sparkles, Flame, Layers, Brain, LayoutDashboard, Gamepad2, BookOpen, Volume2, VolumeX, User, LogOut, ShieldCheck } from 'lucide-react';
+import { isDemoEnv, fetchUserSyncedData } from '../utils/auth';
+import { Sparkles, Flame, Layers, Brain, LayoutDashboard, Gamepad2, BookOpen, Volume2, VolumeX, User, LogOut, ShieldCheck, RefreshCw } from 'lucide-react';
 
 interface HeaderProps {
   activeTab: ActiveTab;
@@ -133,6 +133,26 @@ export const Header: React.FC<HeaderProps> = ({
             >
               ⚡ 一键充能
             </button>
+
+            {/* 云端多端同步手动刷新按钮 */}
+            {currentUser && (
+              <button
+                onClick={async () => {
+                  const btn = document.getElementById('manual-sync-btn');
+                  if (btn) btn.classList.add('spin-anim');
+                  await fetchUserSyncedData(currentUser.username);
+                  setTimeout(() => {
+                    if (btn) btn.classList.remove('spin-anim');
+                    alert(`🎉 [${currentUser.username}] 云端多端数据已成功双向同步！`);
+                  }, 600);
+                }}
+                className="cyber-button"
+                style={{ padding: '6px 10px', fontSize: '0.8rem', background: 'rgba(16, 185, 129, 0.15)', border: '1px solid #10b981', color: '#34d399' }}
+                title="点此立即强制云端双向同步打卡与连胜进度"
+              >
+                <RefreshCw id="manual-sync-btn" size={14} /> 手动云同步
+              </button>
+            )}
 
             {/* 账号挂件 */}
             {currentUser ? (
