@@ -6,7 +6,7 @@ import { FlashcardEngine } from './components/FlashcardEngine';
 import { HeatmapDashboard } from './components/HeatmapDashboard';
 import { CyberShooterGame } from './components/CyberShooterGame';
 import { WordBookManager } from './components/WordBookManager';
-import { getUserWordRecords, getStudyStats, getCurrentBookId, setCurrentBookId } from './utils/storage';
+import { getUserWordRecords, getStudyStats, getCurrentBookId, setCurrentBookId, loadDemoData } from './utils/storage';
 
 // 动态导入 JSON 词库数据
 import cet4Data from './data/cet4.json';
@@ -40,6 +40,11 @@ export const App: React.FC = () => {
   const refreshState = () => {
     setUserRecords(getUserWordRecords());
     setStats(getStudyStats());
+  };
+
+  const handleLoadDemoData = () => {
+    loadDemoData();
+    refreshState();
   };
 
   const handleSetCurrentBook = (book: BookCategory) => {
@@ -76,6 +81,7 @@ export const App: React.FC = () => {
         stats={stats}
         soundEnabled={soundEnabled}
         setSoundEnabled={setSoundEnabled}
+        onLoadDemoData={handleLoadDemoData}
       />
 
       {/* 主视图区域 */}

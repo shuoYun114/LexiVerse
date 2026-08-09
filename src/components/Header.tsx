@@ -10,6 +10,7 @@ interface HeaderProps {
   stats: StudyStats;
   soundEnabled: boolean;
   setSoundEnabled: (enabled: boolean) => void;
+  onLoadDemoData: () => void;
 }
 
 export const Header: React.FC<HeaderProps> = ({
@@ -20,6 +21,7 @@ export const Header: React.FC<HeaderProps> = ({
   stats,
   soundEnabled,
   setSoundEnabled,
+  onLoadDemoData,
 }) => {
   return (
     <header className="glass-panel" style={{ margin: '16px 24px', padding: '12px 24px', position: 'relative', zIndex: 50 }}>
@@ -96,6 +98,16 @@ export const Header: React.FC<HeaderProps> = ({
             <Flame size={18} className="streak-fire-icon" />
             <span>{stats.currentStreak} 天连胜</span>
           </div>
+
+          {/* 顶栏一键充能按钮 */}
+          <button
+            onClick={onLoadDemoData}
+            className="cyber-button cyber-button-primary"
+            style={{ padding: '6px 12px', fontSize: '0.8rem' }}
+            title="点此一键充能打卡与星云记录"
+          >
+            ⚡ 一键充能打卡
+          </button>
 
           {/* 发音开关 */}
           <button
