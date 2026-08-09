@@ -6,7 +6,7 @@ const AUTH_KEYS = {
   SYNC_PREFIX: 'lexiverse_user_sync_',
 };
 
-/** 获取当前局域网 API 服务器地址 (例如 http://192.168.48.156:3001) */
+/** 获取当前局域网 API 服务器地址 */
 function getApiHost(): string {
   if (typeof window === 'undefined') return 'http://localhost:3001';
   const hostname = window.location.hostname;
@@ -38,95 +38,117 @@ export function setCurrentUser(user: UserAccount | null): void {
   }
 }
 
-/** 注册账号 */
-export async function registerAccount(username: string, password: string): Promise<{ success: boolean; message: string }> {
-  if (isDemoEnv()) {
-    return {
-      success: false,
-      message: '🚫 GitHub Pages 演示环境为 Demo 体验线，禁止注册账号！请按照 README 在本地/局域网环境运行以解锁全功能账号系统。',
-    };
-  }
-
-  const cleanName = username.trim();
-  if (!cleanName || cleanName.length < 3) {
-    return { success: false, message: '用户名至少需要 3 个字符' };
-  }
-
-  if (!password || password.length < 4) {
-    return { success: false, message: '密码至少需要 4 位字符' };
-  }
-
+/** 获取本地账号数据库 */
+function getUsersDb(): Record<string, { username: string; passwordHash: string; createdAt: string }> {
   try {
-    // 优先尝试向局域网 3001 API 服务器注册
-    const res = await fetch(`${getApiHost()}/api/register`, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ username: cleanName, password }),
-    });
-    const data = await res.json();
-    if (res.ok && data.success) {
-      const userAccount: UserAccount = { username: cleanName, createdAt: new Date().toISOString() };
-      setCurrentUser(userAccount);
-      return { success: true, message: '🎉 局域网真账号注册成功并已自动登录！' };
-    }
-    return { success: false, message: data.message || '注册失败' };
-  } catch (err) {
-    // 平滑降级至 LocalStorage
-    const db = getUsersDb();
-    if (db[cleanName.toLowerCase()]) {
-      return { success: false, message: '该用户名已被注册' };
-    }
-    db[cleanName.toLowerCase()] = {
-      username: cleanName,
-      passwordHash: btoa(password),
-      createdAt: new Date().toISOString(),
-    };
-    localStorage.setItem(AUTH_KEYS.USERS_DB, JSON.stringify(db));
-    setCurrentUser({ username: cleanName, createdAt: new Date().toISOString() });
-    return { success: true, message: '🎉 本地账号注册成功并已登录！' };
+    const raw = localStorage.getItem(AUTH_KEYS.USERS_DB);
+    return raw ? JSON.parse(raw) : {};
+  } catch (e) {
+    return {};
   }
 }
 
-/** 登录账号 */
+/** 注册账号 (双写机制：本地 LocalStorage + 局域网 3001 API) */
+export async function registerAccount(username: string, password: string): Promise<{ success: boolean; message: string }> {
+  const cleanName = username.trim();
+  if (!cleanName || cleanName.length < 2) {
+    return { success: false, message: '用户名至少需要 2 个字符' };
+  }
+
+  if (!password || password.length < 3) {
+    return { success: false, message: '密码至少需要 3 位字符' };
+  }
+
+  const lowerName = cleanName.toLowerCase();
+  const db = getUsersDb();
+
+  if (db[lowerName]) {
+    return { success: false, message: '该用户名已被注册，请直接登录' };
+  }
+
+  // 1. 先写入本地 LocalStorage，保障本地与手机端 100% 账号存在
+  const newUser = {
+    username: cleanName,
+    passwordHash: btoa(password),
+    createdAt: new Date().toISOString(),
+  };
+  db[lowerName] = newUser;
+  localStorage.setItem(AUTH_KEYS.USERS_DB, JSON.stringify(db));
+
+  // 2. 尝试向局域网 3001 端口服务同步注册
+  if (!isDemoEnv()) {
+    try {
+      await fetch(`${getApiHost()}/api/register`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ username: cleanName, password }),
+      });
+    } catch (e) {
+      // 忽略 3001 失败，依赖本地存根
+    }
+  }
+
+  // 自动登录
+  const userAccount: UserAccount = { username: cleanName, createdAt: newUser.createdAt };
+  setCurrentUser(userAccount);
+
+  return { success: true, message: '🎉 账号注册成功并已自动登录！' };
+}
+
+/** 登录账号 (多重校验与备份恢复) */
 export async function loginAccount(username: string, password: string): Promise<{ success: boolean; message: string }> {
   const cleanName = username.trim();
-
-  try {
-    // 优先向局域网 3001 API 服务器校验登录
-    const res = await fetch(`${getApiHost()}/api/login`, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ username: cleanName, password }),
-    });
-    const data = await res.json();
-    if (res.ok && data.success) {
-      setCurrentUser(data.user);
-      if (data.syncData) {
-        // 如果服务器上有最新打卡数据，同步保存到浏览器并恢复
-        if (data.syncData.records) localStorage.setItem('lexiverse_word_records_v1', JSON.stringify(data.syncData.records));
-        if (data.syncData.activities) localStorage.setItem('lexiverse_daily_activities_v1', JSON.stringify(data.syncData.activities));
-        if (data.syncData.badges) localStorage.setItem('lexiverse_badges_v1', JSON.stringify(data.syncData.badges));
-      }
-      return { success: true, message: `Welcome back, ${data.user.username}!` };
-    }
-    return { success: false, message: data.message || '登录失败' };
-  } catch (err) {
-    // 平滑降级至 LocalStorage
-    const db = getUsersDb();
-    const found = db[cleanName.toLowerCase()];
-    if (!found) {
-      return { success: false, message: '账号不存在，请先注册账号' };
-    }
-    if (found.passwordHash !== btoa(password)) {
-      return { success: false, message: '密码错误' };
-    }
-    setCurrentUser({ username: found.username, createdAt: found.createdAt });
-    loadUserSyncedData(found.username);
-    return { success: true, message: `Welcome back, ${found.username}!` };
+  if (!cleanName) {
+    return { success: false, message: '请输入用户名' };
   }
+
+  const lowerName = cleanName.toLowerCase();
+  const db = getUsersDb();
+  let foundUser = db[lowerName];
+
+  // 1. 尝试从局域网 3001 API 获取最新账号与数据
+  if (!isDemoEnv()) {
+    try {
+      const res = await fetch(`${getApiHost()}/api/login`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ username: cleanName, password }),
+      });
+      const data = await res.json();
+      if (res.ok && data.success) {
+        setCurrentUser(data.user);
+        if (data.syncData) {
+          if (data.syncData.records) localStorage.setItem('lexiverse_word_records_v1', JSON.stringify(data.syncData.records));
+          if (data.syncData.activities) localStorage.setItem('lexiverse_daily_activities_v1', JSON.stringify(data.syncData.activities));
+          if (data.syncData.badges) localStorage.setItem('lexiverse_badges_v1', JSON.stringify(data.syncData.badges));
+        }
+        // 反向写入本地数据库补全存根
+        db[lowerName] = { username: data.user.username, passwordHash: btoa(password), createdAt: data.user.createdAt };
+        localStorage.setItem(AUTH_KEYS.USERS_DB, JSON.stringify(db));
+        return { success: true, message: `Welcome back, ${data.user.username}!` };
+      }
+    } catch (e) {
+      // 忽略 API 报错，走下面的 LocalStorage 兜底
+    }
+  }
+
+  // 2. 本地数据库兜底校验
+  if (!foundUser) {
+    return { success: false, message: '账号不存在，请先点击【注册账号】' };
+  }
+
+  if (foundUser.passwordHash !== btoa(password)) {
+    return { success: false, message: '密码错误，请重新输入' };
+  }
+
+  const userAccount: UserAccount = { username: foundUser.username, createdAt: foundUser.createdAt };
+  setCurrentUser(userAccount);
+  loadUserSyncedData(foundUser.username);
+
+  return { success: true, message: `Welcome back, ${foundUser.username}!` };
 }
 
-/** 将当前学习进度保存到服务器与本地 */
+/** 保存当前数据 */
 export async function saveUserSyncedData(
   username: string,
   records: Record<string, UserWordRecord>,
@@ -135,7 +157,6 @@ export async function saveUserSyncedData(
 ): Promise<void> {
   if (!username) return;
 
-  // 本地离线备份
   const payload: SyncPayload = {
     username,
     records,
@@ -145,22 +166,14 @@ export async function saveUserSyncedData(
   };
   localStorage.setItem(`${AUTH_KEYS.SYNC_PREFIX}${username.toLowerCase()}`, JSON.stringify(payload));
 
-  // 向局域网 Server 同步
-  try {
-    await fetch(`${getApiHost()}/api/sync`, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(payload),
-    });
-  } catch (e) {}
-}
-
-function getUsersDb(): Record<string, { username: string; passwordHash: string; createdAt: string }> {
-  try {
-    const raw = localStorage.getItem(AUTH_KEYS.USERS_DB);
-    return raw ? JSON.parse(raw) : {};
-  } catch (e) {
-    return {};
+  if (!isDemoEnv()) {
+    try {
+      await fetch(`${getApiHost()}/api/sync`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload),
+      });
+    } catch (e) {}
   }
 }
 

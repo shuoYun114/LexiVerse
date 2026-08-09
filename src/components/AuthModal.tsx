@@ -27,10 +27,6 @@ export const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose, onAuthSuc
     setSuccessMsg('');
 
     if (isRegisterMode) {
-      if (isDemo) {
-        setErrorMsg('🚫 GitHub Pages 静态演示 Demo 不支持注册账号！请按照 README 在本地/局域网运行应用。');
-        return;
-      }
       if (password !== confirmPassword) {
         setErrorMsg('两次输入的密码不一致');
         return;
@@ -41,7 +37,7 @@ export const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose, onAuthSuc
         setTimeout(() => {
           onAuthSuccess({ username, createdAt: new Date().toISOString() });
           onClose();
-        }, 1000);
+        }, 800);
       } else {
         setErrorMsg(res.message);
       }
@@ -52,7 +48,7 @@ export const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose, onAuthSuc
         setTimeout(() => {
           onAuthSuccess({ username, createdAt: new Date().toISOString() });
           onClose();
-        }, 1000);
+        }, 800);
       } else {
         setErrorMsg(res.message);
       }
@@ -152,10 +148,9 @@ export const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose, onAuthSuc
               color: '#fff',
               fontWeight: 600,
               cursor: 'pointer',
-              opacity: isDemo ? 0.6 : 1,
             }}
           >
-            注册账号 {isDemo ? '(演示禁用)' : ''}
+            注册账号
           </button>
         </div>
 
@@ -184,7 +179,6 @@ export const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose, onAuthSuc
               onChange={(e) => setUsername(e.target.value)}
               placeholder="请输入用户名..."
               required
-              disabled={isDemo && isRegisterMode}
               style={{
                 width: '100%',
                 padding: '10px 14px',
@@ -207,7 +201,6 @@ export const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose, onAuthSuc
               onChange={(e) => setPassword(e.target.value)}
               placeholder="请输入密码..."
               required
-              disabled={isDemo && isRegisterMode}
               style={{
                 width: '100%',
                 padding: '10px 14px',
@@ -231,7 +224,6 @@ export const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose, onAuthSuc
                 onChange={(e) => setConfirmPassword(e.target.value)}
                 placeholder="再次输入密码..."
                 required
-                disabled={isDemo && isRegisterMode}
                 style={{
                   width: '100%',
                   padding: '10px 14px',
@@ -256,9 +248,8 @@ export const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose, onAuthSuc
             </button>
             <button
               type="submit"
-              disabled={isDemo && isRegisterMode}
               className="cyber-button cyber-button-primary"
-              style={{ flex: 1, padding: '10px', opacity: isDemo && isRegisterMode ? 0.5 : 1 }}
+              style={{ flex: 1, padding: '10px' }}
             >
               <LogIn size={18} /> {isRegisterMode ? '立即注册' : '登录账户'}
             </button>
