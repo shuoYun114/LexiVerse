@@ -1,0 +1,90 @@
+[
+  {
+    "id": "cet6-001",
+    "word": "synchronize",
+    "phonetic": "/ˈsɪŋkrənaɪz/",
+    "definition": "v. 使同步；同时发生",
+    "translation": "使同步",
+    "example": "All local data will automatically synchronize with cloud storage.",
+    "exampleTranslation": "所有本地数据都将自动与云端存储同步。",
+    "difficulty": 3,
+    "tags": ["技术", "动词"]
+  },
+  {
+    "id": "cet6-002",
+    "word": "paradigm",
+    "phonetic": "/ˈpærədaɪm/",
+    "definition": "n. 范式；典范；架构模型",
+    "translation": "范式，模式",
+    "example": "Spaced repetition represents a shift in learning paradigms.",
+    "exampleTranslation": "间隔复习代表着学习范式的转变。",
+    "difficulty": 4,
+    "tags": ["学术", "概念"]
+  },
+  {
+    "id": "cet6-003",
+    "word": "clandestine",
+    "phonetic": "/klænˈdestɪn/",
+    "definition": "adj. 秘密的；暗中的",
+    "translation": "暗中的，秘密的",
+    "example": "They held a clandestine meeting in the cyber district.",
+    "exampleTranslation": "他们在赛博街区举行了一场秘密会议。",
+    "difficulty": 4,
+    "tags": ["形容词", "文学"]
+  },
+  {
+    "id": "cet6-004",
+    "word": "ephemeral",
+    "phonetic": "/ɪˈfemərəl/",
+    "definition": "adj. 转瞬即逝的；短暂的",
+    "translation": "转瞬即逝的",
+    "example": "Fame in the digital era can be strikingly ephemeral.",
+    "exampleTranslation": "数字时代的声名可能极其转瞬即逝。",
+    "difficulty": 5,
+    "tags": ["哲学", "形容词"]
+  },
+  {
+    "id": "cet6-005",
+    "word": "ubiquitous",
+    "phonetic": "/juːˈbɪkwɪtəs/",
+    "definition": "adj. 无所不在的；普遍存在的",
+    "translation": "无所不在的",
+    "example": "Smartphones have become ubiquitous in modern society.",
+    "exampleTranslation": "智能手机在现代社会已变得无处不在。",
+    "difficulty": 4,
+    "tags": ["高频词", "学术"]
+  },
+  {
+    "id": "cet6-006",
+    "word": "juxtapose",
+    "phonetic": "/ˌdʒʌkstəˈpəʊz/",
+    "definition": "v. 并置；对照",
+    "translation": "并列放置，对照",
+    "example": "The artwork juxtaposes neon lights with ancient ruins.",
+    "exampleTranslation": "该艺术品将霓虹灯光与古老遗迹并置对照。",
+    "difficulty": 5,
+    "tags": ["艺术", "动词"]
+  },
+  {
+    "id": "cet6-007",
+    "word": "meticulous",
+    "phonetic": "/mɪˈtɪkjələs/",
+    "definition": "adj. 一丝不苟的；极仔细的",
+    "translation": "严谨的，一丝不苟的",
+    "example": "Crafting clean code requires meticulous attention to detail.",
+    "exampleTranslation": "编写干净的代码需要对细节一丝不苟。",
+    "difficulty": 3,
+    "tags": ["品质", "态度"]
+  },
+  {
+    "id": "cet6-008",
+    "word": "quintessential",
+    "phonetic": "/ˌkwɪntɪˈsenʃl/",
+    "definition": "adj. 最典型的；精髓的",
+    "translation": "最典型的，精髓的",
+    "example": "LexiVerse is the quintessential cyberpunk vocabulary tool.",
+    "exampleTranslation": "LexiVerse 是最典型的赛博朋克词汇应用。",
+    "difficulty": 5,
+    "tags": ["高级形容词"]
+  }
+]

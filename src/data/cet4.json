@@ -1,0 +1,112 @@
+[
+  {
+    "id": "cet4-001",
+    "word": "nebula",
+    "phonetic": "/ˈnebjələ/",
+    "definition": "n. 星云",
+    "translation": "星云",
+    "example": "The Orion Nebula is a picture of incredible cosmic beauty.",
+    "exampleTranslation": "猎户座星云呈现出一幅不可思议的宇宙之美。",
+    "difficulty": 2,
+    "tags": ["天文学", "科幻"]
+  },
+  {
+    "id": "cet4-002",
+    "word": "algorithm",
+    "phonetic": "/ˈælɡərɪðəm/",
+    "definition": "n. 算法",
+    "translation": "算法",
+    "example": "The Ebbinghaus algorithm calculates the optimal review interval.",
+    "exampleTranslation": "艾宾浩斯算法计算最佳的复习间隔。",
+    "difficulty": 3,
+    "tags": ["计算机", "数学"]
+  },
+  {
+    "id": "cet4-003",
+    "word": "horizon",
+    "phonetic": "/həˈraɪzn/",
+    "definition": "n. 地平线；眼界；范围",
+    "translation": "地平线，眼界",
+    "example": "Reading daily broadens your intellectual horizons.",
+    "exampleTranslation": "每天阅读能拓宽你的知识视野。",
+    "difficulty": 1,
+    "tags": ["常用词"]
+  },
+  {
+    "id": "cet4-004",
+    "word": "cyberpunk",
+    "phonetic": "/ˈsaɪbəpʌŋk/",
+    "definition": "n. 赛博朋克（科幻小说流派）",
+    "translation": "赛博朋克",
+    "example": "Neon lights illuminated the futuristic cyberpunk metropolis.",
+    "exampleTranslation": "霓虹灯照亮了这座未来的赛博朋克大都市。",
+    "difficulty": 3,
+    "tags": ["科技", "文化"]
+  },
+  {
+    "id": "cet4-005",
+    "word": "retention",
+    "phonetic": "/rɪˈtenʃn/",
+    "definition": "n. 保留；记忆力；滞留",
+    "translation": "保留，记忆力",
+    "example": "Spaced repetition techniques dramatically improve memory retention.",
+    "exampleTranslation": "间隔复习技术能显著提升记忆保留率。",
+    "difficulty": 2,
+    "tags": ["心理学", "学习"]
+  },
+  {
+    "id": "cet4-006",
+    "word": "luminous",
+    "phonetic": "/ˈluːmɪnəs/",
+    "definition": "adj. 发光的；明亮的",
+    "translation": "发光的，夜光的",
+    "example": "The star emitted a soft, luminous glow in the dark sky.",
+    "exampleTranslation": "那颗恒星在黑暗的夜空中散发出柔和的发光微芒。",
+    "difficulty": 3,
+    "tags": ["自然", "描述词"]
+  },
+  {
+    "id": "cet4-007",
+    "word": "resilience",
+    "phonetic": "/rɪˈzɪliəns/",
+    "definition": "n. 恢复力；弹力；顺应力",
+    "translation": "复原力，韧性",
+    "example": "Continuous learning builds mental resilience against challenges.",
+    "exampleTranslation": "持续学习能够构建应对挑战的心态韧性。",
+    "difficulty": 4,
+    "tags": ["品质", "心理学"]
+  },
+  {
+    "id": "cet4-008",
+    "word": "velocity",
+    "phonetic": "/vəˈlɒsəti/",
+    "definition": "n. 速度；速率",
+    "translation": "速度",
+    "example": "Light travels at an unfathomable velocity through the void.",
+    "exampleTranslation": "光以难以想象的高速穿越虚空。",
+    "difficulty": 2,
+    "tags": ["物理", "运动"]
+  },
+  {
+    "id": "cet4-009",
+    "word": "catalyst",
+    "phonetic": "/ˈkætəlɪst/",
+    "definition": "n. 催化剂；促使变化的人或事物",
+    "translation": "催化剂，促进因素",
+    "example": "Failure can act as a catalyst for future success.",
+    "exampleTranslation": "失败可以成为未来成功的催化剂。",
+    "difficulty": 3,
+    "tags": ["化学", "比喻"]
+  },
+  {
+    "id": "cet4-010",
+    "word": "spectrum",
+    "phonetic": "/ˈspektrəm/",
+    "definition": "n. 光谱；范围；系列",
+    "translation": "光谱，范围",
+    "example": "The dashboard displays a wide spectrum of memory metrics.",
+    "exampleTranslation": "看板展示了广阔维度的记忆指标。",
+    "difficulty": 2,
+    "tags": ["物理", "数据"]
+  }
+]

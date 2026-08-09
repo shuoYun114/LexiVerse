@@ -1,0 +1,90 @@
+[
+  {
+    "id": "dev-001",
+    "word": "asynchronous",
+    "phonetic": "/eɪˈsɪŋkrənəs/",
+    "definition": "adj. 异步的",
+    "translation": "异步的",
+    "example": "Promises in JavaScript allow handling asynchronous operations cleanly.",
+    "exampleTranslation": "JavaScript 中的 Promise 允许优雅地处理异步操作。",
+    "difficulty": 3,
+    "tags": ["开发", "前端"]
+  },
+  {
+    "id": "dev-002",
+    "word": "deprecated",
+    "phonetic": "/ˈdeprəkeɪtɪd/",
+    "definition": "adj. 已废弃的；不推荐使用的",
+    "translation": "已废弃的",
+    "example": "This method has been deprecated; use the new V2 API instead.",
+    "exampleTranslation": "该方法已被废弃；请改用全新的 V2 API。",
+    "difficulty": 2,
+    "tags": ["API", "规范"]
+  },
+  {
+    "id": "dev-003",
+    "word": "idempotent",
+    "phonetic": "/ˌaɪdəmˈpəʊtənt/",
+    "definition": "adj. 幂等的（多次执行结果一致）",
+    "translation": "幂等的",
+    "example": "HTTP GET and PUT requests should be idempotent by design.",
+    "exampleTranslation": "根据设计规范，HTTP GET 和 PUT 请求应当是幂等的。",
+    "difficulty": 4,
+    "tags": ["后端", "架构"]
+  },
+  {
+    "id": "dev-004",
+    "word": "polymorphism",
+    "phonetic": "/ˌpɒliˈmɔːfɪzəm/",
+    "definition": "n. 多态性",
+    "translation": "多态性",
+    "example": "Polymorphism enables standard interfaces for varied object types.",
+    "exampleTranslation": "多态性为各种不同对象类型提供了统一的标准接口。",
+    "difficulty": 4,
+    "tags": ["面向对象", "编程"]
+  },
+  {
+    "id": "dev-005",
+    "word": "concurrency",
+    "phonetic": "/kənˈkʌrənsi/",
+    "definition": "n. 并发；并发性",
+    "translation": "并发",
+    "example": "Go channels simplify handling memory access in high concurrency.",
+    "exampleTranslation": "Go channel 简化了在高并发下的内存访问处理。",
+    "difficulty": 3,
+    "tags": ["性能", "系统"]
+  },
+  {
+    "id": "dev-006",
+    "word": "refactor",
+    "phonetic": "/ˌriːˈfæktə/",
+    "definition": "v./n. 重构（代码）",
+    "translation": "重构",
+    "example": "Refactoring code improves readability without altering external behavior.",
+    "exampleTranslation": "重构代码能在不改变外部行为的前提下提升可读性。",
+    "difficulty": 2,
+    "tags": ["重构", "软件工程"]
+  },
+  {
+    "id": "dev-007",
+    "word": "middleware",
+    "phonetic": "/ˈmɪdlweə/",
+    "definition": "n. 中间件",
+    "translation": "中间件",
+    "example": "Authentication middleware intercepts incoming requests to check tokens.",
+    "exampleTranslation": "身份认证中间件会拦截传入请求以检查 Token。",
+    "difficulty": 2,
+    "tags": ["架构", "Web"]
+  },
+  {
+    "id": "dev-008",
+    "word": "serialization",
+    "phonetic": "/ˌsɪəriəlaɪˈzeɪʃn/",
+    "definition": "n. 序列化",
+    "translation": "序列化",
+    "example": "JSON serialization transforms objects into string representations.",
+    "exampleTranslation": "JSON 序列化将对象转换为字符串表达形式。",
+    "difficulty": 3,
+    "tags": ["数据", "格式"]
+  }
+]

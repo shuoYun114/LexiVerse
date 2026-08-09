@@ -1,0 +1,112 @@
+[
+  {
+    "id": "bnu1-001",
+    "word": "lifestyle",
+    "phonetic": "/ˈlaɪfstaɪl/",
+    "definition": "n. 生活方式",
+    "translation": "生活方式",
+    "example": "Adopting a healthy lifestyle reduces stress and improves memory.",
+    "exampleTranslation": "采取健康的生活方式能减轻压力并提升记忆力。",
+    "difficulty": 2,
+    "tags": ["北师大必修一", "Unit 1 Life Choices"]
+  },
+  {
+    "id": "bnu1-002",
+    "word": "challenge",
+    "phonetic": "/ˈtʃælɪndʒ/",
+    "definition": "n./v. 挑战；质疑",
+    "translation": "挑战",
+    "example": "High school life brings many exciting challenges and opportunities.",
+    "exampleTranslation": "高中生活带来了许多令人兴奋的挑战与机遇。",
+    "difficulty": 2,
+    "tags": ["北师大必修一", "Unit 1 Life Choices"]
+  },
+  {
+    "id": "bnu1-003",
+    "word": "schedule",
+    "phonetic": "/ˈʃedjuːl/",
+    "definition": "n. 日程安排；时间表 v. 安排",
+    "translation": "日程表，安排",
+    "example": "A well-planned study schedule helps students manage their time effectively.",
+    "exampleTranslation": "规划良好的学习时间表有助于学生有效地管理时间。",
+    "difficulty": 3,
+    "tags": ["北师大必修一", "Unit 1 Life Choices"]
+  },
+  {
+    "id": "bnu1-004",
+    "word": "admire",
+    "phonetic": "/ədˈmaɪə/",
+    "definition": "v. 钦佩；赞赏",
+    "translation": "钦佩，赞美",
+    "example": "We greatly admire the national heroes for their selfless devotion.",
+    "exampleTranslation": "我们非常钦佩国家英雄们的无私奉献。",
+    "difficulty": 2,
+    "tags": ["北师大必修一", "Unit 2 Heroes"]
+  },
+  {
+    "id": "bnu1-005",
+    "word": "generous",
+    "phonetic": "/ˈdʒenərəs/",
+    "definition": "adj. 慷慨的；大方的；宽宏大量的",
+    "translation": "慷慨的，大方的",
+    "example": "She is generous with her time when helping classmates with English.",
+    "exampleTranslation": "在帮助同学学习英语时，她非常慷慨大方付出时间。",
+    "difficulty": 3,
+    "tags": ["北师大必修一", "Unit 2 Heroes"]
+  },
+  {
+    "id": "bnu1-006",
+    "word": "bravery",
+    "phonetic": "/ˈbreɪvəri/",
+    "definition": "n. 勇敢；无畏",
+    "translation": "勇敢，无畏",
+    "example": "The firefighter was awarded a medal for his extraordinary bravery.",
+    "exampleTranslation": "这位消防员因其非凡的勇敢获颁勋章。",
+    "difficulty": 3,
+    "tags": ["北师大必修一", "Unit 2 Heroes"]
+  },
+  {
+    "id": "bnu1-007",
+    "word": "celebration",
+    "phonetic": "/ˌselɪˈbreɪʃn/",
+    "definition": "n. 庆祝活动；庆典",
+    "translation": "庆祝，庆典",
+    "example": "The Spring Festival is the most important traditional celebration in China.",
+    "exampleTranslation": "春节是中国最重要的传统庆祝节日。",
+    "difficulty": 2,
+    "tags": ["北师大必修一", "Unit 3 Celebration"]
+  },
+  {
+    "id": "bnu1-008",
+    "word": "tradition",
+    "phonetic": "/trəˈdɪʃn/",
+    "definition": "n. 传统；惯例",
+    "translation": "传统",
+    "example": "It is a tradition to gather with family during the Mid-Autumn Festival.",
+    "exampleTranslation": "在中秋节期间与家人团聚是一项传统。",
+    "difficulty": 2,
+    "tags": ["北师大必修一", "Unit 3 Celebration"]
+  },
+  {
+    "id": "bnu1-009",
+    "word": "participate",
+    "phonetic": "/pɑːˈtɪsɪpeɪt/",
+    "definition": "v. 参与；参加 (in)",
+    "translation": "参与，参加",
+    "example": "Students are encouraged to actively participate in class discussions.",
+    "exampleTranslation": "鼓励学生们积极参与课堂讨论。",
+    "difficulty": 3,
+    "tags": ["北师大必修一", "Unit 3 Celebration"]
+  },
+  {
+    "id": "bnu1-010",
+    "word": "inspire",
+    "phonetic": "/ɪnˈspaɪə/",
+    "definition": "v. 鼓舞；激励；赋予灵感",
+    "translation": "鼓舞，激励",
+    "example": "Great teachers inspire students to pursue their dreams with confidence.",
+    "exampleTranslation": "优秀的老师能鼓舞学生充满自信地追求梦想。",
+    "difficulty": 2,
+    "tags": ["北师大必修一", "Unit 2 Heroes"]
+  }
+]

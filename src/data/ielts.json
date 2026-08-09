@@ -1,0 +1,68 @@
+[
+  {
+    "id": "ielts-001",
+    "word": "ambiguity",
+    "phonetic": "/ˌæmbɪˈɡjuːəti/",
+    "definition": "n. 模棱两可；不明确",
+    "translation": "模棱两可，歧义",
+    "example": "Clear documentation eliminates ambiguity in software architecture.",
+    "exampleTranslation": "清晰的文档消除了软件架构中的模棱两可。",
+    "difficulty": 3,
+    "tags": ["雅思高频", "学术"]
+  },
+  {
+    "id": "ielts-002",
+    "word": "cognitive",
+    "phonetic": "/ˈkɒɡnətɪv/",
+    "definition": "adj. 认知的；感知的",
+    "translation": "认知的",
+    "example": "Interactive games lower the cognitive load during vocabulary retention.",
+    "exampleTranslation": "互动游戏减轻了词汇记忆过程中的认知负荷。",
+    "difficulty": 3,
+    "tags": ["心理学", "雅思"]
+  },
+  {
+    "id": "ielts-003",
+    "word": "fluctuation",
+    "phonetic": "/ˌflʌktʃuˈeɪʃn/",
+    "definition": "n. 波动；起伏",
+    "translation": "波动，起伏",
+    "example": "The heat map tracks daily fluctuations in learning output.",
+    "exampleTranslation": "热力图追踪每日学习产出的起伏波动。",
+    "difficulty": 2,
+    "tags": ["图表描述", "雅思写作"]
+  },
+  {
+    "id": "ielts-004",
+    "word": "extrapolate",
+    "phonetic": "/ɪkˈstræpəleɪt/",
+    "definition": "v. 推断；外推",
+    "translation": "推断，外推",
+    "example": "We can extrapolate future growth trends from historical activity.",
+    "exampleTranslation": "我们可以根据历史打卡记录推断未来的增长趋势。",
+    "difficulty": 4,
+    "tags": ["学术", "数学"]
+  },
+  {
+    "id": "ielts-005",
+    "word": "subsequent",
+    "phonetic": "/ˈsʌbsɪkwənt/",
+    "definition": "adj. 随后的；后来的",
+    "translation": "随后的，后来的",
+    "example": "Subsequent review sessions build long-term memory traces.",
+    "exampleTranslation": "随后的复习环节构建了长期记忆痕迹。",
+    "difficulty": 2,
+    "tags": ["逻辑连词", "写作"]
+  },
+  {
+    "id": "ielts-006",
+    "word": "prerequisite",
+    "phonetic": "/ˌpriːˈrekwəzɪt/",
+    "definition": "n. 先决条件；前提",
+    "translation": "先决条件，前提",
+    "example": "Consistency is a prerequisite for mastering any foreign language.",
+    "exampleTranslation": "持之以恒是掌握任何外语的先决条件。",
+    "difficulty": 4,
+    "tags": ["高频名", "写作"]
+  }
+]
