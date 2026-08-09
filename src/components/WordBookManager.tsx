@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Word, UserWordRecord, BookCategory } from '../types';
 import { exportUserData, importUserData, resetAllData } from '../utils/storage';
-import { speakWord } from '../utils/tts';
+import { speakWord, getWordAccent } from '../utils/tts';
 import { Search, Download, Upload, Volume2, Database, CheckCircle, Clock } from 'lucide-react';
 
 interface WordBookManagerProps {
@@ -210,7 +210,7 @@ export const WordBookManager: React.FC<WordBookManagerProps> = ({
 
                   <td style={{ padding: '14px 16px', textAlign: 'right' }}>
                     <button
-                      onClick={() => speakWord(word.word)}
+                      onClick={() => speakWord(word.word, getWordAccent(word))}
                       className="cyber-button"
                       style={{ padding: '6px 10px', fontSize: '0.75rem' }}
                     >

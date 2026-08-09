@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Word, UserWordRecord } from '../types';
 import { calculateSM2, formatNextReviewLabel } from '../utils/ebbinghaus';
 import { recordDailyActivity, saveUserWordRecord } from '../utils/storage';
-import { speakWord } from '../utils/tts';
+import { speakWord, getWordAccent } from '../utils/tts';
 import confetti from 'canvas-confetti';
 import { Volume2, RotateCw, CheckCircle2, Eye, ChevronRight } from 'lucide-react';
 
@@ -29,7 +29,7 @@ export const FlashcardEngine: React.FC<FlashcardEngineProps> = ({
   // 自动播放音频
   useEffect(() => {
     if (currentWord && soundEnabled && !isFlipped) {
-      speakWord(currentWord.word);
+      speakWord(currentWord.word, getWordAccent(currentWord));
     }
   }, [currentIndex, soundEnabled]);
 
@@ -121,7 +121,7 @@ export const FlashcardEngine: React.FC<FlashcardEngineProps> = ({
               <button
                 onClick={(e) => {
                   e.stopPropagation();
-                  speakWord(currentWord.word);
+                  speakWord(currentWord.word, getWordAccent(currentWord));
                 }}
                 className="cyber-button"
                 style={{ padding: '6px 12px', borderRadius: '20px' }}
@@ -168,7 +168,7 @@ export const FlashcardEngine: React.FC<FlashcardEngineProps> = ({
               <button
                 onClick={(e) => {
                   e.stopPropagation();
-                  speakWord(currentWord.word);
+                  speakWord(currentWord.word, getWordAccent(currentWord));
                 }}
                 className="cyber-button"
                 style={{ padding: '6px 12px' }}

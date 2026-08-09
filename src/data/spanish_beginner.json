@@ -1,0 +1,112 @@
+[
+  {
+    "id": "es-001",
+    "word": "Hola",
+    "phonetic": "/ˈo.la/",
+    "definition": "interj. 你好；嗨",
+    "translation": "你好",
+    "example": "¡Hola! ¿Cómo estás hoy?",
+    "exampleTranslation": "你好！你今天怎么样？",
+    "difficulty": 1,
+    "tags": ["西班牙语入门", "基础打招呼"]
+  },
+  {
+    "id": "es-002",
+    "word": "Gracias",
+    "phonetic": "/ˈɡɾa.sjas/",
+    "definition": "n./interj. 谢谢；感谢",
+    "translation": "谢谢",
+    "example": "Muchas gracias por tu ayuda.",
+    "exampleTranslation": "非常感谢你的帮助。",
+    "difficulty": 1,
+    "tags": ["西班牙语入门", "日常礼貌"]
+  },
+  {
+    "id": "es-003",
+    "word": "Por favor",
+    "phonetic": "/poɾ faˈβoɾ/",
+    "definition": "phrase 请；求求你",
+    "translation": "请",
+    "example": "Un café, por favor.",
+    "exampleTranslation": "请给我一杯咖啡。",
+    "difficulty": 1,
+    "tags": ["西班牙语入门", "日常礼貌"]
+  },
+  {
+    "id": "es-004",
+    "word": "Buenos días",
+    "phonetic": "/ˈbwe.nos ˈdi.as/",
+    "definition": "phrase 早上好；日安",
+    "translation": "早上好",
+    "example": "¡Buenos días a todos!",
+    "exampleTranslation": "大家早上好！",
+    "difficulty": 1,
+    "tags": ["西班牙语入门", "基础打招呼"]
+  },
+  {
+    "id": "es-005",
+    "word": "Amigo",
+    "phonetic": "/aˈmi.ɣo/",
+    "definition": "n. 朋友；好友",
+    "translation": "朋友",
+    "example": "Él es mi mejor amigo.",
+    "exampleTranslation": "他是我的好朋友。",
+    "difficulty": 1,
+    "tags": ["西班牙语入门", "人物社交"]
+  },
+  {
+    "id": "es-006",
+    "word": "Aprender",
+    "phonetic": "/a.pɾenˈdeɾ/",
+    "definition": "v. 学习；掌握",
+    "translation": "学习",
+    "example": "Me gusta aprender palabras nuevas.",
+    "exampleTranslation": "我喜欢学习新单词。",
+    "difficulty": 2,
+    "tags": ["西班牙语入门", "学习动词"]
+  },
+  {
+    "id": "es-007",
+    "word": "Libro",
+    "phonetic": "/ˈli.βɾo/",
+    "definition": "n. 书；书籍",
+    "translation": "书本",
+    "example": "Estoy leyendo un libro excelente.",
+    "exampleTranslation": "我正在读一本优秀的书。",
+    "difficulty": 1,
+    "tags": ["西班牙语入门", "日常用品"]
+  },
+  {
+    "id": "es-008",
+    "word": "Mundo",
+    "phonetic": "/ˈmun.do/",
+    "definition": "n. 世界；地球",
+    "translation": "世界",
+    "example": "El mundo está lleno de oportunidades.",
+    "exampleTranslation": "世界充满了机遇。",
+    "difficulty": 2,
+    "tags": ["西班牙语入门", "基础名词"]
+  },
+  {
+    "id": "es-009",
+    "word": "Tiempo",
+    "phonetic": "/ˈtjem.po/",
+    "definition": "n. 时间；天气",
+    "translation": "时间",
+    "example": "No tenemos mucho tiempo.",
+    "exampleTranslation": "我们没有太多时间了。",
+    "difficulty": 2,
+    "tags": ["西班牙语入门", "基础概念"]
+  },
+  {
+    "id": "es-010",
+    "word": "Sol",
+    "phonetic": "/sol/",
+    "definition": "n. 太阳；阳光",
+    "translation": "太阳",
+    "example": "El sol brilla en el cielo.",
+    "exampleTranslation": "太阳在空中闪耀。",
+    "difficulty": 1,
+    "tags": ["西班牙语入门", "自然天体"]
+  }
+]

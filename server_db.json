@@ -1,4 +1,2853 @@
 {
   "users": {},
-  "syncData": {}
+  "syncData": {
+    "syhx": {
+      "records": {
+        "cet4-001": {
+          "wordId": "cet4-001",
+          "repetition": 5,
+          "interval": 21,
+          "easinessFactor": 2.5,
+          "nextReviewDate": "2026-08-30",
+          "lastReviewedDate": "2026-08-09",
+          "status": "mastered",
+          "totalReviews": 6,
+          "correctReviews": 6
+        },
+        "cet4-002": {
+          "wordId": "cet4-002",
+          "repetition": 5,
+          "interval": 21,
+          "easinessFactor": 2.5,
+          "nextReviewDate": "2026-08-30",
+          "lastReviewedDate": "2026-08-09",
+          "status": "mastered",
+          "totalReviews": 6,
+          "correctReviews": 6
+        },
+        "cet4-003": {
+          "wordId": "cet4-003",
+          "repetition": 5,
+          "interval": 21,
+          "easinessFactor": 2.5,
+          "nextReviewDate": "2026-08-30",
+          "lastReviewedDate": "2026-08-09",
+          "status": "mastered",
+          "totalReviews": 6,
+          "correctReviews": 6
+        },
+        "cet4-004": {
+          "wordId": "cet4-004",
+          "repetition": 5,
+          "interval": 21,
+          "easinessFactor": 2.5,
+          "nextReviewDate": "2026-08-30",
+          "lastReviewedDate": "2026-08-09",
+          "status": "mastered",
+          "totalReviews": 6,
+          "correctReviews": 6
+        },
+        "cet4-005": {
+          "wordId": "cet4-005",
+          "repetition": 5,
+          "interval": 21,
+          "easinessFactor": 2.5,
+          "nextReviewDate": "2026-08-30",
+          "lastReviewedDate": "2026-08-09",
+          "status": "mastered",
+          "totalReviews": 6,
+          "correctReviews": 6
+        },
+        "cet4-006": {
+          "wordId": "cet4-006",
+          "repetition": 5,
+          "interval": 21,
+          "easinessFactor": 2.5,
+          "nextReviewDate": "2026-08-30",
+          "lastReviewedDate": "2026-08-09",
+          "status": "mastered",
+          "totalReviews": 6,
+          "correctReviews": 6
+        },
+        "cet4-007": {
+          "wordId": "cet4-007",
+          "repetition": 5,
+          "interval": 21,
+          "easinessFactor": 2.5,
+          "nextReviewDate": "2026-08-30",
+          "lastReviewedDate": "2026-08-09",
+          "status": "mastered",
+          "totalReviews": 6,
+          "correctReviews": 6
+        },
+        "cet4-008": {
+          "wordId": "cet4-008",
+          "repetition": 5,
+          "interval": 21,
+          "easinessFactor": 2.5,
+          "nextReviewDate": "2026-08-30",
+          "lastReviewedDate": "2026-08-09",
+          "status": "mastered",
+          "totalReviews": 6,
+          "correctReviews": 6
+        },
+        "bnu1-001": {
+          "wordId": "bnu1-001",
+          "repetition": 1,
+          "interval": 1,
+          "easinessFactor": 2.6,
+          "nextReviewDate": "2026-08-10",
+          "lastReviewedDate": "2026-08-09",
+          "status": "reviewing",
+          "totalReviews": 1,
+          "correctReviews": 1
+        },
+        "bnu1-002": {
+          "wordId": "bnu1-002",
+          "repetition": 1,
+          "interval": 1,
+          "easinessFactor": 2.6,
+          "nextReviewDate": "2026-08-10",
+          "lastReviewedDate": "2026-08-09",
+          "status": "reviewing",
+          "totalReviews": 1,
+          "correctReviews": 1
+        },
+        "bnu1-003": {
+          "wordId": "bnu1-003",
+          "repetition": 1,
+          "interval": 1,
+          "easinessFactor": 2.6,
+          "nextReviewDate": "2026-08-10",
+          "lastReviewedDate": "2026-08-09",
+          "status": "reviewing",
+          "totalReviews": 1,
+          "correctReviews": 1
+        },
+        "bnu1-004": {
+          "wordId": "bnu1-004",
+          "repetition": 1,
+          "interval": 1,
+          "easinessFactor": 2.6,
+          "nextReviewDate": "2026-08-10",
+          "lastReviewedDate": "2026-08-09",
+          "status": "reviewing",
+          "totalReviews": 1,
+          "correctReviews": 1
+        },
+        "bnu1-005": {
+          "wordId": "bnu1-005",
+          "repetition": 1,
+          "interval": 1,
+          "easinessFactor": 2.6,
+          "nextReviewDate": "2026-08-10",
+          "lastReviewedDate": "2026-08-09",
+          "status": "reviewing",
+          "totalReviews": 1,
+          "correctReviews": 1
+        },
+        "bnu1-006": {
+          "wordId": "bnu1-006",
+          "repetition": 1,
+          "interval": 1,
+          "easinessFactor": 2.6,
+          "nextReviewDate": "2026-08-10",
+          "lastReviewedDate": "2026-08-09",
+          "status": "reviewing",
+          "totalReviews": 1,
+          "correctReviews": 1
+        },
+        "bnu1-007": {
+          "wordId": "bnu1-007",
+          "repetition": 1,
+          "interval": 1,
+          "easinessFactor": 2.6,
+          "nextReviewDate": "2026-08-10",
+          "lastReviewedDate": "2026-08-09",
+          "status": "reviewing",
+          "totalReviews": 1,
+          "correctReviews": 1
+        },
+        "bnu1-008": {
+          "wordId": "bnu1-008",
+          "repetition": 1,
+          "interval": 1,
+          "easinessFactor": 2.6,
+          "nextReviewDate": "2026-08-10",
+          "lastReviewedDate": "2026-08-09",
+          "status": "reviewing",
+          "totalReviews": 1,
+          "correctReviews": 1
+        },
+        "bnu1-009": {
+          "wordId": "bnu1-009",
+          "repetition": 1,
+          "interval": 1,
+          "easinessFactor": 2.6,
+          "nextReviewDate": "2026-08-10",
+          "lastReviewedDate": "2026-08-09",
+          "status": "reviewing",
+          "totalReviews": 1,
+          "correctReviews": 1
+        },
+        "bnu1-010": {
+          "wordId": "bnu1-010",
+          "repetition": 1,
+          "interval": 1,
+          "easinessFactor": 2.6,
+          "nextReviewDate": "2026-08-10",
+          "lastReviewedDate": "2026-08-09",
+          "status": "reviewing",
+          "totalReviews": 1,
+          "correctReviews": 1
+        },
+        "es-001": {
+          "wordId": "es-001",
+          "repetition": 1,
+          "interval": 1,
+          "easinessFactor": 2.6,
+          "nextReviewDate": "2026-08-10",
+          "lastReviewedDate": "2026-08-09",
+          "status": "reviewing",
+          "totalReviews": 1,
+          "correctReviews": 1
+        }
+      },
+      "activities": {
+        "2026-07-27": {
+          "date": "2026-07-27",
+          "count": 19,
+          "reviewCount": 11,
+          "masteredCount": 7,
+          "gameScore": 481
+        },
+        "2026-07-28": {
+          "date": "2026-07-28",
+          "count": 19,
+          "reviewCount": 11,
+          "masteredCount": 7,
+          "gameScore": 524
+        },
+        "2026-07-29": {
+          "date": "2026-07-29",
+          "count": 19,
+          "reviewCount": 11,
+          "masteredCount": 7,
+          "gameScore": 538
+        },
+        "2026-07-30": {
+          "date": "2026-07-30",
+          "count": 16,
+          "reviewCount": 9,
+          "masteredCount": 6,
+          "gameScore": 545
+        },
+        "2026-07-31": {
+          "date": "2026-07-31",
+          "count": 17,
+          "reviewCount": 10,
+          "masteredCount": 6,
+          "gameScore": 487
+        },
+        "2026-08-01": {
+          "date": "2026-08-01",
+          "count": 19,
+          "reviewCount": 11,
+          "masteredCount": 7,
+          "gameScore": 461
+        },
+        "2026-08-02": {
+          "date": "2026-08-02",
+          "count": 19,
+          "reviewCount": 11,
+          "masteredCount": 7,
+          "gameScore": 531
+        },
+        "2026-08-03": {
+          "date": "2026-08-03",
+          "count": 18,
+          "reviewCount": 10,
+          "masteredCount": 7,
+          "gameScore": 501
+        },
+        "2026-08-04": {
+          "date": "2026-08-04",
+          "count": 14,
+          "reviewCount": 8,
+          "masteredCount": 5,
+          "gameScore": 538
+        },
+        "2026-08-05": {
+          "date": "2026-08-05",
+          "count": 17,
+          "reviewCount": 10,
+          "masteredCount": 6,
+          "gameScore": 463
+        },
+        "2026-08-06": {
+          "date": "2026-08-06",
+          "count": 15,
+          "reviewCount": 9,
+          "masteredCount": 6,
+          "gameScore": 527
+        },
+        "2026-08-07": {
+          "date": "2026-08-07",
+          "count": 18,
+          "reviewCount": 10,
+          "masteredCount": 7,
+          "gameScore": 505
+        },
+        "2026-08-08": {
+          "date": "2026-08-08",
+          "count": 17,
+          "reviewCount": 10,
+          "masteredCount": 6,
+          "gameScore": 472
+        },
+        "2026-08-09": {
+          "date": "2026-08-09",
+          "count": 18,
+          "reviewCount": 10,
+          "masteredCount": 6,
+          "gameScore": 502
+        }
+      },
+      "badges": [
+        {
+          "id": "first_word",
+          "name": "初入词域",
+          "description": "完成第一次单词打卡学习",
+          "icon": "🚀",
+          "category": "learning",
+          "unlocked": true,
+          "progress": 1,
+          "maxProgress": 1,
+          "unlockedAt": "2026-08-09"
+        },
+        {
+          "id": "streak_7",
+          "name": "七日连胜",
+          "description": "连续打卡 7 天",
+          "icon": "🔥",
+          "category": "streak",
+          "unlocked": true,
+          "progress": 7,
+          "maxProgress": 7,
+          "unlockedAt": "2026-08-09"
+        },
+        {
+          "id": "streak_30",
+          "name": "月度星轨",
+          "description": "连续打卡 30 天",
+          "icon": "⚡",
+          "category": "streak",
+          "unlocked": false,
+          "progress": 14,
+          "maxProgress": 30
+        },
+        {
+          "id": "master_50",
+          "name": "半百破壁",
+          "description": "累计掌握 50 个单词",
+          "icon": "🛡️",
+          "category": "mastery",
+          "unlocked": false,
+          "progress": 8,
+          "maxProgress": 50
+        },
+        {
+          "id": "master_200",
+          "name": "星云探索者",
+          "description": "累计掌握 200 个单词",
+          "icon": "🌌",
+          "category": "mastery",
+          "unlocked": false,
+          "progress": 8,
+          "maxProgress": 200
+        },
+        {
+          "id": "game_combo_50",
+          "name": "极速盲打",
+          "description": "打字速记模式获得单局 500 分以上",
+          "icon": "⌨️",
+          "category": "game",
+          "unlocked": true,
+          "progress": 500,
+          "maxProgress": 500,
+          "unlockedAt": "2026-08-09"
+        },
+        {
+          "id": "ebbinghaus_geek",
+          "name": "艾宾浩斯极客",
+          "description": "累计完成 100 次间隔复习",
+          "icon": "🧠",
+          "category": "learning",
+          "unlocked": false,
+          "progress": 48,
+          "maxProgress": 100
+        },
+        {
+          "id": "legend_master",
+          "name": "全域高能",
+          "description": "词汇总量准确率超过 85%",
+          "icon": "👑",
+          "category": "mastery",
+          "unlocked": true,
+          "progress": 85,
+          "maxProgress": 85,
+          "unlockedAt": "2026-08-09"
+        },
+        {
+          "id": "first_word",
+          "name": "初入词域",
+          "description": "完成第一次单词打卡学习",
+          "icon": "🚀",
+          "category": "learning",
+          "unlocked": true,
+          "progress": 1,
+          "maxProgress": 1,
+          "unlockedAt": "2026-08-09"
+        },
+        {
+          "id": "streak_7",
+          "name": "七日连胜",
+          "description": "连续打卡 7 天",
+          "icon": "🔥",
+          "category": "streak",
+          "unlocked": true,
+          "progress": 7,
+          "maxProgress": 7,
+          "unlockedAt": "2026-08-09"
+        },
+        {
+          "id": "streak_30",
+          "name": "月度星轨",
+          "description": "连续打卡 30 天",
+          "icon": "⚡",
+          "category": "streak",
+          "unlocked": false,
+          "progress": 14,
+          "maxProgress": 30
+        },
+        {
+          "id": "master_50",
+          "name": "半百破壁",
+          "description": "累计掌握 50 个单词",
+          "icon": "🛡️",
+          "category": "mastery",
+          "unlocked": false,
+          "progress": 8,
+          "maxProgress": 50
+        },
+        {
+          "id": "master_200",
+          "name": "星云探索者",
+          "description": "累计掌握 200 个单词",
+          "icon": "🌌",
+          "category": "mastery",
+          "unlocked": false,
+          "progress": 8,
+          "maxProgress": 200
+        },
+        {
+          "id": "game_combo_50",
+          "name": "极速盲打",
+          "description": "打字速记模式获得单局 500 分以上",
+          "icon": "⌨️",
+          "category": "game",
+          "unlocked": true,
+          "progress": 500,
+          "maxProgress": 500,
+          "unlockedAt": "2026-08-09"
+        },
+        {
+          "id": "ebbinghaus_geek",
+          "name": "艾宾浩斯极客",
+          "description": "累计完成 100 次间隔复习",
+          "icon": "🧠",
+          "category": "learning",
+          "unlocked": false,
+          "progress": 48,
+          "maxProgress": 100
+        },
+        {
+          "id": "legend_master",
+          "name": "全域高能",
+          "description": "词汇总量准确率超过 85%",
+          "icon": "👑",
+          "category": "mastery",
+          "unlocked": true,
+          "progress": 85,
+          "maxProgress": 85,
+          "unlockedAt": "2026-08-09"
+        },
+        {
+          "id": "first_word",
+          "name": "初入词域",
+          "description": "完成第一次单词打卡学习",
+          "icon": "🚀",
+          "category": "learning",
+          "unlocked": false,
+          "progress": 0,
+          "maxProgress": 1
+        },
+        {
+          "id": "streak_7",
+          "name": "七日连胜",
+          "description": "连续打卡 7 天",
+          "icon": "🔥",
+          "category": "streak",
+          "unlocked": false,
+          "progress": 0,
+          "maxProgress": 7
+        },
+        {
+          "id": "streak_30",
+          "name": "月度星轨",
+          "description": "连续打卡 30 天",
+          "icon": "⚡",
+          "category": "streak",
+          "unlocked": false,
+          "progress": 0,
+          "maxProgress": 30
+        },
+        {
+          "id": "master_50",
+          "name": "半百破壁",
+          "description": "累计掌握 50 个单词",
+          "icon": "🛡️",
+          "category": "mastery",
+          "unlocked": false,
+          "progress": 0,
+          "maxProgress": 50
+        },
+        {
+          "id": "master_200",
+          "name": "星云探索者",
+          "description": "累计掌握 200 个单词",
+          "icon": "🌌",
+          "category": "mastery",
+          "unlocked": false,
+          "progress": 0,
+          "maxProgress": 200
+        },
+        {
+          "id": "game_combo_50",
+          "name": "极速盲打",
+          "description": "打字速记模式获得单局 500 分以上",
+          "icon": "⌨️",
+          "category": "game",
+          "unlocked": false,
+          "progress": 0,
+          "maxProgress": 500
+        },
+        {
+          "id": "ebbinghaus_geek",
+          "name": "艾宾浩斯极客",
+          "description": "累计完成 100 次间隔复习",
+          "icon": "🧠",
+          "category": "learning",
+          "unlocked": false,
+          "progress": 0,
+          "maxProgress": 100
+        },
+        {
+          "id": "legend_master",
+          "name": "全域高能",
+          "description": "词汇总量准确率超过 85%",
+          "icon": "👑",
+          "category": "mastery",
+          "unlocked": false,
+          "progress": 0,
+          "maxProgress": 85
+        },
+        {
+          "id": "first_word",
+          "name": "初入词域",
+          "description": "完成第一次单词打卡学习",
+          "icon": "🚀",
+          "category": "learning",
+          "unlocked": false,
+          "progress": 0,
+          "maxProgress": 1
+        },
+        {
+          "id": "streak_7",
+          "name": "七日连胜",
+          "description": "连续打卡 7 天",
+          "icon": "🔥",
+          "category": "streak",
+          "unlocked": false,
+          "progress": 0,
+          "maxProgress": 7
+        },
+        {
+          "id": "streak_30",
+          "name": "月度星轨",
+          "description": "连续打卡 30 天",
+          "icon": "⚡",
+          "category": "streak",
+          "unlocked": false,
+          "progress": 0,
+          "maxProgress": 30
+        },
+        {
+          "id": "master_50",
+          "name": "半百破壁",
+          "description": "累计掌握 50 个单词",
+          "icon": "🛡️",
+          "category": "mastery",
+          "unlocked": false,
+          "progress": 0,
+          "maxProgress": 50
+        },
+        {
+          "id": "master_200",
+          "name": "星云探索者",
+          "description": "累计掌握 200 个单词",
+          "icon": "🌌",
+          "category": "mastery",
+          "unlocked": false,
+          "progress": 0,
+          "maxProgress": 200
+        },
+        {
+          "id": "game_combo_50",
+          "name": "极速盲打",
+          "description": "打字速记模式获得单局 500 分以上",
+          "icon": "⌨️",
+          "category": "game",
+          "unlocked": false,
+          "progress": 0,
+          "maxProgress": 500
+        },
+        {
+          "id": "ebbinghaus_geek",
+          "name": "艾宾浩斯极客",
+          "description": "累计完成 100 次间隔复习",
+          "icon": "🧠",
+          "category": "learning",
+          "unlocked": false,
+          "progress": 0,
+          "maxProgress": 100
+        },
+        {
+          "id": "legend_master",
+          "name": "全域高能",
+          "description": "词汇总量准确率超过 85%",
+          "icon": "👑",
+          "category": "mastery",
+          "unlocked": false,
+          "progress": 0,
+          "maxProgress": 85
+        },
+        {
+          "id": "first_word",
+          "name": "初入词域",
+          "description": "完成第一次单词打卡学习",
+          "icon": "🚀",
+          "category": "learning",
+          "unlocked": false,
+          "progress": 0,
+          "maxProgress": 1
+        },
+        {
+          "id": "streak_7",
+          "name": "七日连胜",
+          "description": "连续打卡 7 天",
+          "icon": "🔥",
+          "category": "streak",
+          "unlocked": false,
+          "progress": 0,
+          "maxProgress": 7
+        },
+        {
+          "id": "streak_30",
+          "name": "月度星轨",
+          "description": "连续打卡 30 天",
+          "icon": "⚡",
+          "category": "streak",
+          "unlocked": false,
+          "progress": 0,
+          "maxProgress": 30
+        },
+        {
+          "id": "master_50",
+          "name": "半百破壁",
+          "description": "累计掌握 50 个单词",
+          "icon": "🛡️",
+          "category": "mastery",
+          "unlocked": false,
+          "progress": 0,
+          "maxProgress": 50
+        },
+        {
+          "id": "master_200",
+          "name": "星云探索者",
+          "description": "累计掌握 200 个单词",
+          "icon": "🌌",
+          "category": "mastery",
+          "unlocked": false,
+          "progress": 0,
+          "maxProgress": 200
+        },
+        {
+          "id": "game_combo_50",
+          "name": "极速盲打",
+          "description": "打字速记模式获得单局 500 分以上",
+          "icon": "⌨️",
+          "category": "game",
+          "unlocked": false,
+          "progress": 0,
+          "maxProgress": 500
+        },
+        {
+          "id": "ebbinghaus_geek",
+          "name": "艾宾浩斯极客",
+          "description": "累计完成 100 次间隔复习",
+          "icon": "🧠",
+          "category": "learning",
+          "unlocked": false,
+          "progress": 0,
+          "maxProgress": 100
+        },
+        {
+          "id": "legend_master",
+          "name": "全域高能",
+          "description": "词汇总量准确率超过 85%",
+          "icon": "👑",
+          "category": "mastery",
+          "unlocked": false,
+          "progress": 0,
+          "maxProgress": 85
+        },
+        {
+          "id": "first_word",
+          "name": "初入词域",
+          "description": "完成第一次单词打卡学习",
+          "icon": "🚀",
+          "category": "learning",
+          "unlocked": false,
+          "progress": 0,
+          "maxProgress": 1
+        },
+        {
+          "id": "streak_7",
+          "name": "七日连胜",
+          "description": "连续打卡 7 天",
+          "icon": "🔥",
+          "category": "streak",
+          "unlocked": false,
+          "progress": 0,
+          "maxProgress": 7
+        },
+        {
+          "id": "streak_30",
+          "name": "月度星轨",
+          "description": "连续打卡 30 天",
+          "icon": "⚡",
+          "category": "streak",
+          "unlocked": false,
+          "progress": 0,
+          "maxProgress": 30
+        },
+        {
+          "id": "master_50",
+          "name": "半百破壁",
+          "description": "累计掌握 50 个单词",
+          "icon": "🛡️",
+          "category": "mastery",
+          "unlocked": false,
+          "progress": 0,
+          "maxProgress": 50
+        },
+        {
+          "id": "master_200",
+          "name": "星云探索者",
+          "description": "累计掌握 200 个单词",
+          "icon": "🌌",
+          "category": "mastery",
+          "unlocked": false,
+          "progress": 0,
+          "maxProgress": 200
+        },
+        {
+          "id": "game_combo_50",
+          "name": "极速盲打",
+          "description": "打字速记模式获得单局 500 分以上",
+          "icon": "⌨️",
+          "category": "game",
+          "unlocked": false,
+          "progress": 0,
+          "maxProgress": 500
+        },
+        {
+          "id": "ebbinghaus_geek",
+          "name": "艾宾浩斯极客",
+          "description": "累计完成 100 次间隔复习",
+          "icon": "🧠",
+          "category": "learning",
+          "unlocked": false,
+          "progress": 0,
+          "maxProgress": 100
+        },
+        {
+          "id": "legend_master",
+          "name": "全域高能",
+          "description": "词汇总量准确率超过 85%",
+          "icon": "👑",
+          "category": "mastery",
+          "unlocked": false,
+          "progress": 0,
+          "maxProgress": 85
+        },
+        {
+          "id": "first_word",
+          "name": "初入词域",
+          "description": "完成第一次单词打卡学习",
+          "icon": "🚀",
+          "category": "learning",
+          "unlocked": false,
+          "progress": 0,
+          "maxProgress": 1
+        },
+        {
+          "id": "streak_7",
+          "name": "七日连胜",
+          "description": "连续打卡 7 天",
+          "icon": "🔥",
+          "category": "streak",
+          "unlocked": false,
+          "progress": 0,
+          "maxProgress": 7
+        },
+        {
+          "id": "streak_30",
+          "name": "月度星轨",
+          "description": "连续打卡 30 天",
+          "icon": "⚡",
+          "category": "streak",
+          "unlocked": false,
+          "progress": 0,
+          "maxProgress": 30
+        },
+        {
+          "id": "master_50",
+          "name": "半百破壁",
+          "description": "累计掌握 50 个单词",
+          "icon": "🛡️",
+          "category": "mastery",
+          "unlocked": false,
+          "progress": 0,
+          "maxProgress": 50
+        },
+        {
+          "id": "master_200",
+          "name": "星云探索者",
+          "description": "累计掌握 200 个单词",
+          "icon": "🌌",
+          "category": "mastery",
+          "unlocked": false,
+          "progress": 0,
+          "maxProgress": 200
+        },
+        {
+          "id": "game_combo_50",
+          "name": "极速盲打",
+          "description": "打字速记模式获得单局 500 分以上",
+          "icon": "⌨️",
+          "category": "game",
+          "unlocked": false,
+          "progress": 0,
+          "maxProgress": 500
+        },
+        {
+          "id": "ebbinghaus_geek",
+          "name": "艾宾浩斯极客",
+          "description": "累计完成 100 次间隔复习",
+          "icon": "🧠",
+          "category": "learning",
+          "unlocked": false,
+          "progress": 0,
+          "maxProgress": 100
+        },
+        {
+          "id": "legend_master",
+          "name": "全域高能",
+          "description": "词汇总量准确率超过 85%",
+          "icon": "👑",
+          "category": "mastery",
+          "unlocked": false,
+          "progress": 0,
+          "maxProgress": 85
+        },
+        {
+          "id": "first_word",
+          "name": "初入词域",
+          "description": "完成第一次单词打卡学习",
+          "icon": "🚀",
+          "category": "learning",
+          "unlocked": false,
+          "progress": 0,
+          "maxProgress": 1
+        },
+        {
+          "id": "streak_7",
+          "name": "七日连胜",
+          "description": "连续打卡 7 天",
+          "icon": "🔥",
+          "category": "streak",
+          "unlocked": false,
+          "progress": 0,
+          "maxProgress": 7
+        },
+        {
+          "id": "streak_30",
+          "name": "月度星轨",
+          "description": "连续打卡 30 天",
+          "icon": "⚡",
+          "category": "streak",
+          "unlocked": false,
+          "progress": 0,
+          "maxProgress": 30
+        },
+        {
+          "id": "master_50",
+          "name": "半百破壁",
+          "description": "累计掌握 50 个单词",
+          "icon": "🛡️",
+          "category": "mastery",
+          "unlocked": false,
+          "progress": 0,
+          "maxProgress": 50
+        },
+        {
+          "id": "master_200",
+          "name": "星云探索者",
+          "description": "累计掌握 200 个单词",
+          "icon": "🌌",
+          "category": "mastery",
+          "unlocked": false,
+          "progress": 0,
+          "maxProgress": 200
+        },
+        {
+          "id": "game_combo_50",
+          "name": "极速盲打",
+          "description": "打字速记模式获得单局 500 分以上",
+          "icon": "⌨️",
+          "category": "game",
+          "unlocked": false,
+          "progress": 0,
+          "maxProgress": 500
+        },
+        {
+          "id": "ebbinghaus_geek",
+          "name": "艾宾浩斯极客",
+          "description": "累计完成 100 次间隔复习",
+          "icon": "🧠",
+          "category": "learning",
+          "unlocked": false,
+          "progress": 0,
+          "maxProgress": 100
+        },
+        {
+          "id": "legend_master",
+          "name": "全域高能",
+          "description": "词汇总量准确率超过 85%",
+          "icon": "👑",
+          "category": "mastery",
+          "unlocked": false,
+          "progress": 0,
+          "maxProgress": 85
+        },
+        {
+          "id": "first_word",
+          "name": "初入词域",
+          "description": "完成第一次单词打卡学习",
+          "icon": "🚀",
+          "category": "learning",
+          "unlocked": false,
+          "progress": 0,
+          "maxProgress": 1
+        },
+        {
+          "id": "streak_7",
+          "name": "七日连胜",
+          "description": "连续打卡 7 天",
+          "icon": "🔥",
+          "category": "streak",
+          "unlocked": false,
+          "progress": 0,
+          "maxProgress": 7
+        },
+        {
+          "id": "streak_30",
+          "name": "月度星轨",
+          "description": "连续打卡 30 天",
+          "icon": "⚡",
+          "category": "streak",
+          "unlocked": false,
+          "progress": 0,
+          "maxProgress": 30
+        },
+        {
+          "id": "master_50",
+          "name": "半百破壁",
+          "description": "累计掌握 50 个单词",
+          "icon": "🛡️",
+          "category": "mastery",
+          "unlocked": false,
+          "progress": 0,
+          "maxProgress": 50
+        },
+        {
+          "id": "master_200",
+          "name": "星云探索者",
+          "description": "累计掌握 200 个单词",
+          "icon": "🌌",
+          "category": "mastery",
+          "unlocked": false,
+          "progress": 0,
+          "maxProgress": 200
+        },
+        {
+          "id": "game_combo_50",
+          "name": "极速盲打",
+          "description": "打字速记模式获得单局 500 分以上",
+          "icon": "⌨️",
+          "category": "game",
+          "unlocked": false,
+          "progress": 0,
+          "maxProgress": 500
+        },
+        {
+          "id": "ebbinghaus_geek",
+          "name": "艾宾浩斯极客",
+          "description": "累计完成 100 次间隔复习",
+          "icon": "🧠",
+          "category": "learning",
+          "unlocked": false,
+          "progress": 0,
+          "maxProgress": 100
+        },
+        {
+          "id": "legend_master",
+          "name": "全域高能",
+          "description": "词汇总量准确率超过 85%",
+          "icon": "👑",
+          "category": "mastery",
+          "unlocked": false,
+          "progress": 0,
+          "maxProgress": 85
+        },
+        {
+          "id": "first_word",
+          "name": "初入词域",
+          "description": "完成第一次单词打卡学习",
+          "icon": "🚀",
+          "category": "learning",
+          "unlocked": false,
+          "progress": 0,
+          "maxProgress": 1
+        },
+        {
+          "id": "streak_7",
+          "name": "七日连胜",
+          "description": "连续打卡 7 天",
+          "icon": "🔥",
+          "category": "streak",
+          "unlocked": false,
+          "progress": 0,
+          "maxProgress": 7
+        },
+        {
+          "id": "streak_30",
+          "name": "月度星轨",
+          "description": "连续打卡 30 天",
+          "icon": "⚡",
+          "category": "streak",
+          "unlocked": false,
+          "progress": 0,
+          "maxProgress": 30
+        },
+        {
+          "id": "master_50",
+          "name": "半百破壁",
+          "description": "累计掌握 50 个单词",
+          "icon": "🛡️",
+          "category": "mastery",
+          "unlocked": false,
+          "progress": 0,
+          "maxProgress": 50
+        },
+        {
+          "id": "master_200",
+          "name": "星云探索者",
+          "description": "累计掌握 200 个单词",
+          "icon": "🌌",
+          "category": "mastery",
+          "unlocked": false,
+          "progress": 0,
+          "maxProgress": 200
+        },
+        {
+          "id": "game_combo_50",
+          "name": "极速盲打",
+          "description": "打字速记模式获得单局 500 分以上",
+          "icon": "⌨️",
+          "category": "game",
+          "unlocked": false,
+          "progress": 0,
+          "maxProgress": 500
+        },
+        {
+          "id": "ebbinghaus_geek",
+          "name": "艾宾浩斯极客",
+          "description": "累计完成 100 次间隔复习",
+          "icon": "🧠",
+          "category": "learning",
+          "unlocked": false,
+          "progress": 0,
+          "maxProgress": 100
+        },
+        {
+          "id": "legend_master",
+          "name": "全域高能",
+          "description": "词汇总量准确率超过 85%",
+          "icon": "👑",
+          "category": "mastery",
+          "unlocked": false,
+          "progress": 0,
+          "maxProgress": 85
+        },
+        {
+          "id": "first_word",
+          "name": "初入词域",
+          "description": "完成第一次单词打卡学习",
+          "icon": "🚀",
+          "category": "learning",
+          "unlocked": false,
+          "progress": 0,
+          "maxProgress": 1
+        },
+        {
+          "id": "streak_7",
+          "name": "七日连胜",
+          "description": "连续打卡 7 天",
+          "icon": "🔥",
+          "category": "streak",
+          "unlocked": false,
+          "progress": 0,
+          "maxProgress": 7
+        },
+        {
+          "id": "streak_30",
+          "name": "月度星轨",
+          "description": "连续打卡 30 天",
+          "icon": "⚡",
+          "category": "streak",
+          "unlocked": false,
+          "progress": 0,
+          "maxProgress": 30
+        },
+        {
+          "id": "master_50",
+          "name": "半百破壁",
+          "description": "累计掌握 50 个单词",
+          "icon": "🛡️",
+          "category": "mastery",
+          "unlocked": false,
+          "progress": 0,
+          "maxProgress": 50
+        },
+        {
+          "id": "master_200",
+          "name": "星云探索者",
+          "description": "累计掌握 200 个单词",
+          "icon": "🌌",
+          "category": "mastery",
+          "unlocked": false,
+          "progress": 0,
+          "maxProgress": 200
+        },
+        {
+          "id": "game_combo_50",
+          "name": "极速盲打",
+          "description": "打字速记模式获得单局 500 分以上",
+          "icon": "⌨️",
+          "category": "game",
+          "unlocked": false,
+          "progress": 0,
+          "maxProgress": 500
+        },
+        {
+          "id": "ebbinghaus_geek",
+          "name": "艾宾浩斯极客",
+          "description": "累计完成 100 次间隔复习",
+          "icon": "🧠",
+          "category": "learning",
+          "unlocked": false,
+          "progress": 0,
+          "maxProgress": 100
+        },
+        {
+          "id": "legend_master",
+          "name": "全域高能",
+          "description": "词汇总量准确率超过 85%",
+          "icon": "👑",
+          "category": "mastery",
+          "unlocked": false,
+          "progress": 0,
+          "maxProgress": 85
+        },
+        {
+          "id": "first_word",
+          "name": "初入词域",
+          "description": "完成第一次单词打卡学习",
+          "icon": "🚀",
+          "category": "learning",
+          "unlocked": false,
+          "progress": 0,
+          "maxProgress": 1
+        },
+        {
+          "id": "streak_7",
+          "name": "七日连胜",
+          "description": "连续打卡 7 天",
+          "icon": "🔥",
+          "category": "streak",
+          "unlocked": false,
+          "progress": 0,
+          "maxProgress": 7
+        },
+        {
+          "id": "streak_30",
+          "name": "月度星轨",
+          "description": "连续打卡 30 天",
+          "icon": "⚡",
+          "category": "streak",
+          "unlocked": false,
+          "progress": 0,
+          "maxProgress": 30
+        },
+        {
+          "id": "master_50",
+          "name": "半百破壁",
+          "description": "累计掌握 50 个单词",
+          "icon": "🛡️",
+          "category": "mastery",
+          "unlocked": false,
+          "progress": 0,
+          "maxProgress": 50
+        },
+        {
+          "id": "master_200",
+          "name": "星云探索者",
+          "description": "累计掌握 200 个单词",
+          "icon": "🌌",
+          "category": "mastery",
+          "unlocked": false,
+          "progress": 0,
+          "maxProgress": 200
+        },
+        {
+          "id": "game_combo_50",
+          "name": "极速盲打",
+          "description": "打字速记模式获得单局 500 分以上",
+          "icon": "⌨️",
+          "category": "game",
+          "unlocked": false,
+          "progress": 0,
+          "maxProgress": 500
+        },
+        {
+          "id": "ebbinghaus_geek",
+          "name": "艾宾浩斯极客",
+          "description": "累计完成 100 次间隔复习",
+          "icon": "🧠",
+          "category": "learning",
+          "unlocked": false,
+          "progress": 0,
+          "maxProgress": 100
+        },
+        {
+          "id": "legend_master",
+          "name": "全域高能",
+          "description": "词汇总量准确率超过 85%",
+          "icon": "👑",
+          "category": "mastery",
+          "unlocked": false,
+          "progress": 0,
+          "maxProgress": 85
+        },
+        {
+          "id": "first_word",
+          "name": "初入词域",
+          "description": "完成第一次单词打卡学习",
+          "icon": "🚀",
+          "category": "learning",
+          "unlocked": false,
+          "progress": 0,
+          "maxProgress": 1
+        },
+        {
+          "id": "streak_7",
+          "name": "七日连胜",
+          "description": "连续打卡 7 天",
+          "icon": "🔥",
+          "category": "streak",
+          "unlocked": false,
+          "progress": 0,
+          "maxProgress": 7
+        },
+        {
+          "id": "streak_30",
+          "name": "月度星轨",
+          "description": "连续打卡 30 天",
+          "icon": "⚡",
+          "category": "streak",
+          "unlocked": false,
+          "progress": 0,
+          "maxProgress": 30
+        },
+        {
+          "id": "master_50",
+          "name": "半百破壁",
+          "description": "累计掌握 50 个单词",
+          "icon": "🛡️",
+          "category": "mastery",
+          "unlocked": false,
+          "progress": 0,
+          "maxProgress": 50
+        },
+        {
+          "id": "master_200",
+          "name": "星云探索者",
+          "description": "累计掌握 200 个单词",
+          "icon": "🌌",
+          "category": "mastery",
+          "unlocked": false,
+          "progress": 0,
+          "maxProgress": 200
+        },
+        {
+          "id": "game_combo_50",
+          "name": "极速盲打",
+          "description": "打字速记模式获得单局 500 分以上",
+          "icon": "⌨️",
+          "category": "game",
+          "unlocked": false,
+          "progress": 0,
+          "maxProgress": 500
+        },
+        {
+          "id": "ebbinghaus_geek",
+          "name": "艾宾浩斯极客",
+          "description": "累计完成 100 次间隔复习",
+          "icon": "🧠",
+          "category": "learning",
+          "unlocked": false,
+          "progress": 0,
+          "maxProgress": 100
+        },
+        {
+          "id": "legend_master",
+          "name": "全域高能",
+          "description": "词汇总量准确率超过 85%",
+          "icon": "👑",
+          "category": "mastery",
+          "unlocked": false,
+          "progress": 0,
+          "maxProgress": 85
+        },
+        {
+          "id": "first_word",
+          "name": "初入词域",
+          "description": "完成第一次单词打卡学习",
+          "icon": "🚀",
+          "category": "learning",
+          "unlocked": false,
+          "progress": 0,
+          "maxProgress": 1
+        },
+        {
+          "id": "streak_7",
+          "name": "七日连胜",
+          "description": "连续打卡 7 天",
+          "icon": "🔥",
+          "category": "streak",
+          "unlocked": false,
+          "progress": 0,
+          "maxProgress": 7
+        },
+        {
+          "id": "streak_30",
+          "name": "月度星轨",
+          "description": "连续打卡 30 天",
+          "icon": "⚡",
+          "category": "streak",
+          "unlocked": false,
+          "progress": 0,
+          "maxProgress": 30
+        },
+        {
+          "id": "master_50",
+          "name": "半百破壁",
+          "description": "累计掌握 50 个单词",
+          "icon": "🛡️",
+          "category": "mastery",
+          "unlocked": false,
+          "progress": 0,
+          "maxProgress": 50
+        },
+        {
+          "id": "master_200",
+          "name": "星云探索者",
+          "description": "累计掌握 200 个单词",
+          "icon": "🌌",
+          "category": "mastery",
+          "unlocked": false,
+          "progress": 0,
+          "maxProgress": 200
+        },
+        {
+          "id": "game_combo_50",
+          "name": "极速盲打",
+          "description": "打字速记模式获得单局 500 分以上",
+          "icon": "⌨️",
+          "category": "game",
+          "unlocked": false,
+          "progress": 0,
+          "maxProgress": 500
+        },
+        {
+          "id": "ebbinghaus_geek",
+          "name": "艾宾浩斯极客",
+          "description": "累计完成 100 次间隔复习",
+          "icon": "🧠",
+          "category": "learning",
+          "unlocked": false,
+          "progress": 0,
+          "maxProgress": 100
+        },
+        {
+          "id": "legend_master",
+          "name": "全域高能",
+          "description": "词汇总量准确率超过 85%",
+          "icon": "👑",
+          "category": "mastery",
+          "unlocked": false,
+          "progress": 0,
+          "maxProgress": 85
+        },
+        {
+          "id": "first_word",
+          "name": "初入词域",
+          "description": "完成第一次单词打卡学习",
+          "icon": "🚀",
+          "category": "learning",
+          "unlocked": false,
+          "progress": 0,
+          "maxProgress": 1
+        },
+        {
+          "id": "streak_7",
+          "name": "七日连胜",
+          "description": "连续打卡 7 天",
+          "icon": "🔥",
+          "category": "streak",
+          "unlocked": false,
+          "progress": 0,
+          "maxProgress": 7
+        },
+        {
+          "id": "streak_30",
+          "name": "月度星轨",
+          "description": "连续打卡 30 天",
+          "icon": "⚡",
+          "category": "streak",
+          "unlocked": false,
+          "progress": 0,
+          "maxProgress": 30
+        },
+        {
+          "id": "master_50",
+          "name": "半百破壁",
+          "description": "累计掌握 50 个单词",
+          "icon": "🛡️",
+          "category": "mastery",
+          "unlocked": false,
+          "progress": 0,
+          "maxProgress": 50
+        },
+        {
+          "id": "master_200",
+          "name": "星云探索者",
+          "description": "累计掌握 200 个单词",
+          "icon": "🌌",
+          "category": "mastery",
+          "unlocked": false,
+          "progress": 0,
+          "maxProgress": 200
+        },
+        {
+          "id": "game_combo_50",
+          "name": "极速盲打",
+          "description": "打字速记模式获得单局 500 分以上",
+          "icon": "⌨️",
+          "category": "game",
+          "unlocked": false,
+          "progress": 0,
+          "maxProgress": 500
+        },
+        {
+          "id": "ebbinghaus_geek",
+          "name": "艾宾浩斯极客",
+          "description": "累计完成 100 次间隔复习",
+          "icon": "🧠",
+          "category": "learning",
+          "unlocked": false,
+          "progress": 0,
+          "maxProgress": 100
+        },
+        {
+          "id": "legend_master",
+          "name": "全域高能",
+          "description": "词汇总量准确率超过 85%",
+          "icon": "👑",
+          "category": "mastery",
+          "unlocked": false,
+          "progress": 0,
+          "maxProgress": 85
+        },
+        {
+          "id": "first_word",
+          "name": "初入词域",
+          "description": "完成第一次单词打卡学习",
+          "icon": "🚀",
+          "category": "learning",
+          "unlocked": false,
+          "progress": 0,
+          "maxProgress": 1
+        },
+        {
+          "id": "streak_7",
+          "name": "七日连胜",
+          "description": "连续打卡 7 天",
+          "icon": "🔥",
+          "category": "streak",
+          "unlocked": false,
+          "progress": 0,
+          "maxProgress": 7
+        },
+        {
+          "id": "streak_30",
+          "name": "月度星轨",
+          "description": "连续打卡 30 天",
+          "icon": "⚡",
+          "category": "streak",
+          "unlocked": false,
+          "progress": 0,
+          "maxProgress": 30
+        },
+        {
+          "id": "master_50",
+          "name": "半百破壁",
+          "description": "累计掌握 50 个单词",
+          "icon": "🛡️",
+          "category": "mastery",
+          "unlocked": false,
+          "progress": 0,
+          "maxProgress": 50
+        },
+        {
+          "id": "master_200",
+          "name": "星云探索者",
+          "description": "累计掌握 200 个单词",
+          "icon": "🌌",
+          "category": "mastery",
+          "unlocked": false,
+          "progress": 0,
+          "maxProgress": 200
+        },
+        {
+          "id": "game_combo_50",
+          "name": "极速盲打",
+          "description": "打字速记模式获得单局 500 分以上",
+          "icon": "⌨️",
+          "category": "game",
+          "unlocked": false,
+          "progress": 0,
+          "maxProgress": 500
+        },
+        {
+          "id": "ebbinghaus_geek",
+          "name": "艾宾浩斯极客",
+          "description": "累计完成 100 次间隔复习",
+          "icon": "🧠",
+          "category": "learning",
+          "unlocked": false,
+          "progress": 0,
+          "maxProgress": 100
+        },
+        {
+          "id": "legend_master",
+          "name": "全域高能",
+          "description": "词汇总量准确率超过 85%",
+          "icon": "👑",
+          "category": "mastery",
+          "unlocked": false,
+          "progress": 0,
+          "maxProgress": 85
+        },
+        {
+          "id": "first_word",
+          "name": "初入词域",
+          "description": "完成第一次单词打卡学习",
+          "icon": "🚀",
+          "category": "learning",
+          "unlocked": false,
+          "progress": 0,
+          "maxProgress": 1
+        },
+        {
+          "id": "streak_7",
+          "name": "七日连胜",
+          "description": "连续打卡 7 天",
+          "icon": "🔥",
+          "category": "streak",
+          "unlocked": false,
+          "progress": 0,
+          "maxProgress": 7
+        },
+        {
+          "id": "streak_30",
+          "name": "月度星轨",
+          "description": "连续打卡 30 天",
+          "icon": "⚡",
+          "category": "streak",
+          "unlocked": false,
+          "progress": 0,
+          "maxProgress": 30
+        },
+        {
+          "id": "master_50",
+          "name": "半百破壁",
+          "description": "累计掌握 50 个单词",
+          "icon": "🛡️",
+          "category": "mastery",
+          "unlocked": false,
+          "progress": 0,
+          "maxProgress": 50
+        },
+        {
+          "id": "master_200",
+          "name": "星云探索者",
+          "description": "累计掌握 200 个单词",
+          "icon": "🌌",
+          "category": "mastery",
+          "unlocked": false,
+          "progress": 0,
+          "maxProgress": 200
+        },
+        {
+          "id": "game_combo_50",
+          "name": "极速盲打",
+          "description": "打字速记模式获得单局 500 分以上",
+          "icon": "⌨️",
+          "category": "game",
+          "unlocked": false,
+          "progress": 0,
+          "maxProgress": 500
+        },
+        {
+          "id": "ebbinghaus_geek",
+          "name": "艾宾浩斯极客",
+          "description": "累计完成 100 次间隔复习",
+          "icon": "🧠",
+          "category": "learning",
+          "unlocked": false,
+          "progress": 0,
+          "maxProgress": 100
+        },
+        {
+          "id": "legend_master",
+          "name": "全域高能",
+          "description": "词汇总量准确率超过 85%",
+          "icon": "👑",
+          "category": "mastery",
+          "unlocked": false,
+          "progress": 0,
+          "maxProgress": 85
+        },
+        {
+          "id": "first_word",
+          "name": "初入词域",
+          "description": "完成第一次单词打卡学习",
+          "icon": "🚀",
+          "category": "learning",
+          "unlocked": false,
+          "progress": 0,
+          "maxProgress": 1
+        },
+        {
+          "id": "streak_7",
+          "name": "七日连胜",
+          "description": "连续打卡 7 天",
+          "icon": "🔥",
+          "category": "streak",
+          "unlocked": false,
+          "progress": 0,
+          "maxProgress": 7
+        },
+        {
+          "id": "streak_30",
+          "name": "月度星轨",
+          "description": "连续打卡 30 天",
+          "icon": "⚡",
+          "category": "streak",
+          "unlocked": false,
+          "progress": 0,
+          "maxProgress": 30
+        },
+        {
+          "id": "master_50",
+          "name": "半百破壁",
+          "description": "累计掌握 50 个单词",
+          "icon": "🛡️",
+          "category": "mastery",
+          "unlocked": false,
+          "progress": 0,
+          "maxProgress": 50
+        },
+        {
+          "id": "master_200",
+          "name": "星云探索者",
+          "description": "累计掌握 200 个单词",
+          "icon": "🌌",
+          "category": "mastery",
+          "unlocked": false,
+          "progress": 0,
+          "maxProgress": 200
+        },
+        {
+          "id": "game_combo_50",
+          "name": "极速盲打",
+          "description": "打字速记模式获得单局 500 分以上",
+          "icon": "⌨️",
+          "category": "game",
+          "unlocked": false,
+          "progress": 0,
+          "maxProgress": 500
+        },
+        {
+          "id": "ebbinghaus_geek",
+          "name": "艾宾浩斯极客",
+          "description": "累计完成 100 次间隔复习",
+          "icon": "🧠",
+          "category": "learning",
+          "unlocked": false,
+          "progress": 0,
+          "maxProgress": 100
+        },
+        {
+          "id": "legend_master",
+          "name": "全域高能",
+          "description": "词汇总量准确率超过 85%",
+          "icon": "👑",
+          "category": "mastery",
+          "unlocked": false,
+          "progress": 0,
+          "maxProgress": 85
+        },
+        {
+          "id": "first_word",
+          "name": "初入词域",
+          "description": "完成第一次单词打卡学习",
+          "icon": "🚀",
+          "category": "learning",
+          "unlocked": false,
+          "progress": 0,
+          "maxProgress": 1
+        },
+        {
+          "id": "streak_7",
+          "name": "七日连胜",
+          "description": "连续打卡 7 天",
+          "icon": "🔥",
+          "category": "streak",
+          "unlocked": false,
+          "progress": 0,
+          "maxProgress": 7
+        },
+        {
+          "id": "streak_30",
+          "name": "月度星轨",
+          "description": "连续打卡 30 天",
+          "icon": "⚡",
+          "category": "streak",
+          "unlocked": false,
+          "progress": 0,
+          "maxProgress": 30
+        },
+        {
+          "id": "master_50",
+          "name": "半百破壁",
+          "description": "累计掌握 50 个单词",
+          "icon": "🛡️",
+          "category": "mastery",
+          "unlocked": false,
+          "progress": 0,
+          "maxProgress": 50
+        },
+        {
+          "id": "master_200",
+          "name": "星云探索者",
+          "description": "累计掌握 200 个单词",
+          "icon": "🌌",
+          "category": "mastery",
+          "unlocked": false,
+          "progress": 0,
+          "maxProgress": 200
+        },
+        {
+          "id": "game_combo_50",
+          "name": "极速盲打",
+          "description": "打字速记模式获得单局 500 分以上",
+          "icon": "⌨️",
+          "category": "game",
+          "unlocked": false,
+          "progress": 0,
+          "maxProgress": 500
+        },
+        {
+          "id": "ebbinghaus_geek",
+          "name": "艾宾浩斯极客",
+          "description": "累计完成 100 次间隔复习",
+          "icon": "🧠",
+          "category": "learning",
+          "unlocked": false,
+          "progress": 0,
+          "maxProgress": 100
+        },
+        {
+          "id": "legend_master",
+          "name": "全域高能",
+          "description": "词汇总量准确率超过 85%",
+          "icon": "👑",
+          "category": "mastery",
+          "unlocked": false,
+          "progress": 0,
+          "maxProgress": 85
+        },
+        {
+          "id": "first_word",
+          "name": "初入词域",
+          "description": "完成第一次单词打卡学习",
+          "icon": "🚀",
+          "category": "learning",
+          "unlocked": false,
+          "progress": 0,
+          "maxProgress": 1
+        },
+        {
+          "id": "streak_7",
+          "name": "七日连胜",
+          "description": "连续打卡 7 天",
+          "icon": "🔥",
+          "category": "streak",
+          "unlocked": false,
+          "progress": 0,
+          "maxProgress": 7
+        },
+        {
+          "id": "streak_30",
+          "name": "月度星轨",
+          "description": "连续打卡 30 天",
+          "icon": "⚡",
+          "category": "streak",
+          "unlocked": false,
+          "progress": 0,
+          "maxProgress": 30
+        },
+        {
+          "id": "master_50",
+          "name": "半百破壁",
+          "description": "累计掌握 50 个单词",
+          "icon": "🛡️",
+          "category": "mastery",
+          "unlocked": false,
+          "progress": 0,
+          "maxProgress": 50
+        },
+        {
+          "id": "master_200",
+          "name": "星云探索者",
+          "description": "累计掌握 200 个单词",
+          "icon": "🌌",
+          "category": "mastery",
+          "unlocked": false,
+          "progress": 0,
+          "maxProgress": 200
+        },
+        {
+          "id": "game_combo_50",
+          "name": "极速盲打",
+          "description": "打字速记模式获得单局 500 分以上",
+          "icon": "⌨️",
+          "category": "game",
+          "unlocked": false,
+          "progress": 0,
+          "maxProgress": 500
+        },
+        {
+          "id": "ebbinghaus_geek",
+          "name": "艾宾浩斯极客",
+          "description": "累计完成 100 次间隔复习",
+          "icon": "🧠",
+          "category": "learning",
+          "unlocked": false,
+          "progress": 0,
+          "maxProgress": 100
+        },
+        {
+          "id": "legend_master",
+          "name": "全域高能",
+          "description": "词汇总量准确率超过 85%",
+          "icon": "👑",
+          "category": "mastery",
+          "unlocked": false,
+          "progress": 0,
+          "maxProgress": 85
+        },
+        {
+          "id": "first_word",
+          "name": "初入词域",
+          "description": "完成第一次单词打卡学习",
+          "icon": "🚀",
+          "category": "learning",
+          "unlocked": true,
+          "progress": 1,
+          "maxProgress": 1,
+          "unlockedAt": "2026-08-09"
+        },
+        {
+          "id": "streak_7",
+          "name": "七日连胜",
+          "description": "连续打卡 7 天",
+          "icon": "🔥",
+          "category": "streak",
+          "unlocked": true,
+          "progress": 7,
+          "maxProgress": 7,
+          "unlockedAt": "2026-08-09"
+        },
+        {
+          "id": "streak_30",
+          "name": "月度星轨",
+          "description": "连续打卡 30 天",
+          "icon": "⚡",
+          "category": "streak",
+          "unlocked": false,
+          "progress": 14,
+          "maxProgress": 30
+        },
+        {
+          "id": "master_50",
+          "name": "半百破壁",
+          "description": "累计掌握 50 个单词",
+          "icon": "🛡️",
+          "category": "mastery",
+          "unlocked": false,
+          "progress": 8,
+          "maxProgress": 50
+        },
+        {
+          "id": "master_200",
+          "name": "星云探索者",
+          "description": "累计掌握 200 个单词",
+          "icon": "🌌",
+          "category": "mastery",
+          "unlocked": false,
+          "progress": 8,
+          "maxProgress": 200
+        },
+        {
+          "id": "game_combo_50",
+          "name": "极速盲打",
+          "description": "打字速记模式获得单局 500 分以上",
+          "icon": "⌨️",
+          "category": "game",
+          "unlocked": true,
+          "progress": 500,
+          "maxProgress": 500,
+          "unlockedAt": "2026-08-09"
+        },
+        {
+          "id": "ebbinghaus_geek",
+          "name": "艾宾浩斯极客",
+          "description": "累计完成 100 次间隔复习",
+          "icon": "🧠",
+          "category": "learning",
+          "unlocked": false,
+          "progress": 48,
+          "maxProgress": 100
+        },
+        {
+          "id": "legend_master",
+          "name": "全域高能",
+          "description": "词汇总量准确率超过 85%",
+          "icon": "👑",
+          "category": "mastery",
+          "unlocked": true,
+          "progress": 85,
+          "maxProgress": 85,
+          "unlockedAt": "2026-08-09"
+        },
+        {
+          "id": "first_word",
+          "name": "初入词域",
+          "description": "完成第一次单词打卡学习",
+          "icon": "🚀",
+          "category": "learning",
+          "unlocked": true,
+          "progress": 1,
+          "maxProgress": 1,
+          "unlockedAt": "2026-08-09"
+        },
+        {
+          "id": "streak_7",
+          "name": "七日连胜",
+          "description": "连续打卡 7 天",
+          "icon": "🔥",
+          "category": "streak",
+          "unlocked": true,
+          "progress": 7,
+          "maxProgress": 7,
+          "unlockedAt": "2026-08-09"
+        },
+        {
+          "id": "streak_30",
+          "name": "月度星轨",
+          "description": "连续打卡 30 天",
+          "icon": "⚡",
+          "category": "streak",
+          "unlocked": false,
+          "progress": 14,
+          "maxProgress": 30
+        },
+        {
+          "id": "master_50",
+          "name": "半百破壁",
+          "description": "累计掌握 50 个单词",
+          "icon": "🛡️",
+          "category": "mastery",
+          "unlocked": false,
+          "progress": 8,
+          "maxProgress": 50
+        },
+        {
+          "id": "master_200",
+          "name": "星云探索者",
+          "description": "累计掌握 200 个单词",
+          "icon": "🌌",
+          "category": "mastery",
+          "unlocked": false,
+          "progress": 8,
+          "maxProgress": 200
+        },
+        {
+          "id": "game_combo_50",
+          "name": "极速盲打",
+          "description": "打字速记模式获得单局 500 分以上",
+          "icon": "⌨️",
+          "category": "game",
+          "unlocked": true,
+          "progress": 500,
+          "maxProgress": 500,
+          "unlockedAt": "2026-08-09"
+        },
+        {
+          "id": "ebbinghaus_geek",
+          "name": "艾宾浩斯极客",
+          "description": "累计完成 100 次间隔复习",
+          "icon": "🧠",
+          "category": "learning",
+          "unlocked": false,
+          "progress": 48,
+          "maxProgress": 100
+        },
+        {
+          "id": "legend_master",
+          "name": "全域高能",
+          "description": "词汇总量准确率超过 85%",
+          "icon": "👑",
+          "category": "mastery",
+          "unlocked": true,
+          "progress": 85,
+          "maxProgress": 85,
+          "unlockedAt": "2026-08-09"
+        },
+        {
+          "id": "first_word",
+          "name": "初入词域",
+          "description": "完成第一次单词打卡学习",
+          "icon": "🚀",
+          "category": "learning",
+          "unlocked": true,
+          "progress": 1,
+          "maxProgress": 1,
+          "unlockedAt": "2026-08-09"
+        },
+        {
+          "id": "streak_7",
+          "name": "七日连胜",
+          "description": "连续打卡 7 天",
+          "icon": "🔥",
+          "category": "streak",
+          "unlocked": true,
+          "progress": 7,
+          "maxProgress": 7,
+          "unlockedAt": "2026-08-09"
+        },
+        {
+          "id": "streak_30",
+          "name": "月度星轨",
+          "description": "连续打卡 30 天",
+          "icon": "⚡",
+          "category": "streak",
+          "unlocked": false,
+          "progress": 14,
+          "maxProgress": 30
+        },
+        {
+          "id": "master_50",
+          "name": "半百破壁",
+          "description": "累计掌握 50 个单词",
+          "icon": "🛡️",
+          "category": "mastery",
+          "unlocked": false,
+          "progress": 8,
+          "maxProgress": 50
+        },
+        {
+          "id": "master_200",
+          "name": "星云探索者",
+          "description": "累计掌握 200 个单词",
+          "icon": "🌌",
+          "category": "mastery",
+          "unlocked": false,
+          "progress": 8,
+          "maxProgress": 200
+        },
+        {
+          "id": "game_combo_50",
+          "name": "极速盲打",
+          "description": "打字速记模式获得单局 500 分以上",
+          "icon": "⌨️",
+          "category": "game",
+          "unlocked": true,
+          "progress": 500,
+          "maxProgress": 500,
+          "unlockedAt": "2026-08-09"
+        },
+        {
+          "id": "ebbinghaus_geek",
+          "name": "艾宾浩斯极客",
+          "description": "累计完成 100 次间隔复习",
+          "icon": "🧠",
+          "category": "learning",
+          "unlocked": false,
+          "progress": 48,
+          "maxProgress": 100
+        },
+        {
+          "id": "legend_master",
+          "name": "全域高能",
+          "description": "词汇总量准确率超过 85%",
+          "icon": "👑",
+          "category": "mastery",
+          "unlocked": true,
+          "progress": 85,
+          "maxProgress": 85,
+          "unlockedAt": "2026-08-09"
+        },
+        {
+          "id": "first_word",
+          "name": "初入词域",
+          "description": "完成第一次单词打卡学习",
+          "icon": "🚀",
+          "category": "learning",
+          "unlocked": true,
+          "progress": 1,
+          "maxProgress": 1,
+          "unlockedAt": "2026-08-09"
+        },
+        {
+          "id": "streak_7",
+          "name": "七日连胜",
+          "description": "连续打卡 7 天",
+          "icon": "🔥",
+          "category": "streak",
+          "unlocked": true,
+          "progress": 7,
+          "maxProgress": 7,
+          "unlockedAt": "2026-08-09"
+        },
+        {
+          "id": "streak_30",
+          "name": "月度星轨",
+          "description": "连续打卡 30 天",
+          "icon": "⚡",
+          "category": "streak",
+          "unlocked": false,
+          "progress": 14,
+          "maxProgress": 30
+        },
+        {
+          "id": "master_50",
+          "name": "半百破壁",
+          "description": "累计掌握 50 个单词",
+          "icon": "🛡️",
+          "category": "mastery",
+          "unlocked": false,
+          "progress": 8,
+          "maxProgress": 50
+        },
+        {
+          "id": "master_200",
+          "name": "星云探索者",
+          "description": "累计掌握 200 个单词",
+          "icon": "🌌",
+          "category": "mastery",
+          "unlocked": false,
+          "progress": 8,
+          "maxProgress": 200
+        },
+        {
+          "id": "game_combo_50",
+          "name": "极速盲打",
+          "description": "打字速记模式获得单局 500 分以上",
+          "icon": "⌨️",
+          "category": "game",
+          "unlocked": true,
+          "progress": 500,
+          "maxProgress": 500,
+          "unlockedAt": "2026-08-09"
+        },
+        {
+          "id": "ebbinghaus_geek",
+          "name": "艾宾浩斯极客",
+          "description": "累计完成 100 次间隔复习",
+          "icon": "🧠",
+          "category": "learning",
+          "unlocked": false,
+          "progress": 48,
+          "maxProgress": 100
+        },
+        {
+          "id": "legend_master",
+          "name": "全域高能",
+          "description": "词汇总量准确率超过 85%",
+          "icon": "👑",
+          "category": "mastery",
+          "unlocked": true,
+          "progress": 85,
+          "maxProgress": 85,
+          "unlockedAt": "2026-08-09"
+        },
+        {
+          "id": "first_word",
+          "name": "初入词域",
+          "description": "完成第一次单词打卡学习",
+          "icon": "🚀",
+          "category": "learning",
+          "unlocked": true,
+          "progress": 1,
+          "maxProgress": 1,
+          "unlockedAt": "2026-08-09"
+        },
+        {
+          "id": "streak_7",
+          "name": "七日连胜",
+          "description": "连续打卡 7 天",
+          "icon": "🔥",
+          "category": "streak",
+          "unlocked": true,
+          "progress": 7,
+          "maxProgress": 7,
+          "unlockedAt": "2026-08-09"
+        },
+        {
+          "id": "streak_30",
+          "name": "月度星轨",
+          "description": "连续打卡 30 天",
+          "icon": "⚡",
+          "category": "streak",
+          "unlocked": false,
+          "progress": 14,
+          "maxProgress": 30
+        },
+        {
+          "id": "master_50",
+          "name": "半百破壁",
+          "description": "累计掌握 50 个单词",
+          "icon": "🛡️",
+          "category": "mastery",
+          "unlocked": false,
+          "progress": 8,
+          "maxProgress": 50
+        },
+        {
+          "id": "master_200",
+          "name": "星云探索者",
+          "description": "累计掌握 200 个单词",
+          "icon": "🌌",
+          "category": "mastery",
+          "unlocked": false,
+          "progress": 8,
+          "maxProgress": 200
+        },
+        {
+          "id": "game_combo_50",
+          "name": "极速盲打",
+          "description": "打字速记模式获得单局 500 分以上",
+          "icon": "⌨️",
+          "category": "game",
+          "unlocked": true,
+          "progress": 500,
+          "maxProgress": 500,
+          "unlockedAt": "2026-08-09"
+        },
+        {
+          "id": "ebbinghaus_geek",
+          "name": "艾宾浩斯极客",
+          "description": "累计完成 100 次间隔复习",
+          "icon": "🧠",
+          "category": "learning",
+          "unlocked": false,
+          "progress": 48,
+          "maxProgress": 100
+        },
+        {
+          "id": "legend_master",
+          "name": "全域高能",
+          "description": "词汇总量准确率超过 85%",
+          "icon": "👑",
+          "category": "mastery",
+          "unlocked": true,
+          "progress": 85,
+          "maxProgress": 85,
+          "unlockedAt": "2026-08-09"
+        },
+        {
+          "id": "first_word",
+          "name": "初入词域",
+          "description": "完成第一次单词打卡学习",
+          "icon": "🚀",
+          "category": "learning",
+          "unlocked": true,
+          "progress": 1,
+          "maxProgress": 1,
+          "unlockedAt": "2026-08-09"
+        },
+        {
+          "id": "streak_7",
+          "name": "七日连胜",
+          "description": "连续打卡 7 天",
+          "icon": "🔥",
+          "category": "streak",
+          "unlocked": true,
+          "progress": 7,
+          "maxProgress": 7,
+          "unlockedAt": "2026-08-09"
+        },
+        {
+          "id": "streak_30",
+          "name": "月度星轨",
+          "description": "连续打卡 30 天",
+          "icon": "⚡",
+          "category": "streak",
+          "unlocked": false,
+          "progress": 14,
+          "maxProgress": 30
+        },
+        {
+          "id": "master_50",
+          "name": "半百破壁",
+          "description": "累计掌握 50 个单词",
+          "icon": "🛡️",
+          "category": "mastery",
+          "unlocked": false,
+          "progress": 8,
+          "maxProgress": 50
+        },
+        {
+          "id": "master_200",
+          "name": "星云探索者",
+          "description": "累计掌握 200 个单词",
+          "icon": "🌌",
+          "category": "mastery",
+          "unlocked": false,
+          "progress": 8,
+          "maxProgress": 200
+        },
+        {
+          "id": "game_combo_50",
+          "name": "极速盲打",
+          "description": "打字速记模式获得单局 500 分以上",
+          "icon": "⌨️",
+          "category": "game",
+          "unlocked": true,
+          "progress": 500,
+          "maxProgress": 500,
+          "unlockedAt": "2026-08-09"
+        },
+        {
+          "id": "ebbinghaus_geek",
+          "name": "艾宾浩斯极客",
+          "description": "累计完成 100 次间隔复习",
+          "icon": "🧠",
+          "category": "learning",
+          "unlocked": false,
+          "progress": 48,
+          "maxProgress": 100
+        },
+        {
+          "id": "legend_master",
+          "name": "全域高能",
+          "description": "词汇总量准确率超过 85%",
+          "icon": "👑",
+          "category": "mastery",
+          "unlocked": true,
+          "progress": 85,
+          "maxProgress": 85,
+          "unlockedAt": "2026-08-09"
+        },
+        {
+          "id": "first_word",
+          "name": "初入词域",
+          "description": "完成第一次单词打卡学习",
+          "icon": "🚀",
+          "category": "learning",
+          "unlocked": true,
+          "progress": 1,
+          "maxProgress": 1,
+          "unlockedAt": "2026-08-09"
+        },
+        {
+          "id": "streak_7",
+          "name": "七日连胜",
+          "description": "连续打卡 7 天",
+          "icon": "🔥",
+          "category": "streak",
+          "unlocked": true,
+          "progress": 7,
+          "maxProgress": 7,
+          "unlockedAt": "2026-08-09"
+        },
+        {
+          "id": "streak_30",
+          "name": "月度星轨",
+          "description": "连续打卡 30 天",
+          "icon": "⚡",
+          "category": "streak",
+          "unlocked": false,
+          "progress": 14,
+          "maxProgress": 30
+        },
+        {
+          "id": "master_50",
+          "name": "半百破壁",
+          "description": "累计掌握 50 个单词",
+          "icon": "🛡️",
+          "category": "mastery",
+          "unlocked": false,
+          "progress": 8,
+          "maxProgress": 50
+        },
+        {
+          "id": "master_200",
+          "name": "星云探索者",
+          "description": "累计掌握 200 个单词",
+          "icon": "🌌",
+          "category": "mastery",
+          "unlocked": false,
+          "progress": 8,
+          "maxProgress": 200
+        },
+        {
+          "id": "game_combo_50",
+          "name": "极速盲打",
+          "description": "打字速记模式获得单局 500 分以上",
+          "icon": "⌨️",
+          "category": "game",
+          "unlocked": true,
+          "progress": 500,
+          "maxProgress": 500,
+          "unlockedAt": "2026-08-09"
+        },
+        {
+          "id": "ebbinghaus_geek",
+          "name": "艾宾浩斯极客",
+          "description": "累计完成 100 次间隔复习",
+          "icon": "🧠",
+          "category": "learning",
+          "unlocked": false,
+          "progress": 48,
+          "maxProgress": 100
+        },
+        {
+          "id": "legend_master",
+          "name": "全域高能",
+          "description": "词汇总量准确率超过 85%",
+          "icon": "👑",
+          "category": "mastery",
+          "unlocked": true,
+          "progress": 85,
+          "maxProgress": 85,
+          "unlockedAt": "2026-08-09"
+        },
+        {
+          "id": "first_word",
+          "name": "初入词域",
+          "description": "完成第一次单词打卡学习",
+          "icon": "🚀",
+          "category": "learning",
+          "unlocked": true,
+          "progress": 1,
+          "maxProgress": 1,
+          "unlockedAt": "2026-08-09"
+        },
+        {
+          "id": "streak_7",
+          "name": "七日连胜",
+          "description": "连续打卡 7 天",
+          "icon": "🔥",
+          "category": "streak",
+          "unlocked": true,
+          "progress": 7,
+          "maxProgress": 7,
+          "unlockedAt": "2026-08-09"
+        },
+        {
+          "id": "streak_30",
+          "name": "月度星轨",
+          "description": "连续打卡 30 天",
+          "icon": "⚡",
+          "category": "streak",
+          "unlocked": false,
+          "progress": 14,
+          "maxProgress": 30
+        },
+        {
+          "id": "master_50",
+          "name": "半百破壁",
+          "description": "累计掌握 50 个单词",
+          "icon": "🛡️",
+          "category": "mastery",
+          "unlocked": false,
+          "progress": 8,
+          "maxProgress": 50
+        },
+        {
+          "id": "master_200",
+          "name": "星云探索者",
+          "description": "累计掌握 200 个单词",
+          "icon": "🌌",
+          "category": "mastery",
+          "unlocked": false,
+          "progress": 8,
+          "maxProgress": 200
+        },
+        {
+          "id": "game_combo_50",
+          "name": "极速盲打",
+          "description": "打字速记模式获得单局 500 分以上",
+          "icon": "⌨️",
+          "category": "game",
+          "unlocked": true,
+          "progress": 500,
+          "maxProgress": 500,
+          "unlockedAt": "2026-08-09"
+        },
+        {
+          "id": "ebbinghaus_geek",
+          "name": "艾宾浩斯极客",
+          "description": "累计完成 100 次间隔复习",
+          "icon": "🧠",
+          "category": "learning",
+          "unlocked": false,
+          "progress": 48,
+          "maxProgress": 100
+        },
+        {
+          "id": "legend_master",
+          "name": "全域高能",
+          "description": "词汇总量准确率超过 85%",
+          "icon": "👑",
+          "category": "mastery",
+          "unlocked": true,
+          "progress": 85,
+          "maxProgress": 85,
+          "unlockedAt": "2026-08-09"
+        },
+        {
+          "id": "first_word",
+          "name": "初入词域",
+          "description": "完成第一次单词打卡学习",
+          "icon": "🚀",
+          "category": "learning",
+          "unlocked": true,
+          "progress": 1,
+          "maxProgress": 1,
+          "unlockedAt": "2026-08-09"
+        },
+        {
+          "id": "streak_7",
+          "name": "七日连胜",
+          "description": "连续打卡 7 天",
+          "icon": "🔥",
+          "category": "streak",
+          "unlocked": true,
+          "progress": 7,
+          "maxProgress": 7,
+          "unlockedAt": "2026-08-09"
+        },
+        {
+          "id": "streak_30",
+          "name": "月度星轨",
+          "description": "连续打卡 30 天",
+          "icon": "⚡",
+          "category": "streak",
+          "unlocked": false,
+          "progress": 14,
+          "maxProgress": 30
+        },
+        {
+          "id": "master_50",
+          "name": "半百破壁",
+          "description": "累计掌握 50 个单词",
+          "icon": "🛡️",
+          "category": "mastery",
+          "unlocked": false,
+          "progress": 8,
+          "maxProgress": 50
+        },
+        {
+          "id": "master_200",
+          "name": "星云探索者",
+          "description": "累计掌握 200 个单词",
+          "icon": "🌌",
+          "category": "mastery",
+          "unlocked": false,
+          "progress": 8,
+          "maxProgress": 200
+        },
+        {
+          "id": "game_combo_50",
+          "name": "极速盲打",
+          "description": "打字速记模式获得单局 500 分以上",
+          "icon": "⌨️",
+          "category": "game",
+          "unlocked": true,
+          "progress": 500,
+          "maxProgress": 500,
+          "unlockedAt": "2026-08-09"
+        },
+        {
+          "id": "ebbinghaus_geek",
+          "name": "艾宾浩斯极客",
+          "description": "累计完成 100 次间隔复习",
+          "icon": "🧠",
+          "category": "learning",
+          "unlocked": false,
+          "progress": 48,
+          "maxProgress": 100
+        },
+        {
+          "id": "legend_master",
+          "name": "全域高能",
+          "description": "词汇总量准确率超过 85%",
+          "icon": "👑",
+          "category": "mastery",
+          "unlocked": true,
+          "progress": 85,
+          "maxProgress": 85,
+          "unlockedAt": "2026-08-09"
+        },
+        {
+          "id": "first_word",
+          "name": "初入词域",
+          "description": "完成第一次单词打卡学习",
+          "icon": "🚀",
+          "category": "learning",
+          "unlocked": true,
+          "progress": 1,
+          "maxProgress": 1,
+          "unlockedAt": "2026-08-09"
+        },
+        {
+          "id": "streak_7",
+          "name": "七日连胜",
+          "description": "连续打卡 7 天",
+          "icon": "🔥",
+          "category": "streak",
+          "unlocked": true,
+          "progress": 7,
+          "maxProgress": 7,
+          "unlockedAt": "2026-08-09"
+        },
+        {
+          "id": "streak_30",
+          "name": "月度星轨",
+          "description": "连续打卡 30 天",
+          "icon": "⚡",
+          "category": "streak",
+          "unlocked": false,
+          "progress": 14,
+          "maxProgress": 30
+        },
+        {
+          "id": "master_50",
+          "name": "半百破壁",
+          "description": "累计掌握 50 个单词",
+          "icon": "🛡️",
+          "category": "mastery",
+          "unlocked": false,
+          "progress": 8,
+          "maxProgress": 50
+        },
+        {
+          "id": "master_200",
+          "name": "星云探索者",
+          "description": "累计掌握 200 个单词",
+          "icon": "🌌",
+          "category": "mastery",
+          "unlocked": false,
+          "progress": 8,
+          "maxProgress": 200
+        },
+        {
+          "id": "game_combo_50",
+          "name": "极速盲打",
+          "description": "打字速记模式获得单局 500 分以上",
+          "icon": "⌨️",
+          "category": "game",
+          "unlocked": true,
+          "progress": 500,
+          "maxProgress": 500,
+          "unlockedAt": "2026-08-09"
+        },
+        {
+          "id": "ebbinghaus_geek",
+          "name": "艾宾浩斯极客",
+          "description": "累计完成 100 次间隔复习",
+          "icon": "🧠",
+          "category": "learning",
+          "unlocked": false,
+          "progress": 48,
+          "maxProgress": 100
+        },
+        {
+          "id": "legend_master",
+          "name": "全域高能",
+          "description": "词汇总量准确率超过 85%",
+          "icon": "👑",
+          "category": "mastery",
+          "unlocked": true,
+          "progress": 85,
+          "maxProgress": 85,
+          "unlockedAt": "2026-08-09"
+        },
+        {
+          "id": "first_word",
+          "name": "初入词域",
+          "description": "完成第一次单词打卡学习",
+          "icon": "🚀",
+          "category": "learning",
+          "unlocked": true,
+          "progress": 1,
+          "maxProgress": 1,
+          "unlockedAt": "2026-08-09"
+        },
+        {
+          "id": "streak_7",
+          "name": "七日连胜",
+          "description": "连续打卡 7 天",
+          "icon": "🔥",
+          "category": "streak",
+          "unlocked": true,
+          "progress": 7,
+          "maxProgress": 7,
+          "unlockedAt": "2026-08-09"
+        },
+        {
+          "id": "streak_30",
+          "name": "月度星轨",
+          "description": "连续打卡 30 天",
+          "icon": "⚡",
+          "category": "streak",
+          "unlocked": false,
+          "progress": 14,
+          "maxProgress": 30
+        },
+        {
+          "id": "master_50",
+          "name": "半百破壁",
+          "description": "累计掌握 50 个单词",
+          "icon": "🛡️",
+          "category": "mastery",
+          "unlocked": false,
+          "progress": 8,
+          "maxProgress": 50
+        },
+        {
+          "id": "master_200",
+          "name": "星云探索者",
+          "description": "累计掌握 200 个单词",
+          "icon": "🌌",
+          "category": "mastery",
+          "unlocked": false,
+          "progress": 8,
+          "maxProgress": 200
+        },
+        {
+          "id": "game_combo_50",
+          "name": "极速盲打",
+          "description": "打字速记模式获得单局 500 分以上",
+          "icon": "⌨️",
+          "category": "game",
+          "unlocked": true,
+          "progress": 500,
+          "maxProgress": 500,
+          "unlockedAt": "2026-08-09"
+        },
+        {
+          "id": "ebbinghaus_geek",
+          "name": "艾宾浩斯极客",
+          "description": "累计完成 100 次间隔复习",
+          "icon": "🧠",
+          "category": "learning",
+          "unlocked": false,
+          "progress": 59,
+          "maxProgress": 100
+        },
+        {
+          "id": "legend_master",
+          "name": "全域高能",
+          "description": "词汇总量准确率超过 85%",
+          "icon": "👑",
+          "category": "mastery",
+          "unlocked": true,
+          "progress": 85,
+          "maxProgress": 85,
+          "unlockedAt": "2026-08-09"
+        }
+      ],
+      "updatedAt": "2026-08-09T15:44:22.056Z"
+    }
+  }
 }

@@ -1,4 +1,4 @@
-export type BookCategory = 'cet4' | 'cet6' | 'ielts' | 'dev_english' | 'bnu_compulsory1' | 'custom';
+export type BookCategory = 'cet4' | 'cet6' | 'ielts' | 'dev_english' | 'bnu_compulsory1' | 'spanish_beginner' | 'custom';
 
 export type WordStatus = 'new' | 'reviewing' | 'mastered';
 

@@ -6,17 +6,17 @@ const AUTH_KEYS = {
   SYNC_PREFIX: 'lexiverse_user_sync_',
 };
 
-/** 获得公网高可用云端中转存储端点 (使用免费免注册的公共 KV 通道，任何网络、GitHub Pages / 局域网均可 100% 互通) */
-function getCloudSyncUrl(username: string): string {
-  const cleanName = username.trim().toLowerCase();
-  // 使用 jsonblob 公共跨域 API 通道，根据用户名唯一 MD5/Hash 进行云端数据绑定
-  const hashedUser = btoa(cleanName).replace(/=/g, '');
-  return `https://jsonblob.com/api/jsonBlob/lexiverse_user_${hashedUser}`;
-}
-
 /** 局域网备用 3001 端口 API 地址 */
 function getLocalApiHost(): string {
   if (typeof window === 'undefined') return 'http://localhost:3001';
+  
+  if (window.location.hostname.includes('github.io')) {
+    const savedIp = localStorage.getItem('lexiverse_lan_ip');
+    if (savedIp) {
+      return `http://${savedIp.trim()}:3001`;
+    }
+  }
+  
   const hostname = window.location.hostname;
   return `http://${hostname}:3001`;
 }
@@ -109,25 +109,11 @@ export async function loginAccount(username: string, _password: string): Promise
   return { success: true, message: `Welcome back, ${cleanName}!` };
 }
 
-/** 从【公网云端通道 + 局域网 API】双通道增量拉取最新打卡记录 */
+/** 从【局域网 API】拉取最新打卡记录 */
 export async function fetchUserSyncedData(username: string): Promise<boolean> {
   if (!username) return false;
   let hasFetched = false;
 
-  // 通道 1：从公网云端中转 KV 通道拉取 (支持 GitHub Pages、4G 流量、跨网段手机与电脑实时同步)
-  try {
-    const cloudUrl = getCloudSyncUrl(username);
-    const res = await fetch(cloudUrl, { method: 'GET' });
-    if (res.ok) {
-      const cloudData = await res.json();
-      if (cloudData && (cloudData.records || cloudData.activities)) {
-        applySyncDataToLocal(cloudData);
-        hasFetched = true;
-      }
-    }
-  } catch (e) {}
-
-  // 通道 2：从局域网 3001 端口服务拉取 (备用通道)
   try {
     const res = await fetch(`${getLocalApiHost()}/api/sync?username=${encodeURIComponent(username)}`);
     if (res.ok) {
@@ -197,7 +183,7 @@ export function applySyncDataToLocal(syncData: any) {
   } catch (e) {}
 }
 
-/** 推送本地进度到【公网云端 + 局域网 API】双通道 */
+/** 推送本地进度到【局域网 API】 */
 export async function saveUserSyncedData(
   username: string,
   records: Record<string, UserWordRecord>,
@@ -215,17 +201,6 @@ export async function saveUserSyncedData(
   };
   localStorage.setItem(`${AUTH_KEYS.SYNC_PREFIX}${username.toLowerCase()}`, JSON.stringify(payload));
 
-  // 1. 推送到公网高可用 KV 通道 (允许跨网络多设备秒级同步)
-  try {
-    const cloudUrl = getCloudSyncUrl(username);
-    fetch(cloudUrl, {
-      method: 'PUT',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(payload),
-    }).catch(() => {});
-  } catch (e) {}
-
-  // 2. 推送到局域网 3001 端口服务
   try {
     fetch(`${getLocalApiHost()}/api/sync`, {
       method: 'POST',
@@ -246,4 +221,23 @@ export function loadUserSyncedData(username: string): boolean {
   } catch (e) {
     return false;
   }
+}
+
+/** 彻底重置清空远端服务端的该用户数据，防止自动合并恢复旧数据 */
+export async function wipeUserSyncedData(username: string): Promise<void> {
+  if (!username) return;
+  
+  localStorage.removeItem(`${AUTH_KEYS.SYNC_PREFIX}${username.toLowerCase()}`);
+  
+  try {
+    fetch(`${getLocalApiHost()}/api/sync`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        username,
+        isReset: true
+      }),
+      keepalive: true, // 确保即使页面马上 reload 也能发出去
+    }).catch(() => {});
+  } catch (e) {}
 }

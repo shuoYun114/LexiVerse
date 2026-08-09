@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import * as THREE from 'three';
 import { Word, UserWordRecord } from '../types';
-import { speakWord } from '../utils/tts';
+import { speakWord, getWordAccent } from '../utils/tts';
 import { Volume2, CheckCircle2, Clock } from 'lucide-react';
 
 interface WordNebula3DProps {
@@ -152,7 +152,7 @@ export const WordNebula3D: React.FC<WordNebula3DProps> = ({
         onSelectWord(clickedWord);
 
         if (soundEnabled) {
-          speakWord(clickedWord.word);
+          speakWord(clickedWord.word, getWordAccent(clickedWord));
         }
       }
     };

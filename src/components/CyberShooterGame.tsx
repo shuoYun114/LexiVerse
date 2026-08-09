@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Word } from '../types';
 import { recordDailyActivity } from '../utils/storage';
-import { speakWord } from '../utils/tts';
+import { speakWord, getWordAccent } from '../utils/tts';
 import confetti from 'canvas-confetti';
 import { Gamepad2, Zap, RefreshCw, Trophy, ShieldAlert } from 'lucide-react';
 
@@ -131,7 +131,7 @@ export const CyberShooterGame: React.FC<CyberShooterGameProps> = ({ words, sound
       if (newCombo > maxCombo) setMaxCombo(newCombo);
 
       if (soundEnabled) {
-        speakWord(matched.word.word);
+        speakWord(matched.word.word, getWordAccent(matched.word));
       }
 
       // 剔除击中的单词

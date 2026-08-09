@@ -95,6 +95,7 @@ export const Header: React.FC<HeaderProps> = ({
               }}
             >
               <option value="bnu_compulsory1" style={{ background: '#111827' }}>🎓 北师大版 高中英语必修一</option>
+              <option value="spanish_beginner" style={{ background: '#111827' }}>🇪🇸 西班牙语入门 (Spanish Beginner)</option>
               <option value="cet4" style={{ background: '#111827' }}>CET-4 四级核心</option>
               <option value="cet6" style={{ background: '#111827' }}>CET-6 六级词汇</option>
               <option value="ielts" style={{ background: '#111827' }}>IELTS 雅思高频</option>
@@ -138,19 +139,60 @@ export const Header: React.FC<HeaderProps> = ({
             {currentUser && (
               <button
                 onClick={async () => {
+                  if (isDemoEnv()) {
+                    let savedIp = localStorage.getItem('lexiverse_lan_ip');
+                    if (!savedIp) {
+                      savedIp = window.prompt('【GitHub Pages 跨端同步】\\n检测到您正使用在线演示版。若需与电脑同步，请输入运行 LexiVerse 的电脑局域网 IP (例如 192.168.1.100)：');
+                      if (savedIp) {
+                        localStorage.setItem('lexiverse_lan_ip', savedIp.trim());
+                      } else {
+                        return; // 取消
+                      }
+                    } else {
+                      const changeIp = window.confirm(`【GitHub Pages 跨端同步】\\n当前绑定的电脑局域网 IP 为: ${savedIp}\\n是否需要修改？`);
+                      if (changeIp) {
+                        const newIp = window.prompt('请输入新的电脑局域网 IP：', savedIp);
+                        if (newIp) {
+                          localStorage.setItem('lexiverse_lan_ip', newIp.trim());
+                        } else {
+                          return;
+                        }
+                      }
+                    }
+                  }
+
                   const btn = document.getElementById('manual-sync-btn');
                   if (btn) btn.classList.add('spin-anim');
-                  await fetchUserSyncedData(currentUser.username);
-                  setTimeout(() => {
+
+                  try {
+                    // 动态获取工具方法避免循环依赖或其他导入问题
+                    const { saveUserSyncedData } = await import('../utils/auth');
+                    const { getUserWordRecords, getDailyActivities, getBadges } = await import('../utils/storage');
+                    
+                    // 先推送本地最新进度到局域网服务端
+                    await saveUserSyncedData(currentUser.username, getUserWordRecords(), getDailyActivities(), getBadges());
+                    
+                    // 然后再拉取合并服务端的最新进度
+                    const success = await fetchUserSyncedData(currentUser.username);
+                    
+                    setTimeout(() => {
+                      if (btn) btn.classList.remove('spin-anim');
+                      if (success) {
+                        alert(`🎉 [${currentUser.username}] 数据已成功双向同步！`);
+                      } else {
+                        alert(`⚠️ 同步失败！请确保局域网服务端 (3001端口) 已启动，或检查 IP 地址是否正确。`);
+                      }
+                    }, 600);
+                  } catch (e) {
                     if (btn) btn.classList.remove('spin-anim');
-                    alert(`🎉 [${currentUser.username}] 云端多端数据已成功双向同步！`);
-                  }, 600);
+                    alert(`⚠️ 同步发生异常，请检查网络连接！`);
+                  }
                 }}
                 className="cyber-button"
                 style={{ padding: '6px 10px', fontSize: '0.8rem', background: 'rgba(16, 185, 129, 0.15)', border: '1px solid #10b981', color: '#34d399' }}
-                title="点此立即强制云端双向同步打卡与连胜进度"
+                title="点此立即强制双向同步打卡与连胜进度"
               >
-                <RefreshCw id="manual-sync-btn" size={14} /> 手动云同步
+                <RefreshCw id="manual-sync-btn" size={14} /> 双向数据同步
               </button>
             )}
 

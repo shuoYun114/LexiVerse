@@ -16,6 +16,7 @@ import cet6Data from './data/cet6.json';
 import ieltsData from './data/ielts.json';
 import devEnglishData from './data/dev_english.json';
 import bnuCompulsory1Data from './data/bnu_compulsory1.json';
+import spanishBeginnerData from './data/spanish_beginner.json';
 
 export const App: React.FC = () => {
   const [activeTab, setActiveTab] = useState<ActiveTab>('nebula');
@@ -109,6 +110,8 @@ export const App: React.FC = () => {
   // 获取当前所选词库的单词列表
   const currentWords: Word[] = useMemo(() => {
     switch (currentBook) {
+      case 'spanish_beginner':
+        return spanishBeginnerData as Word[];
       case 'bnu_compulsory1':
         return bnuCompulsory1Data as Word[];
       case 'cet6':

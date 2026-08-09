@@ -428,11 +428,23 @@ export function loadDemoData(): void {
   checkAndUpdateBadges();
 }
 
+import { wipeUserSyncedData } from './auth';
+
 /** 清空重置所有打卡记录与学习进度 */
 export function resetAllData(): void {
   localStorage.removeItem(STORAGE_KEYS.RECORDS);
   localStorage.removeItem(STORAGE_KEYS.ACTIVITIES);
   localStorage.removeItem(STORAGE_KEYS.BADGES);
+
+  try {
+    const rawUser = localStorage.getItem('lexiverse_auth_user_v1');
+    if (rawUser) {
+      const user = JSON.parse(rawUser);
+      if (user && user.username) {
+        wipeUserSyncedData(user.username);
+      }
+    }
+  } catch (e) {}
 }
 
 /** 导入用户 JSON 数据 */

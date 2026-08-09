@@ -112,41 +112,51 @@ const server = http.createServer((req, res) => {
 
     // 4. POST /api/sync 智能并发合并 (Smart Merge - 只打卡累加不覆盖)
     if (pathname === '/api/sync' && req.method === 'POST') {
-      const { username, records, activities, badges } = parsedBody;
+      const { username, records, activities, badges, isReset } = parsedBody;
       const cleanName = (username || '').trim().toLowerCase();
       if (cleanName) {
-        const existingSync = db.syncData[cleanName] || { records: {}, activities: {}, badges: [] };
-        
-        // 智能合并背词记录 (以最新评分为准)
-        const mergedRecords = { ...existingSync.records, ...(records || {}) };
+        if (isReset) {
+          db.syncData[cleanName] = {
+            records: {},
+            activities: {},
+            badges: [],
+            updatedAt: new Date().toISOString(),
+          };
+          writeDb(db);
+        } else {
+          const existingSync = db.syncData[cleanName] || { records: {}, activities: {}, badges: [] };
+          
+          // 智能合并背词记录 (以最新评分为准)
+          const mergedRecords = { ...existingSync.records, ...(records || {}) };
 
-        // 智能合并每日打卡 (取最大打卡次数与最大学习单词数)
-        const mergedActivities = { ...existingSync.activities };
-        if (activities) {
-          Object.keys(activities).forEach(dateKey => {
-            const newAct = activities[dateKey];
-            const oldAct = mergedActivities[dateKey];
-            if (!oldAct) {
-              mergedActivities[dateKey] = newAct;
-            } else {
-              mergedActivities[dateKey] = {
-                date: dateKey,
-                count: Math.max(oldAct.count || 0, newAct.count || 0),
-                reviewCount: Math.max(oldAct.reviewCount || 0, newAct.reviewCount || 0),
-                masteredCount: Math.max(oldAct.masteredCount || 0, newAct.masteredCount || 0),
-                gameScore: Math.max(oldAct.gameScore || 0, newAct.gameScore || 0),
-              };
-            }
-          });
+          // 智能合并每日打卡 (取最大打卡次数与最大学习单词数)
+          const mergedActivities = { ...existingSync.activities };
+          if (activities) {
+            Object.keys(activities).forEach(dateKey => {
+              const newAct = activities[dateKey];
+              const oldAct = mergedActivities[dateKey];
+              if (!oldAct) {
+                mergedActivities[dateKey] = newAct;
+              } else {
+                mergedActivities[dateKey] = {
+                  date: dateKey,
+                  count: Math.max(oldAct.count || 0, newAct.count || 0),
+                  reviewCount: Math.max(oldAct.reviewCount || 0, newAct.reviewCount || 0),
+                  masteredCount: Math.max(oldAct.masteredCount || 0, newAct.masteredCount || 0),
+                  gameScore: Math.max(oldAct.gameScore || 0, newAct.gameScore || 0),
+                };
+              }
+            });
+          }
+
+          db.syncData[cleanName] = {
+            records: mergedRecords,
+            activities: mergedActivities,
+            badges: Array.from(new Set([...(existingSync.badges || []), ...(badges || [])])),
+            updatedAt: new Date().toISOString(),
+          };
+          writeDb(db);
         }
-
-        db.syncData[cleanName] = {
-          records: mergedRecords,
-          activities: mergedActivities,
-          badges: Array.from(new Set([...(existingSync.badges || []), ...(badges || [])])),
-          updatedAt: new Date().toISOString(),
-        };
-        writeDb(db);
       }
       res.writeHead(200, { 'Content-Type': 'application/json' });
       res.end(JSON.stringify({ success: true }));
