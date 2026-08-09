@@ -48,8 +48,9 @@
 ### 安装与本地运行
 
 ```bash
-# 1. 克隆项目或在当前目录
-cd d:\PYTHON\ENGLISH
+# 1. 克隆项目
+git clone https://github.com/shuoYun114/LexiVerse.git
+cd LexiVerse
 
 # 2. 安装依赖
 npm install
