@@ -6,10 +6,11 @@ const AUTH_KEYS = {
   SYNC_PREFIX: 'lexiverse_user_sync_',
 };
 
-/** 获取当前局域网 API 服务器地址 (动态适应 192.168.x.x 或 localhost) */
+/** 智能获取局域网 API 服务器地址 (统一手机与电脑的目标 3001 服务) */
 function getApiHost(): string {
   if (typeof window === 'undefined') return 'http://localhost:3001';
   const hostname = window.location.hostname;
+  // 如果是 localhost 或 127.0.0.1，或者局域网 IP，动态绑定 3001 端口
   return `http://${hostname}:3001`;
 }
 
@@ -38,7 +39,6 @@ export function setCurrentUser(user: UserAccount | null): void {
   }
 }
 
-/** 获取本地账号数据库 */
 function getUsersDb(): Record<string, { username: string; passwordHash: string; createdAt: string }> {
   try {
     const raw = localStorage.getItem(AUTH_KEYS.USERS_DB);
@@ -151,24 +151,57 @@ export async function fetchUserSyncedData(username: string): Promise<boolean> {
   return false;
 }
 
-/** 应用远端同步数据到本地 */
-function applySyncDataToLocal(syncData: any) {
+/** 智能应用并无损合并远端同步数据到本地，并触发全局广播事件 */
+export function applySyncDataToLocal(syncData: any) {
   if (!syncData) return;
   try {
+    let hasChanged = false;
+
     if (syncData.records) {
       const existing = localStorage.getItem('lexiverse_word_records_v1');
       const localRecords = existing ? JSON.parse(existing) : {};
       const mergedRecords = { ...localRecords, ...syncData.records };
       localStorage.setItem('lexiverse_word_records_v1', JSON.stringify(mergedRecords));
+      hasChanged = true;
     }
+
     if (syncData.activities) {
       const existing = localStorage.getItem('lexiverse_daily_activities_v1');
-      const localActivities = existing ? JSON.parse(existing) : {};
-      const mergedActivities = { ...localActivities, ...syncData.activities };
+      const localActivities: Record<string, DailyActivity> = existing ? JSON.parse(existing) : {};
+      const remoteActivities: Record<string, DailyActivity> = syncData.activities;
+
+      const mergedActivities = { ...localActivities };
+      Object.keys(remoteActivities).forEach(dateKey => {
+        const rAct = remoteActivities[dateKey];
+        const lAct = mergedActivities[dateKey];
+        if (!lAct) {
+          mergedActivities[dateKey] = rAct;
+        } else {
+          mergedActivities[dateKey] = {
+            date: dateKey,
+            count: Math.max(lAct.count || 0, rAct.count || 0),
+            reviewCount: Math.max(lAct.reviewCount || 0, rAct.reviewCount || 0),
+            masteredCount: Math.max(lAct.masteredCount || 0, rAct.masteredCount || 0),
+            gameScore: Math.max(lAct.gameScore || 0, rAct.gameScore || 0),
+          };
+        }
+      });
       localStorage.setItem('lexiverse_daily_activities_v1', JSON.stringify(mergedActivities));
+      hasChanged = true;
     }
+
     if (syncData.badges) {
-      localStorage.setItem('lexiverse_badges_v1', JSON.stringify(syncData.badges));
+      const existing = localStorage.getItem('lexiverse_badges_v1');
+      const localBadges = existing ? JSON.parse(existing) : [];
+      const badgeMap = new Map();
+      [...localBadges, ...syncData.badges].forEach(b => badgeMap.set(b.id, b));
+      localStorage.setItem('lexiverse_badges_v1', JSON.stringify(Array.from(badgeMap.values())));
+      hasChanged = true;
+    }
+
+    // 向全局触发 UI 强制重新渲染广播事件
+    if (hasChanged && typeof window !== 'undefined') {
+      window.dispatchEvent(new CustomEvent('lexiverse_data_synced'));
     }
   } catch (e) {}
 }

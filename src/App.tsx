@@ -34,33 +34,38 @@ export const App: React.FC = () => {
   });
   const [soundEnabled, setSoundEnabled] = useState(true);
 
-  // 初始化加载与 4 秒双向无感自动轮询同步
+  // 初始化加载与双向无感自动同步
   useEffect(() => {
     const savedBook = getCurrentBookId() as BookCategory;
     if (savedBook) setCurrentBookState(savedBook);
     const user = getCurrentUser();
     if (user) {
       setCurrentUserState(user);
-      // 挂载时主动拉取远端数据
       fetchUserSyncedData(user.username).then(() => refreshState());
     } else {
       refreshState();
     }
 
-    // 4 秒无感自动后台双向同步定时器
+    const handleCustomSynced = () => {
+      const records = getUserWordRecords();
+      setUserRecords(records);
+      setStats(getStudyStats());
+    };
+
+    window.addEventListener('lexiverse_data_synced', handleCustomSynced);
+
+    // 3 秒双向后台轮询引擎
     const interval = setInterval(async () => {
       const activeUser = getCurrentUser();
       if (activeUser) {
-        const hasNew = await fetchUserSyncedData(activeUser.username);
-        if (hasNew) {
-          const records = getUserWordRecords();
-          setUserRecords(records);
-          setStats(getStudyStats());
-        }
+        await fetchUserSyncedData(activeUser.username);
       }
-    }, 4000);
+    }, 3000);
 
-    return () => clearInterval(interval);
+    return () => {
+      window.removeEventListener('lexiverse_data_synced', handleCustomSynced);
+      clearInterval(interval);
+    };
   }, []);
 
   const refreshState = () => {
@@ -90,6 +95,10 @@ export const App: React.FC = () => {
   const handleLoadDemoData = () => {
     loadDemoData();
     refreshState();
+    const user = getCurrentUser();
+    if (user) {
+      saveUserSyncedData(user.username, getUserWordRecords(), getDailyActivities(), getBadges());
+    }
   };
 
   const handleSetCurrentBook = (book: BookCategory) => {
