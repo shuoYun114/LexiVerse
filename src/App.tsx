@@ -8,7 +8,7 @@ import { CyberShooterGame } from './components/CyberShooterGame';
 import { WordBookManager } from './components/WordBookManager';
 import { AuthModal } from './components/AuthModal';
 import { getUserWordRecords, getDailyActivities, getBadges, getStudyStats, getCurrentBookId, setCurrentBookId, loadDemoData } from './utils/storage';
-import { getCurrentUser, setCurrentUser, saveUserSyncedData } from './utils/auth';
+import { getCurrentUser, setCurrentUser, saveUserSyncedData, fetchUserSyncedData } from './utils/auth';
 
 // 动态导入 JSON 词库数据
 import cet4Data from './data/cet4.json';
@@ -34,13 +34,33 @@ export const App: React.FC = () => {
   });
   const [soundEnabled, setSoundEnabled] = useState(true);
 
-  // 初始化加载
+  // 初始化加载与 4 秒双向无感自动轮询同步
   useEffect(() => {
     const savedBook = getCurrentBookId() as BookCategory;
     if (savedBook) setCurrentBookState(savedBook);
     const user = getCurrentUser();
-    if (user) setCurrentUserState(user);
-    refreshState();
+    if (user) {
+      setCurrentUserState(user);
+      // 挂载时主动拉取远端数据
+      fetchUserSyncedData(user.username).then(() => refreshState());
+    } else {
+      refreshState();
+    }
+
+    // 4 秒无感自动后台双向同步定时器
+    const interval = setInterval(async () => {
+      const activeUser = getCurrentUser();
+      if (activeUser) {
+        const hasNew = await fetchUserSyncedData(activeUser.username);
+        if (hasNew) {
+          const records = getUserWordRecords();
+          setUserRecords(records);
+          setStats(getStudyStats());
+        }
+      }
+    }, 4000);
+
+    return () => clearInterval(interval);
   }, []);
 
   const refreshState = () => {
@@ -61,8 +81,9 @@ export const App: React.FC = () => {
     refreshState();
   };
 
-  const handleAuthSuccess = (user: UserAccount) => {
+  const handleAuthSuccess = async (user: UserAccount) => {
     setCurrentUserState(user);
+    await fetchUserSyncedData(user.username);
     refreshState();
   };
 

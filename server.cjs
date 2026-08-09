@@ -1,6 +1,7 @@
 const http = require('http');
 const fs = require('fs');
 const path = require('path');
+const url = require('url');
 
 const PORT = 3001;
 const DB_FILE = path.join(__dirname, 'server_db.json');
@@ -24,7 +25,7 @@ function writeDb(data) {
 }
 
 const server = http.createServer((req, res) => {
-  // CORS 头支持局域网全网访问
+  // CORS 头支持局域网全网跨域访问
   res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
   res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
@@ -32,6 +33,19 @@ const server = http.createServer((req, res) => {
   if (req.method === 'OPTIONS') {
     res.writeHead(200);
     res.end();
+    return;
+  }
+
+  const parsedUrl = url.parse(req.url, true);
+  const pathname = parsedUrl.pathname;
+
+  // 4. GET /api/sync 获取用户云端最新进度
+  if (pathname === '/api/sync' && req.method === 'GET') {
+    const username = (parsedUrl.query.username || '').toString().trim().toLowerCase();
+    const db = readDb();
+    const userSync = db.syncData[username] || null;
+    res.writeHead(200, { 'Content-Type': 'application/json' });
+    res.end(JSON.stringify({ success: true, syncData: userSync }));
     return;
   }
 
@@ -46,12 +60,12 @@ const server = http.createServer((req, res) => {
     const db = readDb();
 
     // 1. 注册 API
-    if (req.url === '/api/register' && req.method === 'POST') {
+    if (pathname === '/api/register' && req.method === 'POST') {
       const { username, password } = parsedBody;
       const cleanName = (username || '').trim().toLowerCase();
-      if (!cleanName || cleanName.length < 3) {
+      if (!cleanName || cleanName.length < 2) {
         res.writeHead(400, { 'Content-Type': 'application/json' });
-        res.end(JSON.stringify({ success: false, message: '用户名至少 3 个字符' }));
+        res.end(JSON.stringify({ success: false, message: '用户名至少 2 个字符' }));
         return;
       }
       if (db.users[cleanName]) {
@@ -73,7 +87,7 @@ const server = http.createServer((req, res) => {
     }
 
     // 2. 登录 API
-    if (req.url === '/api/login' && req.method === 'POST') {
+    if (pathname === '/api/login' && req.method === 'POST') {
       const { username, password } = parsedBody;
       const cleanName = (username || '').trim().toLowerCase();
       const user = db.users[cleanName];
@@ -90,7 +104,6 @@ const server = http.createServer((req, res) => {
         return;
       }
 
-      // 获取该用户在服务端的最新同步数据
       const userSync = db.syncData[cleanName] || null;
 
       res.writeHead(200, { 'Content-Type': 'application/json' });
@@ -98,15 +111,20 @@ const server = http.createServer((req, res) => {
       return;
     }
 
-    // 3. 同步 API
-    if (req.url === '/api/sync' && req.method === 'POST') {
+    // 3. 推送保存同步 API
+    if (pathname === '/api/sync' && req.method === 'POST') {
       const { username, records, activities, badges } = parsedBody;
       const cleanName = (username || '').trim().toLowerCase();
-      if (cleanName && db.users[cleanName]) {
+      if (cleanName) {
+        // 合并以前的打卡记录
+        const existingSync = db.syncData[cleanName] || { records: {}, activities: {}, badges: [] };
+        const mergedRecords = { ...existingSync.records, ...records };
+        const mergedActivities = { ...existingSync.activities, ...activities };
+
         db.syncData[cleanName] = {
-          records,
-          activities,
-          badges,
+          records: mergedRecords,
+          activities: mergedActivities,
+          badges: badges || existingSync.badges || [],
           updatedAt: new Date().toISOString(),
         };
         writeDb(db);
@@ -122,5 +140,5 @@ const server = http.createServer((req, res) => {
 });
 
 server.listen(PORT, '0.0.0.0', () => {
-  console.log(`🌌 LexiVerse LAN Sync Server running on http://0.0.0.0:${PORT}`);
+  console.log(`🌌 LexiVerse LAN Real-Time Sync Server running on http://0.0.0.0:${PORT}`);
 });
