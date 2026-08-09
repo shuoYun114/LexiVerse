@@ -48,6 +48,19 @@ export interface Badge {
 
 export type ActiveTab = 'nebula' | 'flashcards' | 'heatmap' | 'game' | 'wordbook';
 
+export interface UserAccount {
+  username: string;
+  createdAt: string;
+}
+
+export interface SyncPayload {
+  username: string;
+  records: Record<string, UserWordRecord>;
+  activities: Record<string, DailyActivity>;
+  badges: Badge[];
+  updatedAt: string;
+}
+
 export interface StudyStats {
   totalLearned: number;
   totalMastered: number;

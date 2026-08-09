@@ -1,12 +1,14 @@
 import React, { useState, useEffect, useMemo } from 'react';
-import { ActiveTab, BookCategory, Word, UserWordRecord, StudyStats } from './types';
+import { ActiveTab, BookCategory, Word, UserWordRecord, StudyStats, UserAccount } from './types';
 import { Header } from './components/Header';
 import { WordNebula3D } from './components/WordNebula3D';
 import { FlashcardEngine } from './components/FlashcardEngine';
 import { HeatmapDashboard } from './components/HeatmapDashboard';
 import { CyberShooterGame } from './components/CyberShooterGame';
 import { WordBookManager } from './components/WordBookManager';
-import { getUserWordRecords, getStudyStats, getCurrentBookId, setCurrentBookId, loadDemoData } from './utils/storage';
+import { AuthModal } from './components/AuthModal';
+import { getUserWordRecords, getDailyActivities, getBadges, getStudyStats, getCurrentBookId, setCurrentBookId, loadDemoData } from './utils/storage';
+import { getCurrentUser, setCurrentUser, saveUserSyncedData } from './utils/auth';
 
 // 动态导入 JSON 词库数据
 import cet4Data from './data/cet4.json';
@@ -19,6 +21,8 @@ export const App: React.FC = () => {
   const [activeTab, setActiveTab] = useState<ActiveTab>('nebula');
   const [currentBook, setCurrentBookState] = useState<BookCategory>('bnu_compulsory1');
   const [userRecords, setUserRecords] = useState<Record<string, UserWordRecord>>({});
+  const [currentUser, setCurrentUserState] = useState<UserAccount | null>(null);
+  const [isAuthModalOpen, setIsAuthModalOpen] = useState(false);
   const [stats, setStats] = useState<StudyStats>({
     totalLearned: 0,
     totalMastered: 0,
@@ -34,12 +38,32 @@ export const App: React.FC = () => {
   useEffect(() => {
     const savedBook = getCurrentBookId() as BookCategory;
     if (savedBook) setCurrentBookState(savedBook);
+    const user = getCurrentUser();
+    if (user) setCurrentUserState(user);
     refreshState();
   }, []);
 
   const refreshState = () => {
-    setUserRecords(getUserWordRecords());
+    const records = getUserWordRecords();
+    setUserRecords(records);
     setStats(getStudyStats());
+
+    // 如果当前有登录用户，将最新打卡与复习记录同步保存到该用户专属数据区
+    const user = getCurrentUser();
+    if (user) {
+      saveUserSyncedData(user.username, records, getDailyActivities(), getBadges());
+    }
+  };
+
+  const handleLogout = () => {
+    setCurrentUser(null);
+    setCurrentUserState(null);
+    refreshState();
+  };
+
+  const handleAuthSuccess = (user: UserAccount) => {
+    setCurrentUserState(user);
+    refreshState();
   };
 
   const handleLoadDemoData = () => {
@@ -82,6 +106,9 @@ export const App: React.FC = () => {
         soundEnabled={soundEnabled}
         setSoundEnabled={setSoundEnabled}
         onLoadDemoData={handleLoadDemoData}
+        currentUser={currentUser}
+        onOpenAuthModal={() => setIsAuthModalOpen(true)}
+        onLogout={handleLogout}
       />
 
       {/* 主视图区域 */}
@@ -121,6 +148,13 @@ export const App: React.FC = () => {
           />
         )}
       </main>
+
+      {/* 账号登录/注册模态框 */}
+      <AuthModal
+        isOpen={isAuthModalOpen}
+        onClose={() => setIsAuthModalOpen(false)}
+        onAuthSuccess={handleAuthSuccess}
+      />
 
     </div>
   );

@@ -1,6 +1,7 @@
 import React from 'react';
-import { ActiveTab, BookCategory, StudyStats } from '../types';
-import { Sparkles, Flame, Layers, Brain, LayoutDashboard, Gamepad2, BookOpen, Volume2, VolumeX } from 'lucide-react';
+import { ActiveTab, BookCategory, StudyStats, UserAccount } from '../types';
+import { isDemoEnv } from '../utils/auth';
+import { Sparkles, Flame, Layers, Brain, LayoutDashboard, Gamepad2, BookOpen, Volume2, VolumeX, User, LogOut, ShieldCheck } from 'lucide-react';
 
 interface HeaderProps {
   activeTab: ActiveTab;
@@ -11,6 +12,9 @@ interface HeaderProps {
   soundEnabled: boolean;
   setSoundEnabled: (enabled: boolean) => void;
   onLoadDemoData: () => void;
+  currentUser: UserAccount | null;
+  onOpenAuthModal: () => void;
+  onLogout: () => void;
 }
 
 export const Header: React.FC<HeaderProps> = ({
@@ -22,12 +26,17 @@ export const Header: React.FC<HeaderProps> = ({
   soundEnabled,
   setSoundEnabled,
   onLoadDemoData,
+  currentUser,
+  onOpenAuthModal,
+  onLogout,
 }) => {
+  const isDemo = isDemoEnv();
+
   return (
     <header className="glass-panel" style={{ margin: '16px 24px', padding: '12px 24px', position: 'relative', zIndex: 50 }}>
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '16px' }}>
         
-        {/* Logo 标志 */}
+        {/* Logo 标志与 Demo 徽章 */}
         <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
           <div
             style={{
@@ -44,16 +53,27 @@ export const Header: React.FC<HeaderProps> = ({
             <Sparkles size={24} color="#ffffff" />
           </div>
           <div>
-            <h1 className="text-gradient" style={{ fontSize: '1.4rem', fontWeight: 800, letterSpacing: '0.5px' }}>
-              LexiVerse
-            </h1>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+              <h1 className="text-gradient" style={{ fontSize: '1.4rem', fontWeight: 800, letterSpacing: '0.5px' }}>
+                LexiVerse
+              </h1>
+              {isDemo ? (
+                <span style={{ fontSize: '0.7rem', background: 'rgba(236, 72, 153, 0.2)', border: '1px solid #ec4899', color: '#f472b6', padding: '2px 8px', borderRadius: '12px', fontWeight: 700 }}>
+                  🚀 Demo 体验版
+                </span>
+              ) : (
+                <span style={{ fontSize: '0.7rem', background: 'rgba(16, 185, 129, 0.2)', border: '1px solid #10b981', color: '#34d399', padding: '2px 8px', borderRadius: '12px', fontWeight: 700, display: 'inline-flex', alignItems: 'center', gap: '3px' }}>
+                  <ShieldCheck size={10} /> 本地/局域网多端同步
+                </span>
+              )}
+            </div>
             <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)', fontFamily: 'var(--font-code)' }}>
               3D Cyber Nebula & Ebbinghaus
             </span>
           </div>
         </div>
 
-        {/* 词库切换与 Stats Indicator */}
+        {/* 词库切换、Stats Indicator 与 账号 */}
         <div style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
           {/* 词库选择器 */}
           <div style={{ display: 'flex', alignItems: 'center', gap: '6px', background: 'rgba(31, 41, 61, 0.6)', padding: '6px 12px', borderRadius: '8px', border: '1px solid var(--glass-border)' }}>
@@ -108,6 +128,30 @@ export const Header: React.FC<HeaderProps> = ({
           >
             ⚡ 一键充能打卡
           </button>
+
+          {/* 账号挂件 */}
+          {currentUser ? (
+            <div style={{ display: 'flex', alignItems: 'center', gap: '8px', background: 'rgba(99, 102, 241, 0.15)', padding: '4px 10px', borderRadius: '8px', border: '1px solid var(--color-primary)' }}>
+              <span style={{ fontSize: '0.85rem', color: '#fff', fontWeight: 600, display: 'flex', alignItems: 'center', gap: '4px' }}>
+                <User size={14} color="var(--color-accent)" /> {currentUser.username}
+              </span>
+              <button
+                onClick={onLogout}
+                style={{ background: 'none', border: 'none', color: 'var(--text-muted)', cursor: 'pointer', display: 'flex', alignItems: 'center' }}
+                title="退出登录"
+              >
+                <LogOut size={14} />
+              </button>
+            </div>
+          ) : (
+            <button
+              onClick={onOpenAuthModal}
+              className="cyber-button"
+              style={{ padding: '6px 12px', fontSize: '0.8rem' }}
+            >
+              <User size={14} /> 登录/注册
+            </button>
+          )}
 
           {/* 发音开关 */}
           <button
