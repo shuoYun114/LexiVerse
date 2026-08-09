@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { StudyStats } from '../types';
-import { get365DaysHeatmapData, getBadges, loadDemoData } from '../utils/storage';
+import { get365DaysHeatmapData, getBadges, loadDemoData, resetAllData } from '../utils/storage';
 import { Flame, Award, TrendingUp, Zap, Target, CheckCircle, Calendar, Sparkles } from 'lucide-react';
 
 interface HeatmapDashboardProps {
@@ -62,16 +62,30 @@ export const HeatmapDashboard: React.FC<HeatmapDashboardProps> = ({ stats }) => 
             新设备或线上访问无记录？无需复杂导入导出，点此一键快捷充能/同步打卡数据！
           </span>
         </div>
-        <button
-          onClick={() => {
-            loadDemoData();
-            window.location.reload();
-          }}
-          className="cyber-button cyber-button-primary"
-          style={{ padding: '6px 16px', fontSize: '0.85rem' }}
-        >
-          ⚡ 一键充能打卡记录
-        </button>
+        <div style={{ display: 'flex', gap: '8px' }}>
+          <button
+            onClick={() => {
+              loadDemoData();
+              window.location.reload();
+            }}
+            className="cyber-button cyber-button-primary"
+            style={{ padding: '6px 14px', fontSize: '0.85rem' }}
+          >
+            ⚡ 一键充能打卡
+          </button>
+          <button
+            onClick={() => {
+              if (window.confirm('确定要清空并重置为 0 打卡的初始状态吗？')) {
+                resetAllData();
+                window.location.reload();
+              }
+            }}
+            className="cyber-button cyber-button-danger"
+            style={{ padding: '6px 14px', fontSize: '0.85rem' }}
+          >
+            🗑️ 清空重置
+          </button>
+        </div>
       </div>
 
       {/* 顶部连胜与核心统计 KPI */}

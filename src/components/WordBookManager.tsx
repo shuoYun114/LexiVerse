@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Word, UserWordRecord, BookCategory } from '../types';
-import { exportUserData, importUserData } from '../utils/storage';
+import { exportUserData, importUserData, resetAllData } from '../utils/storage';
 import { speakWord } from '../utils/tts';
 import { Search, Download, Upload, Volume2, Database, CheckCircle, Clock } from 'lucide-react';
 
@@ -86,6 +86,20 @@ export const WordBookManager: React.FC<WordBookManagerProps> = ({
               <Upload size={16} /> 导入 JSON 进度
               <input type="file" accept=".json" onChange={handleImport} style={{ display: 'none' }} />
             </label>
+
+            <button
+              onClick={() => {
+                if (window.confirm('⚠️ 确定要清空重置所有打卡天数、学习进度与勋章吗？')) {
+                  resetAllData();
+                  onRefreshData();
+                  alert('✨ 所有打卡记录已重置为干净初始状态！');
+                }
+              }}
+              className="cyber-button cyber-button-danger"
+              style={{ padding: '8px 14px', fontSize: '0.85rem' }}
+            >
+              🗑️ 重置所有打卡
+            </button>
           </div>
 
         </div>

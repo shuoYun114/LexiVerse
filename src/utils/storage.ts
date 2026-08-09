@@ -428,6 +428,13 @@ export function loadDemoData(): void {
   checkAndUpdateBadges();
 }
 
+/** 清空重置所有打卡记录与学习进度 */
+export function resetAllData(): void {
+  localStorage.removeItem(STORAGE_KEYS.RECORDS);
+  localStorage.removeItem(STORAGE_KEYS.ACTIVITIES);
+  localStorage.removeItem(STORAGE_KEYS.BADGES);
+}
+
 /** 导入用户 JSON 数据 */
 export function importUserData(jsonString: string): boolean {
   try {
