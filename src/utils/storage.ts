@@ -386,6 +386,48 @@ export function exportUserData(): string {
   return JSON.stringify(data, null, 2);
 }
 
+/** 一键快捷初始化/恢复打卡体验数据 (无需手动选择文件) */
+export function loadDemoData(): void {
+  const activities: Record<string, DailyActivity> = {};
+  const records: Record<string, UserWordRecord> = {};
+
+  const today = new Date();
+  // 过去 14 天填充打卡数据
+  for (let i = 13; i >= 0; i--) {
+    const d = new Date(today);
+    d.setDate(today.getDate() - i);
+    const dateStr = getLocalDateString(d);
+    const count = 5 + Math.floor(Math.random() * 15);
+    activities[dateStr] = {
+      date: dateStr,
+      count,
+      reviewCount: Math.floor(count * 0.6),
+      masteredCount: Math.floor(count * 0.4),
+      gameScore: 350 + Math.floor(Math.random() * 200),
+    };
+  }
+
+  // 示例掌握记录
+  const demoWords = ['nebula', 'algorithm', 'horizon', 'cyberpunk', 'retention', 'luminous', 'resilience', 'velocity'];
+  demoWords.forEach((wId) => {
+    records[`cet4-00${demoWords.indexOf(wId) + 1}`] = {
+      wordId: `cet4-00${demoWords.indexOf(wId) + 1}`,
+      repetition: 5,
+      interval: 21,
+      easinessFactor: 2.5,
+      nextReviewDate: getLocalDateString(new Date(Date.now() + 86400000 * 21)),
+      lastReviewedDate: getLocalDateString(),
+      status: 'mastered',
+      totalReviews: 6,
+      correctReviews: 6,
+    };
+  });
+
+  localStorage.setItem(STORAGE_KEYS.ACTIVITIES, JSON.stringify(activities));
+  localStorage.setItem(STORAGE_KEYS.RECORDS, JSON.stringify(records));
+  checkAndUpdateBadges();
+}
+
 /** 导入用户 JSON 数据 */
 export function importUserData(jsonString: string): boolean {
   try {

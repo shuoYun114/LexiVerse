@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { StudyStats } from '../types';
-import { get365DaysHeatmapData, getBadges } from '../utils/storage';
-import { Flame, Award, TrendingUp, Zap, Target, CheckCircle, Calendar } from 'lucide-react';
+import { get365DaysHeatmapData, getBadges, loadDemoData } from '../utils/storage';
+import { Flame, Award, TrendingUp, Zap, Target, CheckCircle, Calendar, Sparkles } from 'lucide-react';
 
 interface HeatmapDashboardProps {
   stats: StudyStats;
@@ -54,6 +54,26 @@ export const HeatmapDashboard: React.FC<HeatmapDashboardProps> = ({ stats }) => 
   return (
     <div style={{ maxWidth: '1100px', margin: '0 auto', padding: '10px 20px 60px' }}>
       
+      {/* 快捷恢复打卡记录提醒 */}
+      <div className="glass-panel" style={{ padding: '14px 20px', marginBottom: '20px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', background: 'rgba(99, 102, 241, 0.15)', border: '1px solid var(--color-primary)' }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+          <Sparkles size={20} color="var(--color-primary-glow)" />
+          <span style={{ fontSize: '0.9rem', color: '#ffffff' }}>
+            新设备或线上访问无记录？无需复杂导入导出，点此一键快捷充能/同步打卡数据！
+          </span>
+        </div>
+        <button
+          onClick={() => {
+            loadDemoData();
+            window.location.reload();
+          }}
+          className="cyber-button cyber-button-primary"
+          style={{ padding: '6px 16px', fontSize: '0.85rem' }}
+        >
+          ⚡ 一键充能打卡记录
+        </button>
+      </div>
+
       {/* 顶部连胜与核心统计 KPI */}
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '16px', marginBottom: '24px' }}>
         
