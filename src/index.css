@@ -231,3 +231,86 @@ body::before {
 ::-webkit-scrollbar-thumb:hover {
   background: var(--color-primary);
 }
+
+/* 📱 移动端手机竖屏极佳响应式适配 (Responsive Media Queries) */
+@media (max-width: 768px) {
+  .header-container {
+    margin: 8px 12px !important;
+    padding: 12px 14px !important;
+    gap: 12px !important;
+  }
+
+  .nav-tabs-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    white-space: nowrap;
+    padding: 4px;
+    display: flex !important;
+    gap: 6px !important;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .nav-tabs-wrapper button {
+    flex-shrink: 0;
+    white-space: nowrap;
+    padding: 6px 12px !important;
+    font-size: 0.8rem !important;
+  }
+
+  .header-top-row {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .header-mid-row {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 8px !important;
+  }
+
+  .flip-card {
+    height: 380px !important;
+  }
+
+  .flip-card-front, .flip-card-back {
+    padding: 20px 16px !important;
+  }
+
+  .flip-card-front h2 {
+    font-size: 2.2rem !important;
+  }
+
+  .rating-buttons-grid {
+    grid-template-columns: repeat(5, 1fr) !important;
+    gap: 4px !important;
+    padding: 10px 8px !important;
+  }
+
+  .rating-buttons-grid button {
+    padding: 8px 2px !important;
+  }
+
+  .nebula-legend-box {
+    top: 10px !important;
+    left: 12px !important;
+    right: 12px !important;
+    width: auto !important;
+    padding: 8px 12px !important;
+    font-size: 0.75rem !important;
+    flex-wrap: wrap !important;
+    gap: 8px !important;
+  }
+
+  .heatmap-dashboard-container {
+    padding: 10px 10px 40px !important;
+  }
+
+  .grid-2col {
+    grid-template-columns: 1fr !important;
+  }
+}

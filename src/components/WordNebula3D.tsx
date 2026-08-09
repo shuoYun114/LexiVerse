@@ -216,7 +216,7 @@ export const WordNebula3D: React.FC<WordNebula3DProps> = ({
 
       {/* Nebula Stats Legend Header */}
       <div
-        className="glass-panel"
+        className="glass-panel nebula-legend-box"
         style={{
           position: 'absolute',
           top: '20px',
@@ -226,6 +226,7 @@ export const WordNebula3D: React.FC<WordNebula3DProps> = ({
           gap: '16px',
           alignItems: 'center',
           fontSize: '0.85rem',
+          zIndex: 20,
         }}
       >
         <span style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
