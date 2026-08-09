@@ -21,7 +21,7 @@ export const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose, onAuthSuc
 
   const isDemo = isDemoEnv();
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setErrorMsg('');
     setSuccessMsg('');
@@ -35,7 +35,7 @@ export const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose, onAuthSuc
         setErrorMsg('两次输入的密码不一致');
         return;
       }
-      const res = registerAccount(username, password);
+      const res = await registerAccount(username, password);
       if (res.success) {
         setSuccessMsg(res.message);
         setTimeout(() => {
@@ -46,7 +46,7 @@ export const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose, onAuthSuc
         setErrorMsg(res.message);
       }
     } else {
-      const res = loginAccount(username, password);
+      const res = await loginAccount(username, password);
       if (res.success) {
         setSuccessMsg(res.message);
         setTimeout(() => {

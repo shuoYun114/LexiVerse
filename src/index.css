@@ -237,7 +237,12 @@ body::before {
   .header-container {
     margin: 8px 12px !important;
     padding: 12px 14px !important;
-    gap: 12px !important;
+    gap: 10px !important;
+  }
+
+  .header-content-wrapper {
+    flex-direction: column !important;
+    gap: 10px !important;
   }
 
   .nav-tabs-wrapper {
@@ -257,19 +262,9 @@ body::before {
     font-size: 0.8rem !important;
   }
 
-  .header-top-row {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  .header-mid-row {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
+  .header-mid-group {
+    flex-direction: column !important;
+    align-items: stretch !important;
     gap: 8px !important;
   }
 
