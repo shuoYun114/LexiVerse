@@ -1,0 +1,35 @@
+[
+  {
+    "id": "pep_j8b-001",
+    "word": "matter",
+    "phonetic": "/ˈmætə(r)/",
+    "definition": "n. 问题；事情 v. 有关系",
+    "translation": "问题，有关系",
+    "example": "What's the matter with your sore throat?",
+    "exampleTranslation": "你的喉咙痛怎么了？",
+    "difficulty": 1,
+    "tags": ["人教版初中八下", "Unit 1 What's the matter?"]
+  },
+  {
+    "id": "pep_j8b-002",
+    "word": "stomachache",
+    "phonetic": "/ˈstʌməkeɪk/",
+    "definition": "n. 胃痛；腹痛",
+    "translation": "胃痛",
+    "example": "Take medicine if you have a severe stomachache.",
+    "exampleTranslation": "如果你胃痛严重，就服药。",
+    "difficulty": 2,
+    "tags": ["人教版初中八下", "Unit 1 What's the matter?"]
+  },
+  {
+    "id": "pep_j8b-003",
+    "word": "volunteer",
+    "phonetic": "/ˌvɒlənˈtɪə(r)/",
+    "definition": "n. 志愿者 v. 自愿协助",
+    "translation": "志愿者",
+    "example": "Students volunteer to help clean up city park.",
+    "exampleTranslation": "学生们自愿帮忙清理城市公园。",
+    "difficulty": 2,
+    "tags": ["人教版初中八下", "Unit 2 I'll help to clean up the city parks"]
+  }
+]

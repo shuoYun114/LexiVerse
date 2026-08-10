@@ -1,0 +1,35 @@
+[
+  {
+    "id": "bnu_j7b-001",
+    "word": "community",
+    "phonetic": "/kəˈmjuːnəti/",
+    "definition": "n. 社区；社会",
+    "translation": "社区",
+    "example": "Volunteers help clean our local community park.",
+    "exampleTranslation": "志愿者帮助清理我们当地社区的公园。",
+    "difficulty": 1,
+    "tags": ["北师大初中七下", "Unit 1 Neighborhood Life"]
+  },
+  {
+    "id": "bnu_j7b-002",
+    "word": "celebration",
+    "phonetic": "/ˌselɪˈbreɪʃn/",
+    "definition": "n. 庆祝活动；典礼",
+    "translation": "庆祝活动",
+    "example": "Spring Festival is a traditional festival celebration.",
+    "exampleTranslation": "春节是一项传统的节日庆祝活动。",
+    "difficulty": 2,
+    "tags": ["北师大初中七下", "Unit 2 Festival Celebrations"]
+  },
+  {
+    "id": "bnu_j7b-003",
+    "word": "traditional",
+    "phonetic": "/trəˈdɪʃənl/",
+    "definition": "adj. 传统的；惯例的",
+    "translation": "传统的",
+    "example": "We eat dumpling during traditional Chinese festival.",
+    "exampleTranslation": "我们在中国传统节日吃饺子。",
+    "difficulty": 2,
+    "tags": ["北师大初中七下", "Unit 2 Festival Celebrations"]
+  }
+]

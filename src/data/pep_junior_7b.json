@@ -1,0 +1,35 @@
+[
+  {
+    "id": "pep_j7b-001",
+    "word": "guitar",
+    "phonetic": "/ɡɪˈtɑː(r)/",
+    "definition": "n. 吉他",
+    "translation": "吉他",
+    "example": "Can you play the guitar in music class?",
+    "exampleTranslation": "你可以在音乐课上弹吉他吗？",
+    "difficulty": 1,
+    "tags": ["人教版初中七下", "Unit 1 Can you play the guitar?"]
+  },
+  {
+    "id": "pep_j7b-002",
+    "word": "musician",
+    "phonetic": "/mjuˈzɪʃn/",
+    "definition": "n. 音乐家；乐手",
+    "translation": "音乐家",
+    "example": "He wants to be a famous musician in future.",
+    "exampleTranslation": "他未来想成为一名著名的音乐家。",
+    "difficulty": 2,
+    "tags": ["人教版初中七下", "Unit 1 Can you play the guitar?"]
+  },
+  {
+    "id": "pep_j7b-003",
+    "word": "schedule",
+    "phonetic": "/ˈʃedjuːl/",
+    "definition": "n. 时间表；日程计划",
+    "translation": "时间表",
+    "example": "What time do you usually get up on school day?",
+    "exampleTranslation": "在上学日你通常几点起床？",
+    "difficulty": 1,
+    "tags": ["人教版初中七下", "Unit 2 What time do you go to school?"]
+  }
+]

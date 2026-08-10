@@ -1,0 +1,35 @@
+[
+  {
+    "id": "bnu_j8b-001",
+    "word": "communication",
+    "phonetic": "/kəˌmjuːnɪˈkeɪʃn/",
+    "definition": "n. 交流；沟通",
+    "translation": "交流，沟通",
+    "example": "Effective communication improves mutual understanding.",
+    "exampleTranslation": "有效的沟通能促进互相理解。",
+    "difficulty": 2,
+    "tags": ["北师大初中八下", "Unit 1 Global Communication"]
+  },
+  {
+    "id": "bnu_j8b-002",
+    "word": "opportunity",
+    "phonetic": "/ˌɒpəˈtjuːnəti/",
+    "definition": "n. 机会；时机",
+    "translation": "机会",
+    "example": "Studying abroad provides a unique opportunity.",
+    "exampleTranslation": "出国留学提供了一个难得的机会。",
+    "difficulty": 2,
+    "tags": ["北师大初中八下", "Unit 1 Global Communication"]
+  },
+  {
+    "id": "bnu_j8b-003",
+    "word": "contribution",
+    "phonetic": "/ˌkɒntrɪˈbjuːʃn/",
+    "definition": "n. 贡献；捐献",
+    "translation": "贡献",
+    "example": "Scientists make great contributions to society.",
+    "exampleTranslation": "科学家们对社会做出了巨大贡献。",
+    "difficulty": 3,
+    "tags": ["北师大初中八下", "Unit 2 Science & Progress"]
+  }
+]

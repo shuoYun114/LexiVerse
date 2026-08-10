@@ -105,10 +105,14 @@ export const Header: React.FC<HeaderProps> = ({
 
               <optgroup label="🏫 国内初中英语教材" style={{ background: '#111827', color: '#34d399' }}>
                 <option value="bnu_junior_7a" style={{ background: '#111827' }}>🏫 北师大版 初中英语七年级上册</option>
+                <option value="bnu_junior_7b" style={{ background: '#111827' }}>🏫 北师大版 初中英语七年级下册</option>
                 <option value="bnu_junior_8a" style={{ background: '#111827' }}>🏫 北师大版 初中英语八年级上册</option>
+                <option value="bnu_junior_8b" style={{ background: '#111827' }}>🏫 北师大版 初中英语八年级下册</option>
                 <option value="bnu_junior_9" style={{ background: '#111827' }}>🏫 北师大版 初中英语九年级全一册</option>
                 <option value="pep_junior_7a" style={{ background: '#111827' }}>🏫 人教版 初中英语七年级上册</option>
+                <option value="pep_junior_7b" style={{ background: '#111827' }}>🏫 人教版 初中英语七年级下册</option>
                 <option value="pep_junior_8a" style={{ background: '#111827' }}>🏫 人教版 初中英语八年级上册</option>
+                <option value="pep_junior_8b" style={{ background: '#111827' }}>🏫 人教版 初中英语八年级下册</option>
                 <option value="pep_junior_9" style={{ background: '#111827' }}>🏫 人教版 初中英语九年级全一册</option>
               </optgroup>
 
