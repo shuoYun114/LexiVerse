@@ -96,14 +96,27 @@ export const Header: React.FC<HeaderProps> = ({
                 outline: 'none',
               }}
             >
-              <optgroup label="🌐 官方内置词库" style={{ background: '#111827', color: '#94a3b8' }}>
+              <optgroup label="🎓 国内高中英语教材" style={{ background: '#111827', color: '#818cf8' }}>
                 <option value="bnu_compulsory1" style={{ background: '#111827' }}>🎓 北师大版 高中英语必修一</option>
-                <option value="spanish_beginner" style={{ background: '#111827' }}>🇪🇸 西班牙语入门 (Spanish Beginner)</option>
-                <option value="cet4" style={{ background: '#111827' }}>CET-4 四级核心</option>
-                <option value="cet6" style={{ background: '#111827' }}>CET-6 六级词汇</option>
-                <option value="ielts" style={{ background: '#111827' }}>IELTS 雅思高频</option>
-                <option value="dev_english" style={{ background: '#111827' }}>💻 程序员英文词库</option>
+                <option value="pep_senior_compulsory1" style={{ background: '#111827' }}>📘 人教版 高中英语必修一</option>
+                <option value="pep_senior_compulsory2" style={{ background: '#111827' }}>📘 人教版 高中英语必修二</option>
+                <option value="fltrp_senior_compulsory1" style={{ background: '#111827' }}>📗 外研版 高中英语必修一</option>
               </optgroup>
+
+              <optgroup label="🏫 国内初中英语教材" style={{ background: '#111827', color: '#34d399' }}>
+                <option value="pep_junior_7a" style={{ background: '#111827' }}>🏫 人教版 初中英语七年级上册</option>
+                <option value="pep_junior_8a" style={{ background: '#111827' }}>🏫 人教版 初中英语八年级上册</option>
+                <option value="pep_junior_9" style={{ background: '#111827' }}>🏫 人教版 初中英语九年级全一册</option>
+              </optgroup>
+
+              <optgroup label="🌐 权威等级/多语种/专业词库" style={{ background: '#111827', color: '#fbbf24' }}>
+                <option value="spanish_beginner" style={{ background: '#111827' }}>🇪🇸 西班牙语入门 (Spanish Beginner)</option>
+                <option value="cet4" style={{ background: '#111827' }}>CET-4 大学英语四级核心</option>
+                <option value="cet6" style={{ background: '#111827' }}>CET-6 大学英语六级核心</option>
+                <option value="ielts" style={{ background: '#111827' }}>IELTS 雅思高频词汇</option>
+                <option value="dev_english" style={{ background: '#111827' }}>💻 程序员英文专业词库</option>
+              </optgroup>
+
               {customBooks.length > 0 && (
                 <optgroup label="📚 自建与导入词库" style={{ background: '#111827', color: '#38bdf8' }}>
                   {customBooks.map((b) => (

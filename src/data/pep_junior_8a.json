@@ -1,0 +1,46 @@
+[
+  {
+    "id": "pep_j8a-001",
+    "word": "wonderful",
+    "phonetic": "/ˈwʌndəfl/",
+    "definition": "adj. 精彩的；极好的",
+    "translation": "精彩的",
+    "example": "We had a wonderful summer vacation.",
+    "exampleTranslation": "我们度过了精彩的暑假。",
+    "difficulty": 1,
+    "tags": ["人教版初中八上", "Unit 1 Where did you go on vacation?"]
+  },
+  {
+    "id": "pep_j8a-002",
+    "word": "difference",
+    "phonetic": "/ˈdɪfrəns/",
+    "definition": "n. 差别；差异",
+    "translation": "差异，差别",
+    "example": "Reading books makes a big difference to your mind.",
+    "exampleTranslation": "阅读书籍给你的思维带来巨大改变。",
+    "difficulty": 2,
+    "tags": ["人教版初中八上", "Unit 1 Where did you go on vacation?"]
+  },
+  {
+    "id": "pep_j8a-003",
+    "word": "compete",
+    "phonetic": "/kəmˈpiːt/",
+    "definition": "v. 竞争；比赛",
+    "translation": "竞争，比赛",
+    "example": "Athletes compete for honour in school sports meeting.",
+    "exampleTranslation": "运动健儿在校运会上为荣誉而战。",
+    "difficulty": 2,
+    "tags": ["人教版初中八上", "Unit 2 Sports & Competition"]
+  },
+  {
+    "id": "pep_j8a-004",
+    "word": "improvement",
+    "phonetic": "/ɪmˈpruːvmənt/",
+    "definition": "n. 改进；提高",
+    "translation": "提高，改进",
+    "example": "Daily practice brings steady improvement.",
+    "exampleTranslation": "每日练习带来稳步提升。",
+    "difficulty": 2,
+    "tags": ["人教版初中八上", "Unit 2 Sports & Competition"]
+  }
+]

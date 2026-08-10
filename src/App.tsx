@@ -18,6 +18,12 @@ import cet6Data from './data/cet6.json';
 import ieltsData from './data/ielts.json';
 import devEnglishData from './data/dev_english.json';
 import bnuCompulsory1Data from './data/bnu_compulsory1.json';
+import pepSenior1Data from './data/pep_senior_compulsory1.json';
+import pepSenior2Data from './data/pep_senior_compulsory2.json';
+import fltrpSenior1Data from './data/fltrp_senior_compulsory1.json';
+import pepJunior7aData from './data/pep_junior_7a.json';
+import pepJunior8aData from './data/pep_junior_8a.json';
+import pepJunior9Data from './data/pep_junior_9.json';
 import spanishBeginnerData from './data/spanish_beginner.json';
 
 export const App: React.FC = () => {
@@ -114,6 +120,12 @@ export const App: React.FC = () => {
   const currentWords: Word[] = useMemo(() => {
     if (currentBook === 'spanish_beginner') return spanishBeginnerData as Word[];
     if (currentBook === 'bnu_compulsory1') return bnuCompulsory1Data as Word[];
+    if (currentBook === 'pep_senior_compulsory1') return pepSenior1Data as Word[];
+    if (currentBook === 'pep_senior_compulsory2') return pepSenior2Data as Word[];
+    if (currentBook === 'fltrp_senior_compulsory1') return fltrpSenior1Data as Word[];
+    if (currentBook === 'pep_junior_7a') return pepJunior7aData as Word[];
+    if (currentBook === 'pep_junior_8a') return pepJunior8aData as Word[];
+    if (currentBook === 'pep_junior_9') return pepJunior9Data as Word[];
     if (currentBook === 'cet6') return cet6Data as Word[];
     if (currentBook === 'ielts') return ieltsData as Word[];
     if (currentBook === 'dev_english') return devEnglishData as Word[];

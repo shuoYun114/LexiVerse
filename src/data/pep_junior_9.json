@@ -1,0 +1,57 @@
+[
+  {
+    "id": "pep_j9-001",
+    "word": "textbook",
+    "phonetic": "/ˈtekstbʊk/",
+    "definition": "n. 教科书；课本",
+    "translation": "课本，教科书",
+    "example": "Open your English textbook to page twenty.",
+    "exampleTranslation": "把你的英语课本翻到第20页。",
+    "difficulty": 1,
+    "tags": ["人教版初中九年级", "Unit 1 How can we become good learners?"]
+  },
+  {
+    "id": "pep_j9-002",
+    "word": "pronounce",
+    "phonetic": "/prəˈnaʊns/",
+    "definition": "v. 发音；读音",
+    "translation": "发音",
+    "example": "Listen to native speakers to pronounce words correctly.",
+    "exampleTranslation": "听母语者发音以准确读单词。",
+    "difficulty": 2,
+    "tags": ["人教版初中九年级", "Unit 1 How can we become good learners?"]
+  },
+  {
+    "id": "pep_j9-003",
+    "word": "discover",
+    "phonetic": "/dɪˈskʌvə(r)/",
+    "definition": "v. 发现；发觉",
+    "translation": "发现",
+    "example": "We discover new methods to memorize vocabulary.",
+    "exampleTranslation": "我们发现了记忆词汇的新方法。",
+    "difficulty": 2,
+    "tags": ["人教版初中九年级", "Unit 1 How can we become good learners?"]
+  },
+  {
+    "id": "pep_j9-004",
+    "word": "patient",
+    "phonetic": "/ˈpeɪʃnt/",
+    "definition": "adj. 有耐心的 n. 病人",
+    "translation": "有耐心的",
+    "example": "Teachers are patient when explaining difficult grammar.",
+    "exampleTranslation": "老师在讲解难点语法时非常有耐心。",
+    "difficulty": 2,
+    "tags": ["人教版初中九年级", "Unit 1 How can we become good learners?"]
+  },
+  {
+    "id": "pep_j9-005",
+    "word": "knowledge",
+    "phonetic": "/ˈnɒlɪdʒ/",
+    "definition": "n. 知识；学识",
+    "translation": "知识",
+    "example": "Knowledge is power that shapes the future.",
+    "exampleTranslation": "知识就是塑造未来的力量。",
+    "difficulty": 2,
+    "tags": ["人教版初中九年级", "Unit 1 How can we become good learners?"]
+  }
+]

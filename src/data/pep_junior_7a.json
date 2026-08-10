@@ -1,0 +1,57 @@
+[
+  {
+    "id": "pep_j7a-001",
+    "word": "classmate",
+    "phonetic": "/ˈklɑːsmeɪt/",
+    "definition": "n. 同班同学",
+    "translation": "同班同学",
+    "example": "My classmates are friendly and helpful.",
+    "exampleTranslation": "我的同班同学既友好又乐于助人。",
+    "difficulty": 1,
+    "tags": ["人教版初中七上", "Unit 1 My Name's Gina"]
+  },
+  {
+    "id": "pep_j7a-002",
+    "word": "favourite",
+    "phonetic": "/ˈfeɪvərɪt/",
+    "definition": "adj. 最喜爱的 n. 特别喜爱的人/物",
+    "translation": "最喜欢的",
+    "example": "English is my favourite subject at school.",
+    "exampleTranslation": "英语是我在学校最喜欢的学科。",
+    "difficulty": 1,
+    "tags": ["人教版初中七上", "Unit 1 My Name's Gina"]
+  },
+  {
+    "id": "pep_j7a-003",
+    "word": "subject",
+    "phonetic": "/ˈsʌbdʒɪkt/",
+    "definition": "n. 学科；科目；主题",
+    "translation": "学科，科目",
+    "example": "We learn science, history and computer subjects.",
+    "exampleTranslation": "我们学习科学、历史和计算机学科。",
+    "difficulty": 1,
+    "tags": ["人教版初中七上", "Unit 1 My Name's Gina"]
+  },
+  {
+    "id": "pep_j7a-004",
+    "word": "exercise",
+    "phonetic": "/ˈeksəsaɪz/",
+    "definition": "n./v. 锻炼；练习",
+    "translation": "锻炼，练习",
+    "example": "Doing morning exercise keeps us healthy.",
+    "exampleTranslation": "做晨练让我们保持健康。",
+    "difficulty": 1,
+    "tags": ["人教版初中七上", "Unit 2 Healthy Lifestyle"]
+  },
+  {
+    "id": "pep_j7a-005",
+    "word": "healthy",
+    "phonetic": "/ˈhelθi/",
+    "definition": "adj. 健康的；健壮的",
+    "translation": "健康的",
+    "example": "Eating fresh fruit is a healthy habit.",
+    "exampleTranslation": "吃新鲜水果是一个健康的习惯。",
+    "difficulty": 1,
+    "tags": ["人教版初中七上", "Unit 2 Healthy Lifestyle"]
+  }
+]

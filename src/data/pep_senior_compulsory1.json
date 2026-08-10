@@ -1,0 +1,90 @@
+[
+  {
+    "id": "pep_s1-001",
+    "word": "teenager",
+    "phonetic": "/ˈtiːneɪdʒə(r)/",
+    "definition": "n. (13至19岁的)青少年",
+    "translation": "青少年",
+    "example": "Many teenagers like listening to pop music after school.",
+    "exampleTranslation": "许多青少年放学后喜欢听流行音乐。",
+    "difficulty": 2,
+    "tags": ["人教版高中必修一", "Unit 1 Teenage Life"]
+  },
+  {
+    "id": "pep_s1-002",
+    "word": "volunteer",
+    "phonetic": "/ˌvɒlənˈtɪə(r)/",
+    "definition": "n. 志愿者 v. 自愿做",
+    "translation": "志愿者",
+    "example": "She worked as a volunteer in the community library.",
+    "exampleTranslation": "她在社区图书馆担任志愿者。",
+    "difficulty": 2,
+    "tags": ["人教版高中必修一", "Unit 1 Teenage Life"]
+  },
+  {
+    "id": "pep_s1-003",
+    "word": "debate",
+    "phonetic": "/dɪˈbeɪt/",
+    "definition": "n./v. 辩论；讨论",
+    "translation": "辩论，讨论",
+    "example": "Students joined a lively debate about online education.",
+    "exampleTranslation": "学生们参加了一场关于线上教育的热烈辩论。",
+    "difficulty": 3,
+    "tags": ["人教版高中必修一", "Unit 1 Teenage Life"]
+  },
+  {
+    "id": "pep_s1-004",
+    "word": "prefer",
+    "phonetic": "/prɪˈfɜː(r)/",
+    "definition": "v. 更喜欢；选择",
+    "translation": "更喜欢",
+    "example": "I prefer reading books to watching television.",
+    "exampleTranslation": "比起看电视，我更喜欢读书。",
+    "difficulty": 2,
+    "tags": ["人教版高中必修一", "Unit 1 Teenage Life"]
+  },
+  {
+    "id": "pep_s1-005",
+    "word": "suitable",
+    "phonetic": "/ˈsuːtəbl/",
+    "definition": "adj. 合适的；适宜的",
+    "translation": "合适的",
+    "example": "This course is suitable for high school beginners.",
+    "exampleTranslation": "这门课程非常适合高中初学者。",
+    "difficulty": 2,
+    "tags": ["人教版高中必修一", "Unit 1 Teenage Life"]
+  },
+  {
+    "id": "pep_s1-006",
+    "word": "recommend",
+    "phonetic": "/ˌrekəˈmend/",
+    "definition": "v. 推荐；建议",
+    "translation": "推荐",
+    "example": "The teacher recommended an excellent English dictionary.",
+    "exampleTranslation": "老师推荐了一本优秀的英语词典。",
+    "difficulty": 3,
+    "tags": ["人教版高中必修一", "Unit 1 Teenage Life"]
+  },
+  {
+    "id": "pep_s1-007",
+    "word": "schedule",
+    "phonetic": "/ˈʃedjuːl/",
+    "definition": "n. 工作计划；日程表",
+    "translation": "日程表",
+    "example": "Making a daily schedule helps you organize your study.",
+    "exampleTranslation": "制定每日日程表有助于安排你的学习。",
+    "difficulty": 2,
+    "tags": ["人教版高中必修一", "Unit 1 Teenage Life"]
+  },
+  {
+    "id": "pep_s1-008",
+    "word": "advanced",
+    "phonetic": "/ədˈvɑːnst/",
+    "definition": "adj. 先进的；高级的",
+    "translation": "先进的，高级的",
+    "example": "The lab uses advanced technology to do experiments.",
+    "exampleTranslation": "实验室采用先进技术进行实验。",
+    "difficulty": 3,
+    "tags": ["人教版高中必修一", "Unit 1 Teenage Life"]
+  }
+]

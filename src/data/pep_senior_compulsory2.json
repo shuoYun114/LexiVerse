@@ -1,0 +1,68 @@
+[
+  {
+    "id": "pep_s2-001",
+    "word": "heritage",
+    "phonetic": "/ˈherɪtɪdʒ/",
+    "definition": "n. 遗产(指历史建筑/传统等)",
+    "translation": "文化遗产",
+    "example": "The Great Wall is part of world cultural heritage.",
+    "exampleTranslation": "长城是世界文化遗产的一部分。",
+    "difficulty": 3,
+    "tags": ["人教版高中必修二", "Unit 1 Cultural Heritage"]
+  },
+  {
+    "id": "pep_s2-002",
+    "word": "preserve",
+    "phonetic": "/prɪˈzɜːv/",
+    "definition": "v. 保护；保存；维护",
+    "translation": "保护，保存",
+    "example": "We must work hard to preserve historic sites.",
+    "exampleTranslation": "我们必须努力保护历史遗迹。",
+    "difficulty": 3,
+    "tags": ["人教版高中必修二", "Unit 1 Cultural Heritage"]
+  },
+  {
+    "id": "pep_s2-003",
+    "word": "promote",
+    "phonetic": "/prəˈməʊt/",
+    "definition": "v. 促进；推广；提升",
+    "translation": "促进，推广",
+    "example": "International festivals promote mutual understanding.",
+    "exampleTranslation": "国际文化节增进了互相理解。",
+    "difficulty": 2,
+    "tags": ["人教版高中必修二", "Unit 1 Cultural Heritage"]
+  },
+  {
+    "id": "pep_s2-004",
+    "word": "creature",
+    "phonetic": "/ˈkriːtʃə(r)/",
+    "definition": "n. 生物；动物",
+    "translation": "生物",
+    "example": "Ocean creatures live in harmonious environment.",
+    "exampleTranslation": "海洋生物生活在和谐的环境中。",
+    "difficulty": 2,
+    "tags": ["人教版高中必修二", "Unit 2 Wildlife Protection"]
+  },
+  {
+    "id": "pep_s2-005",
+    "word": "balance",
+    "phonetic": "/ˈbæləns/",
+    "definition": "n. 平衡；均衡 v. 保持平衡",
+    "translation": "平衡",
+    "example": "Protecting wildlife helps balance nature.",
+    "exampleTranslation": "保护野生动物有助于维护自然平衡。",
+    "difficulty": 2,
+    "tags": ["人教版高中必修二", "Unit 2 Wildlife Protection"]
+  },
+  {
+    "id": "pep_s2-006",
+    "word": "establish",
+    "phonetic": "/ɪˈstæblɪʃ/",
+    "definition": "v. 建立；设立；确立",
+    "translation": "建立，设立",
+    "example": "China established national parks for rare animals.",
+    "exampleTranslation": "中国为珍稀动物建立了国家公园。",
+    "difficulty": 3,
+    "tags": ["人教版高中必修二", "Unit 2 Wildlife Protection"]
+  }
+]

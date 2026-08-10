@@ -1,4 +1,17 @@
-export type BookCategory = 'cet4' | 'cet6' | 'ielts' | 'dev_english' | 'bnu_compulsory1' | 'spanish_beginner' | string;
+export type BookCategory =
+  | 'bnu_compulsory1'
+  | 'pep_senior_compulsory1'
+  | 'pep_senior_compulsory2'
+  | 'fltrp_senior_compulsory1'
+  | 'pep_junior_7a'
+  | 'pep_junior_8a'
+  | 'pep_junior_9'
+  | 'cet4'
+  | 'cet6'
+  | 'ielts'
+  | 'dev_english'
+  | 'spanish_beginner'
+  | string;
 
 export type WordStatus = 'new' | 'reviewing' | 'mastered';
 

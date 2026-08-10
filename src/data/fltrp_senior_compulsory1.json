@@ -1,0 +1,57 @@
+[
+  {
+    "id": "fltrp_s1-001",
+    "word": "impression",
+    "phonetic": "/ɪmˈpreʃn/",
+    "definition": "n. 印象；感想",
+    "translation": "印象",
+    "example": "First impressions of high school life are vivid.",
+    "exampleTranslation": "高中生活的第一印象十分深刻。",
+    "difficulty": 2,
+    "tags": ["外研版高中必修一", "Unit 1 A New Start"]
+  },
+  {
+    "id": "fltrp_s1-002",
+    "word": "curious",
+    "phonetic": "/ˈkjʊəriəs/",
+    "definition": "adj. 好奇的；求知欲强的",
+    "translation": "好奇的",
+    "example": "Curious students ask insightful questions in class.",
+    "exampleTranslation": "充满好奇心的学生在课堂上提出深刻的问题。",
+    "difficulty": 2,
+    "tags": ["外研版高中必修一", "Unit 1 A New Start"]
+  },
+  {
+    "id": "fltrp_s1-003",
+    "word": "explore",
+    "phonetic": "/ɪkˈsplɔː(r)/",
+    "definition": "v. 探索；勘探",
+    "translation": "探索",
+    "example": "We explore new knowledge and futuristic tech.",
+    "exampleTranslation": "我们探索新知识与未来科技。",
+    "difficulty": 2,
+    "tags": ["外研版高中必修一", "Unit 1 A New Start"]
+  },
+  {
+    "id": "fltrp_s1-004",
+    "word": "personality",
+    "phonetic": "/ˌpɜːsəˈnæləti/",
+    "definition": "n. 个性；性格",
+    "translation": "性格，个性",
+    "example": "Everyone has unique personality and talents.",
+    "exampleTranslation": "每个人都有独特的性格与才能。",
+    "difficulty": 3,
+    "tags": ["外研版高中必修一", "Unit 1 A New Start"]
+  },
+  {
+    "id": "fltrp_s1-005",
+    "word": "confident",
+    "phonetic": "/ˈkɒnfɪdənt/",
+    "definition": "adj. 自信的；确信的",
+    "translation": "自信的",
+    "example": "Practice makes you confident in public speaking.",
+    "exampleTranslation": "练习让你在公开演讲中充满自信。",
+    "difficulty": 2,
+    "tags": ["外研版高中必修一", "Unit 1 A New Start"]
+  }
+]
