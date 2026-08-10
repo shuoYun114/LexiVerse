@@ -20,6 +20,7 @@ interface FallingWord {
 
 export const CyberShooterGame: React.FC<CyberShooterGameProps> = ({ words, soundEnabled }) => {
   const [isPlaying, setIsPlaying] = useState(false);
+  const [gameSpeed, setGameSpeed] = useState<'easy' | 'normal' | 'hard'>('easy'); // 默认轻松休闲模式，调慢速度
   const [score, setScore] = useState(0);
   const [combo, setCombo] = useState(0);
   const [maxCombo, setMaxCombo] = useState(0);
@@ -30,6 +31,19 @@ export const CyberShooterGame: React.FC<CyberShooterGameProps> = ({ words, sound
 
   const requestRef = useRef<number>();
   const lastSpawnTime = useRef<number>(0);
+
+  // 根据当前难度获取下落速度与间隔
+  const getSpeedConfig = () => {
+    switch (gameSpeed) {
+      case 'easy':
+        return { baseSpeed: 0.045, randomSpeed: 0.02, spawnInterval: 4000, damage: 10 }; // 轻松模式：大大减慢，20秒掉落到底
+      case 'hard':
+        return { baseSpeed: 0.12, randomSpeed: 0.06, spawnInterval: 2200, damage: 15 };
+      case 'normal':
+      default:
+        return { baseSpeed: 0.075, randomSpeed: 0.03, spawnInterval: 3000, damage: 12 };
+    }
+  };
 
   // 开始新游戏
   const startGame = () => {
@@ -47,13 +61,14 @@ export const CyberShooterGame: React.FC<CyberShooterGameProps> = ({ words, sound
   // 生成新单词掉落
   const spawnWord = () => {
     if (words.length === 0) return;
+    const config = getSpeedConfig();
     const randomWord = words[Math.floor(Math.random() * words.length)];
     const newFallingWord: FallingWord = {
       id: Math.random().toString(),
       word: randomWord,
       x: Math.random() * 70 + 15, // 15% 到 85% 视口宽度
       y: 0,
-      speed: 0.15 + Math.random() * 0.1,
+      speed: config.baseSpeed + Math.random() * config.randomSpeed,
     };
     setFallingWords((prev) => [...prev, newFallingWord]);
   };
@@ -64,8 +79,10 @@ export const CyberShooterGame: React.FC<CyberShooterGameProps> = ({ words, sound
 
     const updateGame = () => {
       const now = Date.now();
-      // 每 2.5 秒降落一个新单词
-      if (now - lastSpawnTime.current > 2500) {
+      const config = getSpeedConfig();
+
+      // 根据设置的间隔生成新单词
+      if (now - lastSpawnTime.current > config.spawnInterval) {
         spawnWord();
         lastSpawnTime.current = now;
       }
@@ -78,7 +95,7 @@ export const CyberShooterGame: React.FC<CyberShooterGameProps> = ({ words, sound
           const newY = fw.y + fw.speed;
           if (newY >= 85) {
             // 掉落到底部扣血
-            damage += 15;
+            damage += config.damage;
           } else {
             nextWords.push({ ...fw, y: newY });
           }
@@ -186,15 +203,62 @@ export const CyberShooterGame: React.FC<CyberShooterGameProps> = ({ words, sound
         }}
       >
         {!isPlaying && !gameOver && (
-          <div style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', textAlign: 'center' }}>
+          <div style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', textAlign: 'center', width: '80%' }}>
             <h3 style={{ fontSize: '1.8rem', fontWeight: 800, color: '#ffffff', marginBottom: '12px' }}>
               准备好测试你的英文盲打速度了吗？
             </h3>
-            <p style={{ color: 'var(--text-muted)', marginBottom: '24px' }}>
+            <p style={{ color: 'var(--text-muted)', marginBottom: '18px' }}>
               单词会从星云降落，快速输入正确拼写击碎它们！
             </p>
-            <button onClick={startGame} className="cyber-button cyber-button-primary" style={{ padding: '12px 32px', fontSize: '1.1rem' }}>
-              开始打字速记
+
+            {/* 速度调节按钮组 */}
+            <div style={{ display: 'flex', justifyContent: 'center', gap: '10px', marginBottom: '24px' }}>
+              <button
+                onClick={() => setGameSpeed('easy')}
+                style={{
+                  padding: '8px 16px',
+                  borderRadius: '8px',
+                  border: '1px solid var(--glass-border)',
+                  background: gameSpeed === 'easy' ? 'rgba(52, 211, 153, 0.25)' : 'rgba(31, 41, 61, 0.6)',
+                  color: gameSpeed === 'easy' ? '#34d399' : 'var(--text-muted)',
+                  fontWeight: 700,
+                  cursor: 'pointer',
+                }}
+              >
+                🐢 轻松休闲 (较慢)
+              </button>
+              <button
+                onClick={() => setGameSpeed('normal')}
+                style={{
+                  padding: '8px 16px',
+                  borderRadius: '8px',
+                  border: '1px solid var(--glass-border)',
+                  background: gameSpeed === 'normal' ? 'rgba(56, 189, 248, 0.25)' : 'rgba(31, 41, 61, 0.6)',
+                  color: gameSpeed === 'normal' ? '#38bdf8' : 'var(--text-muted)',
+                  fontWeight: 700,
+                  cursor: 'pointer',
+                }}
+              >
+                🏃 标准挑战
+              </button>
+              <button
+                onClick={() => setGameSpeed('hard')}
+                style={{
+                  padding: '8px 16px',
+                  borderRadius: '8px',
+                  border: '1px solid var(--glass-border)',
+                  background: gameSpeed === 'hard' ? 'rgba(236, 72, 153, 0.25)' : 'rgba(31, 41, 61, 0.6)',
+                  color: gameSpeed === 'hard' ? '#ec4899' : 'var(--text-muted)',
+                  fontWeight: 700,
+                  cursor: 'pointer',
+                }}
+              >
+                ⚡ 极限竞速
+              </button>
+            </div>
+
+            <button onClick={startGame} className="cyber-button cyber-button-primary" style={{ padding: '12px 36px', fontSize: '1.1rem' }}>
+              🚀 开始打字速记
             </button>
           </div>
         )}
