@@ -1,0 +1,46 @@
+[
+  {
+    "id": "zk-001",
+    "word": "ability",
+    "phonetic": "/əˈbɪləti/",
+    "definition": "n. 能力；才能",
+    "translation": "能力",
+    "example": "She has the ability to solve complex math problems.",
+    "exampleTranslation": "她有解决复杂数学问题的能力。",
+    "difficulty": 1,
+    "tags": ["全国中考核心", "高频必考"]
+  },
+  {
+    "id": "zk-002",
+    "word": "benefit",
+    "phonetic": "/ˈbenɪfɪt/",
+    "definition": "n. 利益；好处 v. 有益于",
+    "translation": "好处，有益于",
+    "example": "Reading English daily will benefit your writing skills.",
+    "exampleTranslation": "每天读英语将有益于你的写作技能。",
+    "difficulty": 2,
+    "tags": ["全国中考核心", "高频必考"]
+  },
+  {
+    "id": "zk-003",
+    "word": "continue",
+    "phonetic": "/kənˈtɪnjuː/",
+    "definition": "v. 继续；持续",
+    "translation": "继续，持续",
+    "example": "Please continue working hard for your dreams.",
+    "exampleTranslation": "请为了你的梦想继续努力。",
+    "difficulty": 1,
+    "tags": ["全国中考核心", "高频必考"]
+  },
+  {
+    "id": "zk-004",
+    "word": "decision",
+    "phonetic": "/dɪˈsɪʒn/",
+    "definition": "n. 决定；抉择",
+    "translation": "决定",
+    "example": "Making a wise decision requires calm thinking.",
+    "exampleTranslation": "做出明智的决定需要冷静的思考。",
+    "difficulty": 2,
+    "tags": ["全国中考核心", "高频必考"]
+  }
+]

@@ -1,0 +1,46 @@
+[
+  {
+    "id": "gk-001",
+    "word": "abandon",
+    "phonetic": "/əˈbændən/",
+    "definition": "v. 放弃；抛弃",
+    "translation": "放弃，抛弃",
+    "example": "Never abandon your goals despite difficulties.",
+    "exampleTranslation": "尽管遇到困难，也绝不放弃你的目标。",
+    "difficulty": 3,
+    "tags": ["全国高考核心", "冲刺必备"]
+  },
+  {
+    "id": "gk-002",
+    "word": "comprehend",
+    "phonetic": "/ˌkɒmprɪˈhend/",
+    "definition": "v. 理解；领悟",
+    "translation": "理解，领悟",
+    "example": "Reading extensively helps you comprehend passage deeply.",
+    "exampleTranslation": "广泛阅读有助于你深刻理解文章。",
+    "difficulty": 3,
+    "tags": ["全国高考核心", "冲刺必备"]
+  },
+  {
+    "id": "gk-003",
+    "word": "horizon",
+    "phonetic": "/həˈraɪzn/",
+    "definition": "n. 地平线；眼界；视野",
+    "translation": "眼界，视野",
+    "example": "Traveling broadens your horizon and knowledge.",
+    "exampleTranslation": "旅行能开阔你的视野与知识。",
+    "difficulty": 3,
+    "tags": ["全国高考核心", "冲刺必备"]
+  },
+  {
+    "id": "gk-004",
+    "word": "perspective",
+    "phonetic": "/pəˈspektɪv/",
+    "definition": "n. 视角；观点；远景",
+    "translation": "视角，观点",
+    "example": "Try to view problems from a global perspective.",
+    "exampleTranslation": "尝试从全球视角来看待问题。",
+    "difficulty": 4,
+    "tags": ["全国高考核心", "冲刺必备"]
+  }
+]

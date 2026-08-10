@@ -31,9 +31,21 @@ export const CustomBookModal: React.FC<CustomBookModalProps> = ({
       category: '🏫 国内初中英语教材',
       color: '#34d399',
       items: [
+        { id: 'bnu_junior_7a', name: '北师大版 初中英语七年级上册', tags: '初中基础', desc: '北师大版 BNU 初一英语词汇与自我介绍' },
+        { id: 'bnu_junior_8a', name: '北师大版 初中英语八年级上册', tags: '初中进阶', desc: '北师大版 BNU 初二英语户外冒险与科技词汇' },
+        { id: 'bnu_junior_9', name: '北师大版 初中英语九年级全一册', tags: '中考冲刺', desc: '北师大版 BNU 初三全一册成就与灵感考点' },
         { id: 'pep_junior_7a', name: '人教版 初中英语七年级上册', tags: '初中基础', desc: '人教版 PEP 初一英语词汇与日常习惯' },
         { id: 'pep_junior_8a', name: '人教版 初中英语八年级上册', tags: '初中进阶', desc: '人教版 PEP 初二英语词汇与拓展表达' },
         { id: 'pep_junior_9', name: '人教版 初中英语九年级全一册', tags: '中考冲刺', desc: '人教版 PEP 初三全一册中考高频核心词汇' },
+      ],
+    },
+    {
+      category: '🎯 全国中考 / 高考 / 考研英语冲刺',
+      color: '#ec4899',
+      items: [
+        { id: 'zhongkao_core', name: '全国中考核心高频词汇集', tags: '中考冲刺', desc: '全国中考英语高频必考核心词汇与核心例句' },
+        { id: 'gaokao_core', name: '全国高考核心冲刺词汇集', tags: '高考冲刺', desc: '全国高考英语阅读与写作高频高分词汇' },
+        { id: 'kaoyan_core', name: '考研英语一/二 核心冲刺词库', tags: '考研英语', desc: '考研英语学术阅读与长难句核心词汇' },
       ],
     },
     {

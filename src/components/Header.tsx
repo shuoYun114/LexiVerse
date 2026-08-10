@@ -104,9 +104,18 @@ export const Header: React.FC<HeaderProps> = ({
               </optgroup>
 
               <optgroup label="🏫 国内初中英语教材" style={{ background: '#111827', color: '#34d399' }}>
+                <option value="bnu_junior_7a" style={{ background: '#111827' }}>🏫 北师大版 初中英语七年级上册</option>
+                <option value="bnu_junior_8a" style={{ background: '#111827' }}>🏫 北师大版 初中英语八年级上册</option>
+                <option value="bnu_junior_9" style={{ background: '#111827' }}>🏫 北师大版 初中英语九年级全一册</option>
                 <option value="pep_junior_7a" style={{ background: '#111827' }}>🏫 人教版 初中英语七年级上册</option>
                 <option value="pep_junior_8a" style={{ background: '#111827' }}>🏫 人教版 初中英语八年级上册</option>
                 <option value="pep_junior_9" style={{ background: '#111827' }}>🏫 人教版 初中英语九年级全一册</option>
+              </optgroup>
+
+              <optgroup label="🎯 全国中考 / 高考 / 考研英语冲刺" style={{ background: '#111827', color: '#ec4899' }}>
+                <option value="zhongkao_core" style={{ background: '#111827' }}>📝 全国中考核心高频词汇</option>
+                <option value="gaokao_core" style={{ background: '#111827' }}>🎯 全国高考核心冲刺词汇</option>
+                <option value="kaoyan_core" style={{ background: '#111827' }}>🎓 考研英语一/二 核心词库</option>
               </optgroup>
 
               <optgroup label="🌐 权威等级/多语种/专业词库" style={{ background: '#111827', color: '#fbbf24' }}>

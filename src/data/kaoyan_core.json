@@ -1,0 +1,35 @@
+[
+  {
+    "id": "ky-001",
+    "word": "paradigm",
+    "phonetic": "/ˈpærədaɪm/",
+    "definition": "n. 范例；典范；范式",
+    "translation": "范式，典范",
+    "example": "This research established a new paradigm in economic study.",
+    "exampleTranslation": "这项研究在经济学研究中建立了新的范式。",
+    "difficulty": 4,
+    "tags": ["考研英语核心", "长难句冲刺"]
+  },
+  {
+    "id": "ky-002",
+    "word": "phenomenon",
+    "phonetic": "/fəˈnɒmɪnən/",
+    "definition": "n. 现象；奇迹",
+    "translation": "现象",
+    "example": "Social scientists analyze this cultural phenomenon.",
+    "exampleTranslation": "社会科学家深入分析了这一文化现象。",
+    "difficulty": 4,
+    "tags": ["考研英语核心", "长难句冲刺"]
+  },
+  {
+    "id": "ky-003",
+    "word": "subsequent",
+    "phonetic": "/ˈsʌbsɪkwənt/",
+    "definition": "adj. 随后的；后来的",
+    "translation": "随后的",
+    "example": "Subsequent studies confirmed original hypothesis.",
+    "exampleTranslation": "随后的研究证实了最初的假设。",
+    "difficulty": 4,
+    "tags": ["考研英语核心", "长难句冲刺"]
+  }
+]

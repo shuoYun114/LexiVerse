@@ -1,0 +1,35 @@
+[
+  {
+    "id": "bnu_j9-001",
+    "word": "achievement",
+    "phonetic": "/əˈtʃiːvmənt/",
+    "definition": "n. 成就；成绩",
+    "translation": "成就，成绩",
+    "example": "Passing the final exam is a major achievement.",
+    "exampleTranslation": "通过期末考试是一项重大成就。",
+    "difficulty": 2,
+    "tags": ["北师大初中九年级", "Unit 1 Great Achievements"]
+  },
+  {
+    "id": "bnu_j9-002",
+    "word": "courage",
+    "phonetic": "/ˈkʌrɪdʒ/",
+    "definition": "n. 勇气；胆量",
+    "translation": "勇气",
+    "example": "It takes courage to face challenges bravely.",
+    "exampleTranslation": "勇敢面对挑战需要勇气。",
+    "difficulty": 2,
+    "tags": ["北师大初中九年级", "Unit 1 Great Achievements"]
+  },
+  {
+    "id": "bnu_j9-003",
+    "word": "inspiration",
+    "phonetic": "/ˌɪnspəˈreɪʃn/",
+    "definition": "n. 灵感；鼓舞",
+    "translation": "灵感，鼓舞",
+    "example": "Great books provide continuous inspiration.",
+    "exampleTranslation": "伟大的书籍提供源源不断的灵感。",
+    "difficulty": 3,
+    "tags": ["北师大初中九年级", "Unit 2 Art & Inspiration"]
+  }
+]

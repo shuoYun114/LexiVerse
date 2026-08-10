@@ -1,0 +1,35 @@
+[
+  {
+    "id": "bnu_j8a-001",
+    "word": "adventure",
+    "phonetic": "/ədˈventʃə(r)/",
+    "definition": "n. 冒险；奇遇",
+    "translation": "冒险",
+    "example": "Hiking in the mountain is an exciting adventure.",
+    "exampleTranslation": "在山中徒步是一场令人兴奋的冒险。",
+    "difficulty": 2,
+    "tags": ["北师大初中八上", "Unit 1 Outdoor Adventures"]
+  },
+  {
+    "id": "bnu_j8a-002",
+    "word": "technology",
+    "phonetic": "/tekˈnɒlədʒi/",
+    "definition": "n. 科技；技术",
+    "translation": "科技，技术",
+    "example": "Modern technology changes our communication ways.",
+    "exampleTranslation": "现代科技改变了我们的通信方式。",
+    "difficulty": 2,
+    "tags": ["北师大初中八上", "Unit 2 Science & Tech"]
+  },
+  {
+    "id": "bnu_j8a-003",
+    "word": "invention",
+    "phonetic": "/ɪnˈvenʃn/",
+    "definition": "n. 发明；创造",
+    "translation": "发明",
+    "example": "The computer is one of the greatest inventions.",
+    "exampleTranslation": "计算机是伟大的发明之一。",
+    "difficulty": 2,
+    "tags": ["北师大初中八上", "Unit 2 Science & Tech"]
+  }
+]

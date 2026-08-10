@@ -1,0 +1,46 @@
+[
+  {
+    "id": "bnu_j7a-001",
+    "word": "introduction",
+    "phonetic": "/ˌɪntrəˈdʌkʃn/",
+    "definition": "n. 介绍；引言",
+    "translation": "介绍",
+    "example": "Give a short self-introduction to your new class.",
+    "exampleTranslation": "向新班级做一个简短的自我介绍。",
+    "difficulty": 1,
+    "tags": ["北师大初中七上", "Unit 1 Welcome to Junior High"]
+  },
+  {
+    "id": "bnu_j7a-002",
+    "word": "hobby",
+    "phonetic": "/ˈhɒbi/",
+    "definition": "n. 业余爱好",
+    "translation": "业余爱好",
+    "example": "Reading and drawing are my primary hobbies.",
+    "exampleTranslation": "阅读和绘画是我的主要业余爱好。",
+    "difficulty": 1,
+    "tags": ["北师大初中七上", "Unit 1 Welcome to Junior High"]
+  },
+  {
+    "id": "bnu_j7a-003",
+    "word": "friendship",
+    "phonetic": "/ˈfrendʃɪp/",
+    "definition": "n. 友谊；友情",
+    "translation": "友谊",
+    "example": "True friendship is valuable and long-lasting.",
+    "exampleTranslation": "真正的友谊珍贵且持久。",
+    "difficulty": 1,
+    "tags": ["北师大初中七上", "Unit 1 Welcome to Junior High"]
+  },
+  {
+    "id": "bnu_j7a-004",
+    "word": "environment",
+    "phonetic": "/ɪnˈvaɪrənmənt/",
+    "definition": "n. 环境；自然环境",
+    "translation": "环境",
+    "example": "Keep the school environment clean and beautiful.",
+    "exampleTranslation": "保持校园环境干净美丽。",
+    "difficulty": 2,
+    "tags": ["北师大初中七上", "Unit 2 Our Environment"]
+  }
+]

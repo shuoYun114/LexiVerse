@@ -24,6 +24,12 @@ import fltrpSenior1Data from './data/fltrp_senior_compulsory1.json';
 import pepJunior7aData from './data/pep_junior_7a.json';
 import pepJunior8aData from './data/pep_junior_8a.json';
 import pepJunior9Data from './data/pep_junior_9.json';
+import bnuJunior7aData from './data/bnu_junior_7a.json';
+import bnuJunior8aData from './data/bnu_junior_8a.json';
+import bnuJunior9Data from './data/bnu_junior_9.json';
+import zhongkaoCoreData from './data/zhongkao_core.json';
+import gaokaoCoreData from './data/gaokao_core.json';
+import kaoyanCoreData from './data/kaoyan_core.json';
 import spanishBeginnerData from './data/spanish_beginner.json';
 
 export const App: React.FC = () => {
@@ -126,6 +132,12 @@ export const App: React.FC = () => {
     if (currentBook === 'pep_junior_7a') return pepJunior7aData as Word[];
     if (currentBook === 'pep_junior_8a') return pepJunior8aData as Word[];
     if (currentBook === 'pep_junior_9') return pepJunior9Data as Word[];
+    if (currentBook === 'bnu_junior_7a') return bnuJunior7aData as Word[];
+    if (currentBook === 'bnu_junior_8a') return bnuJunior8aData as Word[];
+    if (currentBook === 'bnu_junior_9') return bnuJunior9Data as Word[];
+    if (currentBook === 'zhongkao_core') return zhongkaoCoreData as Word[];
+    if (currentBook === 'gaokao_core') return gaokaoCoreData as Word[];
+    if (currentBook === 'kaoyan_core') return kaoyanCoreData as Word[];
     if (currentBook === 'cet6') return cet6Data as Word[];
     if (currentBook === 'ielts') return ieltsData as Word[];
     if (currentBook === 'dev_english') return devEnglishData as Word[];
