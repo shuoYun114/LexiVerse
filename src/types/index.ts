@@ -1,6 +1,15 @@
-export type BookCategory = 'cet4' | 'cet6' | 'ielts' | 'dev_english' | 'bnu_compulsory1' | 'spanish_beginner' | 'custom';
+export type BookCategory = 'cet4' | 'cet6' | 'ielts' | 'dev_english' | 'bnu_compulsory1' | 'spanish_beginner' | string;
 
 export type WordStatus = 'new' | 'reviewing' | 'mastered';
+
+export interface CustomWordBook {
+  id: string;
+  name: string;
+  description?: string;
+  icon?: string;
+  createdAt: string;
+  words: Word[];
+}
 
 export interface Word {
   id: string;

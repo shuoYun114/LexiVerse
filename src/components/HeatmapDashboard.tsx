@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { StudyStats } from '../types';
-import { get365DaysHeatmapData, getBadges, loadDemoData, resetAllData } from '../utils/storage';
+import { get365DaysHeatmapData, getBadges, resetAllData } from '../utils/storage';
 import { Flame, Award, TrendingUp, Zap, Target, CheckCircle, Calendar, Sparkles } from 'lucide-react';
 
 interface HeatmapDashboardProps {
@@ -54,25 +54,15 @@ export const HeatmapDashboard: React.FC<HeatmapDashboardProps> = ({ stats }) => 
   return (
     <div style={{ maxWidth: '1100px', margin: '0 auto', padding: '10px 20px 60px' }}>
       
-      {/* 快捷恢复打卡记录提醒 */}
+      {/* 数据安全与重置管理条 */}
       <div className="glass-panel" style={{ padding: '14px 20px', marginBottom: '20px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', background: 'rgba(99, 102, 241, 0.15)', border: '1px solid var(--color-primary)' }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
           <Sparkles size={20} color="var(--color-primary-glow)" />
           <span style={{ fontSize: '0.9rem', color: '#ffffff' }}>
-            新设备或线上访问无记录？无需复杂导入导出，点此一键快捷充能/同步打卡数据！
+            系统打卡数据已开启双向实时自动同步。多端设备同步请登录账号或在右上角开启局域网同步。
           </span>
         </div>
         <div style={{ display: 'flex', gap: '8px' }}>
-          <button
-            onClick={() => {
-              loadDemoData();
-              window.location.reload();
-            }}
-            className="cyber-button cyber-button-primary"
-            style={{ padding: '6px 14px', fontSize: '0.85rem' }}
-          >
-            ⚡ 一键充能打卡
-          </button>
           <button
             onClick={() => {
               if (window.confirm('确定要清空并重置为 0 打卡的初始状态吗？')) {

@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useMemo } from 'react';
-import { ActiveTab, BookCategory, Word, UserWordRecord, StudyStats, UserAccount } from './types';
+import { ActiveTab, BookCategory, Word, UserWordRecord, StudyStats, UserAccount, CustomWordBook } from './types';
 import { Header } from './components/Header';
 import { WordNebula3D } from './components/WordNebula3D';
 import { FlashcardEngine } from './components/FlashcardEngine';
@@ -7,8 +7,10 @@ import { HeatmapDashboard } from './components/HeatmapDashboard';
 import { CyberShooterGame } from './components/CyberShooterGame';
 import { WordBookManager } from './components/WordBookManager';
 import { AuthModal } from './components/AuthModal';
-import { getUserWordRecords, getDailyActivities, getBadges, getStudyStats, getCurrentBookId, setCurrentBookId, loadDemoData } from './utils/storage';
+import { CustomBookModal } from './components/CustomBookModal';
+import { getUserWordRecords, getDailyActivities, getBadges, getStudyStats, getCurrentBookId, setCurrentBookId } from './utils/storage';
 import { getCurrentUser, setCurrentUser, saveUserSyncedData, fetchUserSyncedData } from './utils/auth';
+import { getCustomWordBooks } from './utils/customBooks';
 
 // 动态导入 JSON 词库数据
 import cet4Data from './data/cet4.json';
@@ -21,6 +23,8 @@ import spanishBeginnerData from './data/spanish_beginner.json';
 export const App: React.FC = () => {
   const [activeTab, setActiveTab] = useState<ActiveTab>('nebula');
   const [currentBook, setCurrentBookState] = useState<BookCategory>('bnu_compulsory1');
+  const [customBooks, setCustomBooks] = useState<CustomWordBook[]>([]);
+  const [isCustomModalOpen, setIsCustomModalOpen] = useState(false);
   const [userRecords, setUserRecords] = useState<Record<string, UserWordRecord>>({});
   const [currentUser, setCurrentUserState] = useState<UserAccount | null>(null);
   const [isAuthModalOpen, setIsAuthModalOpen] = useState(false);
@@ -35,10 +39,12 @@ export const App: React.FC = () => {
   });
   const [soundEnabled, setSoundEnabled] = useState(true);
 
-  // 初始化加载与双向无感自动同步
+  // 初始化加载自建词库与双向无感自动同步
   useEffect(() => {
+    setCustomBooks(getCustomWordBooks());
     const savedBook = getCurrentBookId() as BookCategory;
     if (savedBook) setCurrentBookState(savedBook);
+
     const user = getCurrentUser();
     if (user) {
       setCurrentUserState(user);
@@ -53,7 +59,12 @@ export const App: React.FC = () => {
       setStats(getStudyStats());
     };
 
+    const handleCustomBooksUpdated = () => {
+      setCustomBooks(getCustomWordBooks());
+    };
+
     window.addEventListener('lexiverse_data_synced', handleCustomSynced);
+    window.addEventListener('lexiverse_custom_books_updated', handleCustomBooksUpdated);
 
     // 3 秒双向后台轮询引擎
     const interval = setInterval(async () => {
@@ -65,6 +76,7 @@ export const App: React.FC = () => {
 
     return () => {
       window.removeEventListener('lexiverse_data_synced', handleCustomSynced);
+      window.removeEventListener('lexiverse_custom_books_updated', handleCustomBooksUpdated);
       clearInterval(interval);
     };
   }, []);
@@ -93,15 +105,6 @@ export const App: React.FC = () => {
     refreshState();
   };
 
-  const handleLoadDemoData = () => {
-    loadDemoData();
-    refreshState();
-    const user = getCurrentUser();
-    if (user) {
-      saveUserSyncedData(user.username, getUserWordRecords(), getDailyActivities(), getBadges());
-    }
-  };
-
   const handleSetCurrentBook = (book: BookCategory) => {
     setCurrentBookState(book);
     setCurrentBookId(book);
@@ -109,22 +112,21 @@ export const App: React.FC = () => {
 
   // 获取当前所选词库的单词列表
   const currentWords: Word[] = useMemo(() => {
-    switch (currentBook) {
-      case 'spanish_beginner':
-        return spanishBeginnerData as Word[];
-      case 'bnu_compulsory1':
-        return bnuCompulsory1Data as Word[];
-      case 'cet6':
-        return cet6Data as Word[];
-      case 'ielts':
-        return ieltsData as Word[];
-      case 'dev_english':
-        return devEnglishData as Word[];
-      case 'cet4':
-      default:
-        return cet4Data as Word[];
+    if (currentBook === 'spanish_beginner') return spanishBeginnerData as Word[];
+    if (currentBook === 'bnu_compulsory1') return bnuCompulsory1Data as Word[];
+    if (currentBook === 'cet6') return cet6Data as Word[];
+    if (currentBook === 'ielts') return ieltsData as Word[];
+    if (currentBook === 'dev_english') return devEnglishData as Word[];
+    if (currentBook === 'cet4') return cet4Data as Word[];
+
+    // 查找自建/导入的个性化词库
+    const customMatch = customBooks.find((b) => b.id === currentBook);
+    if (customMatch && customMatch.words.length > 0) {
+      return customMatch.words;
     }
-  }, [currentBook]);
+
+    return cet4Data as Word[];
+  }, [currentBook, customBooks]);
 
   return (
     <div style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
@@ -135,10 +137,11 @@ export const App: React.FC = () => {
         setActiveTab={setActiveTab}
         currentBook={currentBook}
         setCurrentBook={handleSetCurrentBook}
+        customBooks={customBooks}
+        onOpenCustomBookModal={() => setIsCustomModalOpen(true)}
         stats={stats}
         soundEnabled={soundEnabled}
         setSoundEnabled={setSoundEnabled}
-        onLoadDemoData={handleLoadDemoData}
         currentUser={currentUser}
         onOpenAuthModal={() => setIsAuthModalOpen(true)}
         onLogout={handleLogout}
@@ -187,6 +190,16 @@ export const App: React.FC = () => {
         isOpen={isAuthModalOpen}
         onClose={() => setIsAuthModalOpen(false)}
         onAuthSuccess={handleAuthSuccess}
+      />
+
+      {/* 自建/导入词库模态框 */}
+      <CustomBookModal
+        isOpen={isCustomModalOpen}
+        onClose={() => setIsCustomModalOpen(false)}
+        onBookCreated={(newBook) => {
+          handleSetCurrentBook(newBook.id);
+          refreshState();
+        }}
       />
 
     </div>

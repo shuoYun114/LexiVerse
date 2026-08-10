@@ -1,17 +1,18 @@
 import React from 'react';
-import { ActiveTab, BookCategory, StudyStats, UserAccount } from '../types';
+import { ActiveTab, BookCategory, StudyStats, UserAccount, CustomWordBook } from '../types';
 import { isDemoEnv, fetchUserSyncedData } from '../utils/auth';
-import { Sparkles, Flame, Layers, Brain, LayoutDashboard, Gamepad2, BookOpen, Volume2, VolumeX, User, LogOut, ShieldCheck, RefreshCw } from 'lucide-react';
+import { Sparkles, Flame, Layers, Brain, LayoutDashboard, Gamepad2, BookOpen, Volume2, VolumeX, User, LogOut, ShieldCheck, RefreshCw, PlusCircle } from 'lucide-react';
 
 interface HeaderProps {
   activeTab: ActiveTab;
   setActiveTab: (tab: ActiveTab) => void;
   currentBook: BookCategory;
   setCurrentBook: (book: BookCategory) => void;
+  customBooks: CustomWordBook[];
+  onOpenCustomBookModal: () => void;
   stats: StudyStats;
   soundEnabled: boolean;
   setSoundEnabled: (enabled: boolean) => void;
-  onLoadDemoData: () => void;
   currentUser: UserAccount | null;
   onOpenAuthModal: () => void;
   onLogout: () => void;
@@ -22,10 +23,11 @@ export const Header: React.FC<HeaderProps> = ({
   setActiveTab,
   currentBook,
   setCurrentBook,
+  customBooks,
+  onOpenCustomBookModal,
   stats,
   soundEnabled,
   setSoundEnabled,
-  onLoadDemoData,
   currentUser,
   onOpenAuthModal,
   onLogout,
@@ -94,14 +96,35 @@ export const Header: React.FC<HeaderProps> = ({
                 outline: 'none',
               }}
             >
-              <option value="bnu_compulsory1" style={{ background: '#111827' }}>🎓 北师大版 高中英语必修一</option>
-              <option value="spanish_beginner" style={{ background: '#111827' }}>🇪🇸 西班牙语入门 (Spanish Beginner)</option>
-              <option value="cet4" style={{ background: '#111827' }}>CET-4 四级核心</option>
-              <option value="cet6" style={{ background: '#111827' }}>CET-6 六级词汇</option>
-              <option value="ielts" style={{ background: '#111827' }}>IELTS 雅思高频</option>
-              <option value="dev_english" style={{ background: '#111827' }}>💻 程序员英文词库</option>
+              <optgroup label="🌐 官方内置词库" style={{ background: '#111827', color: '#94a3b8' }}>
+                <option value="bnu_compulsory1" style={{ background: '#111827' }}>🎓 北师大版 高中英语必修一</option>
+                <option value="spanish_beginner" style={{ background: '#111827' }}>🇪🇸 西班牙语入门 (Spanish Beginner)</option>
+                <option value="cet4" style={{ background: '#111827' }}>CET-4 四级核心</option>
+                <option value="cet6" style={{ background: '#111827' }}>CET-6 六级词汇</option>
+                <option value="ielts" style={{ background: '#111827' }}>IELTS 雅思高频</option>
+                <option value="dev_english" style={{ background: '#111827' }}>💻 程序员英文词库</option>
+              </optgroup>
+              {customBooks.length > 0 && (
+                <optgroup label="📚 自建与导入词库" style={{ background: '#111827', color: '#38bdf8' }}>
+                  {customBooks.map((b) => (
+                    <option key={b.id} value={b.id} style={{ background: '#111827' }}>
+                      {b.icon || '📚'} {b.name} ({b.words.length} 词)
+                    </option>
+                  ))}
+                </optgroup>
+              )}
             </select>
           </div>
+
+          {/* ➕ 自建/导入词库按钮 */}
+          <button
+            onClick={onOpenCustomBookModal}
+            className="cyber-button"
+            style={{ padding: '6px 12px', fontSize: '0.8rem', whiteSpace: 'nowrap', background: 'rgba(6, 182, 212, 0.15)', border: '1px solid #06b6d4', color: '#38bdf8' }}
+            title="点击自建词库或导入外部 JSON 词库"
+          >
+            <PlusCircle size={14} /> 自建/导入词库
+          </button>
 
           <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
             {/* 连胜火花 Widget */}
@@ -124,16 +147,6 @@ export const Header: React.FC<HeaderProps> = ({
               <Flame size={16} className="streak-fire-icon" />
               <span>{stats.currentStreak} 天连胜</span>
             </div>
-
-            {/* 顶栏一键充能按钮 */}
-            <button
-              onClick={onLoadDemoData}
-              className="cyber-button cyber-button-primary"
-              style={{ padding: '6px 12px', fontSize: '0.8rem', whiteSpace: 'nowrap' }}
-              title="点此一键充能打卡与星云记录"
-            >
-              ⚡ 一键充能
-            </button>
 
             {/* 云端多端同步手动刷新按钮 */}
             {currentUser && (
